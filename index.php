@@ -25,3 +25,5 @@
  *---------------------------------------------------------------------------*
  * This script is the backend interface between hubs                         *
  * It is the foundation for all other scripts, it is private API and is not  *
+ * meant to be public.                                                       *
+ *                                                                           *
