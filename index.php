@@ -27,3 +27,5 @@
  * It is the foundation for all other scripts, it is private API and is not  *
  * meant to be public.                                                       *
  *                                                                           *
+ * Identification of peers is done via SSL client certificates               *
+ *                                                                           *
