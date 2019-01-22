@@ -30,3 +30,5 @@
  * Identification of peers is done via SSL client certificates               *
  *                                                                           *
  * Required:                                                                 *
+ * Phalcon PHP extension - http://phalconphp.com                             *
+ *****************************************************************************/
