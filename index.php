@@ -32,3 +32,8 @@
  * Required:                                                                 *
  * Phalcon PHP extension - http://phalconphp.com                             *
  *****************************************************************************/
+
+require_once('libs/db.inc.php');
+
+// =================================================
+// Authenticate the remote peer (Before the Routing)
