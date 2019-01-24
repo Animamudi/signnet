@@ -42,3 +42,5 @@ require_once('libs/db.inc.php');
 
 // By default peer is not authenticated:
 $authinfo = false;
+
+// Create a events manager
