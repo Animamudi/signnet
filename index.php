@@ -44,3 +44,6 @@ require_once('libs/db.inc.php');
 $authinfo = false;
 
 // Create a events manager
+$eventManager = new Phalcon\Events\Manager();
+
+// Attach the anonymous function to handle the authentication of the peer
