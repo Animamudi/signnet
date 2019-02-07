@@ -49,3 +49,7 @@ $eventManager = new Phalcon\Events\Manager();
 // Attach the anonymous function to handle the authentication of the peer
 $eventManager->attach('micro', function($event, $app) use ($mysqli) {
   global $authinfo;
+
+  if ($event->getType() == 'beforeHandleRoute') {
+
+    // The server should have the TLS client certificate information and the remote peer address
