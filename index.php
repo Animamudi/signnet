@@ -57,3 +57,5 @@ $eventManager->attach('micro', function($event, $app) use ($mysqli) {
     if (!array_key_exists("VERIFIED",$_SERVER) || ($_SERVER['VERIFIED'] != "SUCCESS")
      || !array_key_exists("DN",$_SERVER) || (strlen($_SERVER['DN'])==0)
      || !array_key_exists("REMOTE_ADDR",$_SERVER) || (strlen($_SERVER['REMOTE_ADDR'])==0)) {
+      $response = new Phalcon\Http\Response();
+      $response->setStatusCode(401, "Unauthorized");
