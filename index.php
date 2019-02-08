@@ -64,3 +64,7 @@ $eventManager->attach('micro', function($event, $app) use ($mysqli) {
       $response->send();
       return false;
     }
+    // The server could not connect to the MySQL database
+    // Means we are out of business
+    elseif ($mysqli->connect_errno != 0) {
+      $response = new Phalcon\Http\Response();
