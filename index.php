@@ -61,3 +61,6 @@ $eventManager->attach('micro', function($event, $app) use ($mysqli) {
       $response->setStatusCode(401, "Unauthorized");
       //Send errors to the client
       $response->setJsonContent(array('status' => 'ERROR', 'messages' => array('Missing/Wrong TLS client certificate')));
+      $response->send();
+      return false;
+    }
