@@ -68,3 +68,6 @@ $eventManager->attach('micro', function($event, $app) use ($mysqli) {
     // Means we are out of business
     elseif ($mysqli->connect_errno != 0) {
       $response = new Phalcon\Http\Response();
+      //Change the HTTP status
+      $response->setStatusCode(503, "Service Unavailable");
+      //Send errors to the client
