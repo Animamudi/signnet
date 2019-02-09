@@ -71,3 +71,6 @@ $eventManager->attach('micro', function($event, $app) use ($mysqli) {
       //Change the HTTP status
       $response->setStatusCode(503, "Service Unavailable");
       //Send errors to the client
+      $response->setJsonContent(array('status' => 'ERROR', 'messages' => array('No DB connection ('.$mysqli->connect_errno.': '.$mysqli->connect_error.')')));
+      $response->send();
+      return false;
