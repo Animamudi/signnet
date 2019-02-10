@@ -74,3 +74,5 @@ $eventManager->attach('micro', function($event, $app) use ($mysqli) {
       $response->setJsonContent(array('status' => 'ERROR', 'messages' => array('No DB connection ('.$mysqli->connect_errno.': '.$mysqli->connect_error.')')));
       $response->send();
       return false;
+    }
+    // Now we need to check the peer is a known/allowed hub (via its client certificate and the remote address)
