@@ -76,3 +76,7 @@ $eventManager->attach('micro', function($event, $app) use ($mysqli) {
       return false;
     }
     // Now we need to check the peer is a known/allowed hub (via its client certificate and the remote address)
+    $cacheserial = sha1($_SERVER['DN']);
+    $cacheserial2 = sha1($_SERVER['REMOTE_ADDR']);
+    $cachefnam = CACHEFOLDER.sprintf("dashninja_cmd_hubcheck_%s_%s",$cacheserial,$cacheserial2);
+    $cachevalid = (is_readable($cachefnam) && ((filemtime($cachefnam)+7200)>=time()));
