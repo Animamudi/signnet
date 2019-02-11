@@ -83,3 +83,6 @@ $eventManager->attach('micro', function($event, $app) use ($mysqli) {
     if ($cachevalid) {
       $data = unserialize(file_get_contents($cachefnam));
       $result = $data["result"];
+      $authinfo = $data["authinfo"];
+    }
+    else {
