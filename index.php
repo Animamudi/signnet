@@ -81,3 +81,5 @@ $eventManager->attach('micro', function($event, $app) use ($mysqli) {
     $cachefnam = CACHEFOLDER.sprintf("dashninja_cmd_hubcheck_%s_%s",$cacheserial,$cacheserial2);
     $cachevalid = (is_readable($cachefnam) && ((filemtime($cachefnam)+7200)>=time()));
     if ($cachevalid) {
+      $data = unserialize(file_get_contents($cachefnam));
+      $result = $data["result"];
