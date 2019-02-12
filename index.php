@@ -95,3 +95,5 @@ $eventManager->attach('micro', function($event, $app) use ($mysqli) {
         $authinfo = $result->fetch_assoc();
         $result->close();
       }
+      $data = array("result" => $result, "authinfo" => $authinfo);
+      file_put_contents($cachefnam,serialize($data),LOCK_EX);
