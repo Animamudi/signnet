@@ -93,3 +93,5 @@ $eventManager->attach('micro', function($event, $app) use ($mysqli) {
       if ($result !== false) {
         // If the query is a success, we retrieve the first result (should be the only one)
         $authinfo = $result->fetch_assoc();
+        $result->close();
+      }
