@@ -86,3 +86,8 @@ $eventManager->attach('micro', function($event, $app) use ($mysqli) {
       $authinfo = $data["authinfo"];
     }
     else {
+      $sql = "SELECT HubId, HubEnabled, HubDescription FROM cmd_hub WHERE HubCertificate = '%s' AND HubIPv6 = inet6_aton('%s')";
+      $sqlx = sprintf($sql,$mysqli->real_escape_string($_SERVER['DN'])
+                          ,$mysqli->real_escape_string($_SERVER['REMOTE_ADDR']));
+      $result = $mysqli->query($sqlx);
+      if ($result !== false) {
