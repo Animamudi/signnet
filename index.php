@@ -91,3 +91,5 @@ $eventManager->attach('micro', function($event, $app) use ($mysqli) {
                           ,$mysqli->real_escape_string($_SERVER['REMOTE_ADDR']));
       $result = $mysqli->query($sqlx);
       if ($result !== false) {
+        // If the query is a success, we retrieve the first result (should be the only one)
+        $authinfo = $result->fetch_assoc();
