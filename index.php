@@ -100,3 +100,5 @@ $eventManager->attach('micro', function($event, $app) use ($mysqli) {
     }
     // If the query failed, something is wrong with MySQL
     // Means we are out of business
+    if ($result === false) {
+      $response = new Phalcon\Http\Response();
