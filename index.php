@@ -97,3 +97,6 @@ $eventManager->attach('micro', function($event, $app) use ($mysqli) {
       }
       $data = array("result" => $result, "authinfo" => $authinfo);
       file_put_contents($cachefnam,serialize($data),LOCK_EX);
+    }
+    // If the query failed, something is wrong with MySQL
+    // Means we are out of business
