@@ -104,3 +104,7 @@ $eventManager->attach('micro', function($event, $app) use ($mysqli) {
       $response = new Phalcon\Http\Response();
       $response->setStatusCode(503, "Service Unavailable");
       $response->setJsonContent(array('status' => 'ERROR', 'messages' => array($mysqli->errno.': '.$mysqli->error)));
+      $response->send();
+      $authinfo = false;
+      return false;
+    }
