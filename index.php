@@ -108,3 +108,6 @@ $eventManager->attach('micro', function($event, $app) use ($mysqli) {
       $authinfo = false;
       return false;
     }
+    else {
+      // If the query result is null, then the remote peer is NOT authorized
+      if (is_null($authinfo)) {
