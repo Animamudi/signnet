@@ -111,3 +111,7 @@ $eventManager->attach('micro', function($event, $app) use ($mysqli) {
     else {
       // If the query result is null, then the remote peer is NOT authorized
       if (is_null($authinfo)) {
+        $response = new Phalcon\Http\Response();
+        $response->setStatusCode(401, "Unauthorized");
+        $response->setJsonContent(array('status' => 'ERROR', 'messages' => array('TLS client certificate did not match a known hub',$_SERVER['DN'],$_SERVER['REMOTE_ADDR'],$sql,$sqlx)));
+        $response->send();
