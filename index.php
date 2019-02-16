@@ -115,3 +115,7 @@ $eventManager->attach('micro', function($event, $app) use ($mysqli) {
         $response->setStatusCode(401, "Unauthorized");
         $response->setJsonContent(array('status' => 'ERROR', 'messages' => array('TLS client certificate did not match a known hub',$_SERVER['DN'],$_SERVER['REMOTE_ADDR'],$sql,$sqlx)));
         $response->send();
+        $authinfo = false;
+        return false;
+      }
+      // The remote is known, but disabled, deny the access
