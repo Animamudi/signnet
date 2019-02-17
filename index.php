@@ -129,3 +129,7 @@ $eventManager->attach('micro', function($event, $app) use ($mysqli) {
       // We passed! Peer is authorized!
     }
   }
+
+});
+
+//Create and bind the DI to the application
