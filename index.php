@@ -126,3 +126,6 @@ $eventManager->attach('micro', function($event, $app) use ($mysqli) {
         $response->send();
         return false;
       }
+      // We passed! Peer is authorized!
+    }
+  }
