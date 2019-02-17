@@ -119,3 +119,10 @@ $eventManager->attach('micro', function($event, $app) use ($mysqli) {
         return false;
       }
       // The remote is known, but disabled, deny the access
+      elseif ($authinfo['HubEnabled'] != '1') {
+        $response = new Phalcon\Http\Response();
+        $response->setStatusCode(401, "Unauthorized");
+        $response->setJsonContent(array('status' => 'ERROR', 'messages' => array('Hub is disabled (Access denied)')));
+        $response->send();
+        return false;
+      }
