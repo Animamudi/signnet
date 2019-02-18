@@ -133,3 +133,8 @@ $eventManager->attach('micro', function($event, $app) use ($mysqli) {
 });
 
 //Create and bind the DI to the application
+$app = new \Phalcon\Mvc\Micro();
+$app->setEventsManager($eventManager);
+
+$router = $app->getRouter();
+//$router->setUriSource(\Phalcon\Mvc\Router::URI_SOURCE_SERVER_REQUEST_URI);
