@@ -138,3 +138,10 @@ $app->setEventsManager($eventManager);
 
 $router = $app->getRouter();
 //$router->setUriSource(\Phalcon\Mvc\Router::URI_SOURCE_SERVER_REQUEST_URI);
+
+// ============================================================================
+// BALANCES (for dmnbalance)
+// ----------------------------------------------------------------------------
+// End-point to retrieve all pubkeys and last updates
+// HTTP method:
+//   GET
