@@ -145,3 +145,7 @@ $router = $app->getRouter();
 // End-point to retrieve all pubkeys and last updates
 // HTTP method:
 //   GET
+// Parameters:
+//   None
+// ============================================================================
+$app->get('/balances', function() use ($app,&$mysqli) {
