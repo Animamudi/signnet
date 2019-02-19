@@ -153,3 +153,4 @@ $app->get('/balances', function() use ($app,&$mysqli) {
   global $authinfo;
 
   //Create a response
+  $response = new Phalcon\Http\Response();
