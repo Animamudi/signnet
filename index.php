@@ -151,3 +151,5 @@ $router = $app->getRouter();
 $app->get('/balances', function() use ($app,&$mysqli) {
 
   global $authinfo;
+
+  //Create a response
