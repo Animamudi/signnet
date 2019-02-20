@@ -154,3 +154,5 @@ $app->get('/balances', function() use ($app,&$mysqli) {
 
   //Create a response
   $response = new Phalcon\Http\Response();
+
+  $request = $app->request;
