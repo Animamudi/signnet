@@ -164,3 +164,6 @@ $app->get('/balances', function() use ($app,&$mysqli) {
     $response->setJsonContent(array('status' => 'ERROR', 'messages' => array('Payload (or CONTENT_LENGTH) is missing')));
   }
   else {
+    // Retrieve all known nodes for current hub
+    $sql = "SELECT TestNet, PubKey, LastUpdate FROM cmd_info_masternode_balance";
+    $mnpubkeys = array();
