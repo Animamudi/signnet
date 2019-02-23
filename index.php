@@ -171,3 +171,5 @@ $app->get('/balances', function() use ($app,&$mysqli) {
     if ($result = $mysqli->query($sql)) {
       while($row = $result->fetch_assoc()){
         $date = new DateTime($row['LastUpdate']);
+        $row['LastUpdate'] = $date->getTimestamp();
+        if ($row['TestNet'] == 1) {
