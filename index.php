@@ -167,3 +167,7 @@ $app->get('/balances', function() use ($app,&$mysqli) {
     // Retrieve all known nodes for current hub
     $sql = "SELECT TestNet, PubKey, LastUpdate FROM cmd_info_masternode_balance";
     $mnpubkeys = array();
+    $tnpubkeys = array();
+    if ($result = $mysqli->query($sql)) {
+      while($row = $result->fetch_assoc()){
+        $date = new DateTime($row['LastUpdate']);
