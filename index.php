@@ -173,3 +173,6 @@ $app->get('/balances', function() use ($app,&$mysqli) {
         $date = new DateTime($row['LastUpdate']);
         $row['LastUpdate'] = $date->getTimestamp();
         if ($row['TestNet'] == 1) {
+          $tnpubkeys[$row['PubKey']] = $row['LastUpdate'];
+        }
+        else {
