@@ -176,3 +176,6 @@ $app->get('/balances', function() use ($app,&$mysqli) {
           $tnpubkeys[$row['PubKey']] = $row['LastUpdate'];
         }
         else {
+          $mnpubkeys[$row['PubKey']] = $row['LastUpdate'];
+       }
+      }
