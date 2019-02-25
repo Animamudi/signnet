@@ -179,3 +179,6 @@ $app->get('/balances', function() use ($app,&$mysqli) {
           $mnpubkeys[$row['PubKey']] = $row['LastUpdate'];
        }
       }
+
+      //Change the HTTP status
+      $response->setStatusCode(200, "OK");
