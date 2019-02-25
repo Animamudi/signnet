@@ -185,3 +185,7 @@ $app->get('/balances', function() use ($app,&$mysqli) {
       $response->setJsonContent(array('status' => 'OK', 'data' => array('balances' => array('testnet' => $tnpubkeys,
                                                                                             'mainnet' => $mnpubkeys))));
     }
+    else {
+      $response->setStatusCode(503, "Service Unavailable");
+      $response->setJsonContent(array('status' => 'ERROR', 'messages' => array($mysqli->errno.': '.$mysqli->error)));
+    }
