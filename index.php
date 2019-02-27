@@ -197,3 +197,7 @@ $app->get('/balances', function() use ($app,&$mysqli) {
 // ============================================================================
 // BALANCES (Reporting for dmnbalance)
 // ----------------------------------------------------------------------------
+// End-point for the balance report
+// HTTP method:
+//   POST
+// Parameters (JSON body):
