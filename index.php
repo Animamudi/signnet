@@ -191,3 +191,5 @@ $app->get('/balances', function() use ($app,&$mysqli) {
     }
   }
   return $response;
+
+});
