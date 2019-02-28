@@ -206,3 +206,5 @@ $app->get('/balances', function() use ($app,&$mysqli) {
 //   status=OK|ERROR
 //   messages=array of error messages (only if status is ERROR)
 //   data=array of insert/update information (only if status is OK)
+// ============================================================================
+$app->post('/balances', function() use ($app,&$mysqli) {
