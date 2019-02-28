@@ -201,3 +201,6 @@ $app->get('/balances', function() use ($app,&$mysqli) {
 // HTTP method:
 //   POST
 // Parameters (JSON body):
+//   array of balance information (mandatory)
+// Result (JSON body):
+//   status=OK|ERROR
