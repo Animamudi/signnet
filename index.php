@@ -213,3 +213,6 @@ $app->post('/balances', function() use ($app,&$mysqli) {
 
   //Create a response
   $response = new Phalcon\Http\Response();
+
+  $payload = $app->request->getRawBody();
+  $payload = json_decode($payload,true);
