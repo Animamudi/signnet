@@ -221,3 +221,5 @@ $app->post('/balances', function() use ($app,&$mysqli) {
    || !is_array($payload) || (count($payload) == 0)) {
     //Change the HTTP status
     $response->setStatusCode(400, "Bad Request");
+
+    //Send errors to the client
