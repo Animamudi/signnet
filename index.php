@@ -223,3 +223,6 @@ $app->post('/balances', function() use ($app,&$mysqli) {
     $response->setStatusCode(400, "Bad Request");
 
     //Send errors to the client
+    $response->setJsonContent(array('status' => 'ERROR', 'messages' => array('Payload is wrong or CONTENT_LENGTH is missing')));
+  }
+  else {
