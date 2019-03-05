@@ -226,3 +226,6 @@ $app->post('/balances', function() use ($app,&$mysqli) {
     $response->setJsonContent(array('status' => 'ERROR', 'messages' => array('Payload is wrong or CONTENT_LENGTH is missing')));
   }
   else {
+
+    $sqlbal = array();
+    foreach($payload as $node) {
