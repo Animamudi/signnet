@@ -229,3 +229,6 @@ $app->post('/balances', function() use ($app,&$mysqli) {
 
     $sqlbal = array();
     foreach($payload as $node) {
+      $sqlbal[] = sprintf("(%d,'%s',%.9f,'%s')",
+                                  $node['TestNet'],
+                                  $mysqli->real_escape_string($node['PubKey']),
