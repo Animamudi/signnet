@@ -235,3 +235,4 @@ $app->post('/balances', function() use ($app,&$mysqli) {
                                   $node['Balance'],
                                   $mysqli->real_escape_string($node['LastUpdate'])
                                 );
+    }
