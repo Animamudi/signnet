@@ -233,3 +233,5 @@ $app->post('/balances', function() use ($app,&$mysqli) {
                                   $node['TestNet'],
                                   $mysqli->real_escape_string($node['PubKey']),
                                   $node['Balance'],
+                                  $mysqli->real_escape_string($node['LastUpdate'])
+                                );
