@@ -232,3 +232,4 @@ $app->post('/balances', function() use ($app,&$mysqli) {
       $sqlbal[] = sprintf("(%d,'%s',%.9f,'%s')",
                                   $node['TestNet'],
                                   $mysqli->real_escape_string($node['PubKey']),
+                                  $node['Balance'],
