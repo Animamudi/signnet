@@ -236,3 +236,6 @@ $app->post('/balances', function() use ($app,&$mysqli) {
                                   $mysqli->real_escape_string($node['LastUpdate'])
                                 );
     }
+
+    $sql = "INSERT INTO cmd_info_masternode_balance (TestNet, PubKey, Balance, LastUpdate)"
+                           ." VALUES ".implode(',',$sqlbal)
