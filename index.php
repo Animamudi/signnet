@@ -242,3 +242,5 @@ $app->post('/balances', function() use ($app,&$mysqli) {
             ." ON DUPLICATE KEY UPDATE Balance = VALUES(Balance), LastUpdate = VALUES(LastUpdate)";
 
     if ($result = $mysqli->query($sql)) {
+      $info = $mysqli->info;
+      if (is_null($info)) {
