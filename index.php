@@ -244,3 +244,8 @@ $app->post('/balances', function() use ($app,&$mysqli) {
     if ($result = $mysqli->query($sql)) {
       $info = $mysqli->info;
       if (is_null($info)) {
+        $info = true;
+      }
+
+      //Change the HTTP status
+      $response->setStatusCode(202, "Accepted");
