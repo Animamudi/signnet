@@ -249,3 +249,6 @@ $app->post('/balances', function() use ($app,&$mysqli) {
 
       //Change the HTTP status
       $response->setStatusCode(202, "Accepted");
+      $response->setJsonContent(array('status' => 'OK', 'data' => array('balances' => $info)));
+
+    }
