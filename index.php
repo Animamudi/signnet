@@ -258,3 +258,5 @@ $app->post('/balances', function() use ($app,&$mysqli) {
     }
   }
   return $response;
+
+});
