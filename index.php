@@ -260,3 +260,9 @@ $app->post('/balances', function() use ($app,&$mysqli) {
   return $response;
 
 });
+
+// ============================================================================
+// BLOCKSGAPS (data for dmnblockdegapper)
+// ----------------------------------------------------------------------------
+// End-point for the balance report
+// HTTP method:
