@@ -270,3 +270,6 @@ $app->post('/balances', function() use ($app,&$mysqli) {
 // Parameters (JSON body):
 //   testnet=0|1
 //   interval=interval (optional, default is P1D for 1 day)
+// Result (JSON body):
+//   status=OK|ERROR
+//   messages=array of error messages (only if status is ERROR)
