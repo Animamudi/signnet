@@ -268,3 +268,5 @@ $app->post('/balances', function() use ($app,&$mysqli) {
 // HTTP method:
 //   GET
 // Parameters (JSON body):
+//   testnet=0|1
+//   interval=interval (optional, default is P1D for 1 day)
