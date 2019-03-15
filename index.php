@@ -266,3 +266,5 @@ $app->post('/balances', function() use ($app,&$mysqli) {
 // ----------------------------------------------------------------------------
 // End-point for the balance report
 // HTTP method:
+//   GET
+// Parameters (JSON body):
