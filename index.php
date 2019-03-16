@@ -275,3 +275,6 @@ $app->post('/balances', function() use ($app,&$mysqli) {
 //   messages=array of error messages (only if status is ERROR)
 //   data=array of blocks (only is status is OK)
 // ============================================================================
+$app->get('/blocksgaps', function() use ($app,&$mysqli) {
+
+    //Create a response
