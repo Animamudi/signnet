@@ -281,3 +281,7 @@ $app->get('/blocksgaps', function() use ($app,&$mysqli) {
     $response = new Phalcon\Http\Response();
 
     $request = $app->request;
+
+    $errmsg = array();
+
+    if (!array_key_exists('CONTENT_LENGTH',$_SERVER) || (intval($_SERVER['CONTENT_LENGTH']) != 0)) {
