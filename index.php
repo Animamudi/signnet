@@ -287,3 +287,5 @@ $app->get('/blocksgaps', function() use ($app,&$mysqli) {
     if (!array_key_exists('CONTENT_LENGTH',$_SERVER) || (intval($_SERVER['CONTENT_LENGTH']) != 0)) {
         $errmsg[] = "No CONTENT expected";
     }
+
+    // Retrieve the 'testnet' parameter
