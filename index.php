@@ -289,3 +289,6 @@ $app->get('/blocksgaps', function() use ($app,&$mysqli) {
     }
 
     // Retrieve the 'testnet' parameter
+    if ($request->hasQuery('testnet')) {
+        $testnet = intval($request->getQuery('testnet'));
+        if (($testnet != 0) && ($testnet != 1)) {
