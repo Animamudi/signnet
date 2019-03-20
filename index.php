@@ -296,3 +296,5 @@ $app->get('/blocksgaps', function() use ($app,&$mysqli) {
         }
     }
     else {
+        $testnet = 0;
+    }
