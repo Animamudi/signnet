@@ -298,3 +298,7 @@ $app->get('/blocksgaps', function() use ($app,&$mysqli) {
     else {
         $testnet = 0;
     }
+
+    // Retrieve the 'interval' parameter
+    if ($request->hasQuery('interval')) {
+        try {
