@@ -303,3 +303,5 @@ $app->get('/blocksgaps', function() use ($app,&$mysqli) {
     if ($request->hasQuery('interval')) {
         try {
             $interval = new DateInterval($request->getQuery('interval'));
+        } catch (Exception $e) {
+            $errmsg[] = 'Wrong interval parameter';
