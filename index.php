@@ -311,3 +311,7 @@ $app->get('/blocksgaps', function() use ($app,&$mysqli) {
     else {
         $interval = new DateInterval('P1M');
     }
+    $interval->invert = 1;
+    $datefrom = new DateTime();
+    $datefrom->add( $interval );
+    $datefrom = $datefrom->getTimestamp();
