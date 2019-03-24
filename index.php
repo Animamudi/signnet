@@ -308,3 +308,6 @@ $app->get('/blocksgaps', function() use ($app,&$mysqli) {
             $interval = new DateInterval('P1M');
         }
     }
+    else {
+        $interval = new DateInterval('P1M');
+    }
