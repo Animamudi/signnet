@@ -315,3 +315,5 @@ $app->get('/blocksgaps', function() use ($app,&$mysqli) {
     $datefrom = new DateTime();
     $datefrom->add( $interval );
     $datefrom = $datefrom->getTimestamp();
+
+    if (count($errmsg) > 0) {
