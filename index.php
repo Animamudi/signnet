@@ -321,3 +321,5 @@ $app->get('/blocksgaps', function() use ($app,&$mysqli) {
         $response->setStatusCode(400, "Bad Request");
 
         //Send errors to the client
+        $response->setJsonContent(array('status' => 'ERROR', 'messages' => $errmsg));
+    }
