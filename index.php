@@ -317,3 +317,7 @@ $app->get('/blocksgaps', function() use ($app,&$mysqli) {
     $datefrom = $datefrom->getTimestamp();
 
     if (count($errmsg) > 0) {
+        //Change the HTTP status
+        $response->setStatusCode(400, "Bad Request");
+
+        //Send errors to the client
