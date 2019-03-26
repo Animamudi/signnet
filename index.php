@@ -323,3 +323,7 @@ $app->get('/blocksgaps', function() use ($app,&$mysqli) {
         //Send errors to the client
         $response->setJsonContent(array('status' => 'ERROR', 'messages' => $errmsg));
     }
+    else {
+        $sql = sprintf("SELECT BlockId FROM cmd_info_blocks WHERE BlockTestNet = %d AND BlockTime >= %d ORDER BY BlockId DESC",$testnet,$datefrom);
+        $blocks = array();
+        if ($result = $mysqli->query($sql)) {
