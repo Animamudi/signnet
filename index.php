@@ -327,3 +327,5 @@ $app->get('/blocksgaps', function() use ($app,&$mysqli) {
         $sql = sprintf("SELECT BlockId FROM cmd_info_blocks WHERE BlockTestNet = %d AND BlockTime >= %d ORDER BY BlockId DESC",$testnet,$datefrom);
         $blocks = array();
         if ($result = $mysqli->query($sql)) {
+            while($row = $result->fetch_array(MYSQLI_NUM)){
+                $blocks[intval($row[0])] = intval($row[0]);
