@@ -330,3 +330,5 @@ $app->get('/blocksgaps', function() use ($app,&$mysqli) {
             while($row = $result->fetch_array(MYSQLI_NUM)){
                 $blocks[intval($row[0])] = intval($row[0]);
             }
+
+            //Change the HTTP status
