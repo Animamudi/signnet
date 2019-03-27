@@ -329,3 +329,4 @@ $app->get('/blocksgaps', function() use ($app,&$mysqli) {
         if ($result = $mysqli->query($sql)) {
             while($row = $result->fetch_array(MYSQLI_NUM)){
                 $blocks[intval($row[0])] = intval($row[0]);
+            }
