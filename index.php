@@ -351,3 +351,6 @@ $app->get('/blocksgaps', function() use ($app,&$mysqli) {
 // HTTP method:
 //   POST
 // Parameters (JSON body):
+//   array of:
+//     blockshistory (mandatory, can be empty array)
+//     blocksinfo (mandatory, can be empty array)
