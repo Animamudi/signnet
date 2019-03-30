@@ -347,3 +347,7 @@ $app->get('/blocksgaps', function() use ($app,&$mysqli) {
 // ============================================================================
 // BLOCKS (Reporting for dmnblockparser)
 // ----------------------------------------------------------------------------
+// End-point for the balance report
+// HTTP method:
+//   POST
+// Parameters (JSON body):
