@@ -356,3 +356,6 @@ $app->get('/blocksgaps', function() use ($app,&$mysqli) {
 //     blocksinfo (mandatory, can be empty array)
 //   (Both cannot be empty)
 // Result (JSON body):
+//   status=OK|ERROR
+//   messages=array of error messages (only if status is ERROR)
+//   data=array of insert/update information (only if status is OK)
