@@ -354,3 +354,4 @@ $app->get('/blocksgaps', function() use ($app,&$mysqli) {
 //   array of:
 //     blockshistory (mandatory, can be empty array)
 //     blocksinfo (mandatory, can be empty array)
+//   (Both cannot be empty)
