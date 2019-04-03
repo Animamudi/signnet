@@ -363,3 +363,5 @@ $app->get('/blocksgaps', function() use ($app,&$mysqli) {
 $app->post('/blocks', function() use ($app,&$mysqli) {
 
   global $authinfo;
+
+  //Create a response
