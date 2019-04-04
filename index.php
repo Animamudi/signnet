@@ -366,3 +366,5 @@ $app->post('/blocks', function() use ($app,&$mysqli) {
 
   //Create a response
   $response = new Phalcon\Http\Response();
+
+  $payload = $app->request->getRawBody();
