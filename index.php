@@ -374,3 +374,5 @@ $app->post('/blocks', function() use ($app,&$mysqli) {
    || !is_array($payload) || !array_key_exists('blockshistory',$payload) || !is_array($payload['blockshistory'])
    || !array_key_exists('blocksinfo',$payload) || !is_array($payload['blocksinfo'])
    || ((count($payload['blockshistory']) == 0) && (count($payload['blocksinfo']) == 0))) {
+    //Change the HTTP status
+    $response->setStatusCode(400, "Bad Request");
