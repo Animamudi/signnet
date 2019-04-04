@@ -368,3 +368,6 @@ $app->post('/blocks', function() use ($app,&$mysqli) {
   $response = new Phalcon\Http\Response();
 
   $payload = $app->request->getRawBody();
+  $payload = json_decode($payload,true);
+
+  if (!array_key_exists('CONTENT_LENGTH',$_SERVER) || (intval($_SERVER['CONTENT_LENGTH']) == 0)
