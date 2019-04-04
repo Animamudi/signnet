@@ -371,3 +371,6 @@ $app->post('/blocks', function() use ($app,&$mysqli) {
   $payload = json_decode($payload,true);
 
   if (!array_key_exists('CONTENT_LENGTH',$_SERVER) || (intval($_SERVER['CONTENT_LENGTH']) == 0)
+   || !is_array($payload) || !array_key_exists('blockshistory',$payload) || !is_array($payload['blockshistory'])
+   || !array_key_exists('blocksinfo',$payload) || !is_array($payload['blocksinfo'])
+   || ((count($payload['blockshistory']) == 0) && (count($payload['blocksinfo']) == 0))) {
