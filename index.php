@@ -379,3 +379,6 @@ $app->post('/blocks', function() use ($app,&$mysqli) {
 
     //Send errors to the client
     $response->setJsonContent(array('status' => 'ERROR', 'messages' => array('Payload is wrong or CONTENT_LENGTH is missing',"cbh=".count($payload['blockshistory'])." cbi=".count($payload['blocksinfo']),var_export($payload,true))));
+  }
+  else {
+    // Retrieve all known nodes for current hub
