@@ -376,3 +376,6 @@ $app->post('/blocks', function() use ($app,&$mysqli) {
    || ((count($payload['blockshistory']) == 0) && (count($payload['blocksinfo']) == 0))) {
     //Change the HTTP status
     $response->setStatusCode(400, "Bad Request");
+
+    //Send errors to the client
+    $response->setJsonContent(array('status' => 'ERROR', 'messages' => array('Payload is wrong or CONTENT_LENGTH is missing',"cbh=".count($payload['blockshistory'])." cbi=".count($payload['blocksinfo']),var_export($payload,true))));
