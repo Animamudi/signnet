@@ -382,3 +382,8 @@ $app->post('/blocks', function() use ($app,&$mysqli) {
   }
   else {
     // Retrieve all known nodes for current hub
+    $result = dashninja_cmd_getnodes($mysqli,$authinfo['HubId'],0);
+    $numnodes = 0;
+    $nodes = array();
+    if (count($result) > 0) {
+      foreach($result as $nodename => $row){
