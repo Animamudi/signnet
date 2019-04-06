@@ -387,3 +387,4 @@ $app->post('/blocks', function() use ($app,&$mysqli) {
     $nodes = array();
     if (count($result) > 0) {
       foreach($result as $nodename => $row){
+        $numnodes++;
