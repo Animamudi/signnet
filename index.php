@@ -393,3 +393,7 @@ $app->post('/blocks', function() use ($app,&$mysqli) {
     }
     $result = dashninja_cmd_getnodes($mysqli,$authinfo['HubId'],1);
     if (count($result) > 0) {
+        foreach($result as $nodename => $row){
+            $numnodes++;
+            $nodes[$nodename] = $row['NodeId'];
+        }
