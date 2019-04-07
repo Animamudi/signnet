@@ -397,3 +397,5 @@ $app->post('/blocks', function() use ($app,&$mysqli) {
             $numnodes++;
             $nodes[$nodename] = $row['NodeId'];
         }
+    }
+    if ($numnodes == 0) {
