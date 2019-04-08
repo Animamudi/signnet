@@ -399,3 +399,6 @@ $app->post('/blocks', function() use ($app,&$mysqli) {
         }
     }
     if ($numnodes == 0) {
+      $response->setStatusCode(503, "Service Unavailable");
+      $response->setJsonContent(array('status' => 'ERROR', 'messages' => array('No nodes found')));
+    }
