@@ -402,3 +402,4 @@ $app->post('/blocks', function() use ($app,&$mysqli) {
       $response->setStatusCode(503, "Service Unavailable");
       $response->setJsonContent(array('status' => 'ERROR', 'messages' => array('No nodes found')));
     }
+    else {
