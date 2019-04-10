@@ -403,3 +403,8 @@ $app->post('/blocks', function() use ($app,&$mysqli) {
       $response->setJsonContent(array('status' => 'ERROR', 'messages' => array('No nodes found')));
     }
     else {
+      $stats = array();
+      $bhsql = array();
+      $curratio = array(-1,-1);
+      foreach($payload['blockshistory'] as $bhentry) {
+        if (!array_key_exists($bhentry['FromNodeUserName'],$nodes)) {
