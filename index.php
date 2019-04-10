@@ -408,3 +408,8 @@ $app->post('/blocks', function() use ($app,&$mysqli) {
       $curratio = array(-1,-1);
       foreach($payload['blockshistory'] as $bhentry) {
         if (!array_key_exists($bhentry['FromNodeUserName'],$nodes)) {
+          $response->setStatusCode(503, "Service Unavailable");
+          $response->setJsonContent(array('status' => 'ERROR', 'messages' => array("Unknown node reported")));
+          return $response;
+        }
+        $bhsql[] = sprintf("(%d,%d,%d,'%s','%s',%d,%.8f)",$bhentry['BlockHeight'],
