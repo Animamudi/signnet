@@ -413,3 +413,6 @@ $app->post('/blocks', function() use ($app,&$mysqli) {
           return $response;
         }
         $bhsql[] = sprintf("(%d,%d,%d,'%s','%s',%d,%.8f)",$bhentry['BlockHeight'],
+                                                     $bhentry['BlockTestNet'],
+                                                     $nodes[$bhentry['FromNodeUserName']],
+                                                     $mysqli->real_escape_string($bhentry['BlockMNPayee']),
