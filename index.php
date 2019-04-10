@@ -416,3 +416,5 @@ $app->post('/blocks', function() use ($app,&$mysqli) {
                                                      $bhentry['BlockTestNet'],
                                                      $nodes[$bhentry['FromNodeUserName']],
                                                      $mysqli->real_escape_string($bhentry['BlockMNPayee']),
+                                                     $mysqli->real_escape_string($bhentry['LastUpdate']),
+                                                     $bhentry['Protocol'],
