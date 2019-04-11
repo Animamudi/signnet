@@ -418,3 +418,5 @@ $app->post('/blocks', function() use ($app,&$mysqli) {
                                                      $mysqli->real_escape_string($bhentry['BlockMNPayee']),
                                                      $mysqli->real_escape_string($bhentry['LastUpdate']),
                                                      $bhentry['Protocol'],
+                                                     $bhentry['BlockMNRatio']);
+        if ($bhentry['BlockMNRatio'] > $curratio[$bhentry['BlockTestNet']]) {
