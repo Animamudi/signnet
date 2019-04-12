@@ -420,3 +420,5 @@ $app->post('/blocks', function() use ($app,&$mysqli) {
                                                      $bhentry['Protocol'],
                                                      $bhentry['BlockMNRatio']);
         if ($bhentry['BlockMNRatio'] > $curratio[$bhentry['BlockTestNet']]) {
+          $curratio[$bhentry['BlockTestNet']] = $bhentry['BlockMNRatio'];
+        }
