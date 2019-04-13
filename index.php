@@ -423,3 +423,7 @@ $app->post('/blocks', function() use ($app,&$mysqli) {
           $curratio[$bhentry['BlockTestNet']] = $bhentry['BlockMNRatio'];
         }
       }
+      $bhinfo = false;
+      if (count($bhsql) > 0) {
+        $sql = "INSERT INTO cmd_info_blocks_history2 (BlockHeight, BlockTestNet, NodeID, BlockMNPayee, LastUpdate, Protocol, BlockMNRatio)"
+                         ." VALUES ".implode(',',$bhsql)
