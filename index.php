@@ -428,3 +428,6 @@ $app->post('/blocks', function() use ($app,&$mysqli) {
         $sql = "INSERT INTO cmd_info_blocks_history2 (BlockHeight, BlockTestNet, NodeID, BlockMNPayee, LastUpdate, Protocol, BlockMNRatio)"
                          ." VALUES ".implode(',',$bhsql)
               ." ON DUPLICATE KEY UPDATE BlockMNPayee = VALUES(BlockMNPayee), LastUpdate = VALUES(LastUpdate), Protocol = VALUES(Protocol), BlockMNRatio = VALUES(BlockMNRatio)";
+
+        if ($result = $mysqli->query($sql)) {
+          $bhinfo = $mysqli->info;
