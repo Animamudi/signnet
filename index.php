@@ -431,3 +431,5 @@ $app->post('/blocks', function() use ($app,&$mysqli) {
 
         if ($result = $mysqli->query($sql)) {
           $bhinfo = $mysqli->info;
+          if (is_null($bhinfo)) {
+            $bhinfo = true;
