@@ -440,3 +440,6 @@ $app->post('/blocks', function() use ($app,&$mysqli) {
           $response->setJsonContent(array('status' => 'ERROR', 'messages' => array($mysqli->errno.': '.$mysqli->error)));
           return $response;
         }
+        if ($curratio[0] > -1) {
+          $stats[] = sprintf("('mnpaymentratio','%s',%d,'dashninja')",$curratio[0],time());
+        }
