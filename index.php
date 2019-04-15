@@ -443,3 +443,7 @@ $app->post('/blocks', function() use ($app,&$mysqli) {
         if ($curratio[0] > -1) {
           $stats[] = sprintf("('mnpaymentratio','%s',%d,'dashninja')",$curratio[0],time());
         }
+        if ($curratio[1] > -1) {
+          $stats[] = sprintf("('mnpaymentratiotest','%s',%d,'dashninja')",$curratio[1],time());
+        }
+      }
