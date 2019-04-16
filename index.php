@@ -457,3 +457,7 @@ $app->post('/blocks', function() use ($app,&$mysqli) {
         $sqlwhere[] = sprintf($sqlwheretemplate,$bientry['BlockId'],$bientry['BlockTestNet']);
       }
       $sql = <<<EOT
+DROP TABLE IF EXISTS _cibh_nodecount;
+CREATE TEMPORARY TABLE IF NOT EXISTS
+    _cibh_nodecount ENGINE=MEMORY AS (
+                        SELECT
