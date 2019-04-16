@@ -461,3 +461,5 @@ DROP TABLE IF EXISTS _cibh_nodecount;
 CREATE TEMPORARY TABLE IF NOT EXISTS
     _cibh_nodecount ENGINE=MEMORY AS (
                         SELECT
+                                MP.BlockHeight BlockHeight,
+                                BlockMNPayee,
