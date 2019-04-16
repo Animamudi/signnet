@@ -447,3 +447,7 @@ $app->post('/blocks', function() use ($app,&$mysqli) {
           $stats[] = sprintf("('mnpaymentratiotest','%s',%d,'dashninja')",$curratio[1],time());
         }
       }
+
+      $bisql = array();
+      $bsbsql = array();
+      $mninfo = array();
