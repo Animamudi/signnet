@@ -451,3 +451,9 @@ $app->post('/blocks', function() use ($app,&$mysqli) {
       $bisql = array();
       $bsbsql = array();
       $mninfo = array();
+      $sqlwheretemplate = "(BlockHeight = %d AND BlockTestNet = %d)";
+      $sqlwhere = array();
+      foreach($payload['blocksinfo'] as $bientry) {
+        $sqlwhere[] = sprintf($sqlwheretemplate,$bientry['BlockId'],$bientry['BlockTestNet']);
+      }
+      $sql = <<<EOT
