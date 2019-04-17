@@ -468,3 +468,5 @@ CREATE TEMPORARY TABLE IF NOT EXISTS
                         FROM
                                 (SELECT
                                         BlockHeight,
+                                        MAX(Protocol) Protocol
+                                FROM
