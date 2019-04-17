@@ -474,3 +474,6 @@ CREATE TEMPORARY TABLE IF NOT EXISTS
                                 WHERE
 					%s
                                 GROUP BY
+                                        BlockHeight
+                                ) MP
+                        LEFT JOIN
