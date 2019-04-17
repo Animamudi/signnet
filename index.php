@@ -463,3 +463,8 @@ CREATE TEMPORARY TABLE IF NOT EXISTS
                         SELECT
                                 MP.BlockHeight BlockHeight,
                                 BlockMNPayee,
+                                COUNT(NodeID) CountNode,
+                                MAX(BlockMNRatio) BlockMNRatio
+                        FROM
+                                (SELECT
+                                        BlockHeight,
