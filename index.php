@@ -470,3 +470,7 @@ CREATE TEMPORARY TABLE IF NOT EXISTS
                                         BlockHeight,
                                         MAX(Protocol) Protocol
                                 FROM
+                                        cmd_info_blocks_history2
+                                WHERE
+					%s
+                                GROUP BY
