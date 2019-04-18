@@ -477,3 +477,4 @@ CREATE TEMPORARY TABLE IF NOT EXISTS
                                         BlockHeight
                                 ) MP
                         LEFT JOIN
+                                cmd_info_blocks_history2 cibh
