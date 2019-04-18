@@ -478,3 +478,6 @@ CREATE TEMPORARY TABLE IF NOT EXISTS
                                 ) MP
                         LEFT JOIN
                                 cmd_info_blocks_history2 cibh
+                                ON
+                                        (cibh.BlockHeight=MP.BlockHeight
+                                        AND cibh.Protocol=MP.Protocol)
