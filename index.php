@@ -485,3 +485,8 @@ CREATE TEMPORARY TABLE IF NOT EXISTS
                                         BlockHeight,
                                         BlockMNPayee
                         );
+DROP TABLE IF EXISTS _cibh_maxnodecount;
+CREATE TEMPORARY TABLE IF NOT EXISTS _cibh_maxnodecount ENGINE=MEMORY AS (
+        SELECT
+                BlockHeight,
+                MAX(CountNode) MaxCountNode
