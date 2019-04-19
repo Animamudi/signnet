@@ -481,3 +481,5 @@ CREATE TEMPORARY TABLE IF NOT EXISTS
                                 ON
                                         (cibh.BlockHeight=MP.BlockHeight
                                         AND cibh.Protocol=MP.Protocol)
+                                GROUP BY
+                                        BlockHeight,
