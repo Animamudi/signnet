@@ -490,3 +490,7 @@ CREATE TEMPORARY TABLE IF NOT EXISTS _cibh_maxnodecount ENGINE=MEMORY AS (
         SELECT
                 BlockHeight,
                 MAX(CountNode) MaxCountNode
+        FROM
+                _cibh_nodecount
+        GROUP BY
+                BlockHeight
