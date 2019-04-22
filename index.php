@@ -500,3 +500,5 @@ EOT;
 
         $sql = sprintf($sql,implode(" OR ",$sqlwhere));
         $blockhist = array();
+        if ($mysqli->multi_query($sql) &&
+            $mysqli->more_results() && $mysqli->next_result() &&
