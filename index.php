@@ -499,3 +499,4 @@ SELECT NC.BlockHeight BlockHeight, BlockMNPayee, BlockMNRatio FROM _cibh_maxnode
 EOT;
 
         $sql = sprintf($sql,implode(" OR ",$sqlwhere));
+        $blockhist = array();
