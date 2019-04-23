@@ -502,3 +502,6 @@ EOT;
         $blockhist = array();
         if ($mysqli->multi_query($sql) &&
             $mysqli->more_results() && $mysqli->next_result() &&
+            $mysqli->more_results() && $mysqli->next_result() &&
+            $mysqli->more_results() && $mysqli->next_result() &&
+            $mysqli->more_results() && $mysqli->next_result() &&
