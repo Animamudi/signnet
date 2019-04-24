@@ -507,3 +507,5 @@ EOT;
             $mysqli->more_results() && $mysqli->next_result() &&
             ($result = $mysqli->store_result())) {
           while($row = $result->fetch_assoc()){
+            $blockhist[intval($row['BlockHeight'])] = array("BlockMNValueRatioExpected" => floatval($row['BlockMNRatio']),
+                                                            "BlockMNPayeeExpected" => $row['BlockMNPayee']);
