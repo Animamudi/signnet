@@ -511,3 +511,7 @@ EOT;
                                                             "BlockMNPayeeExpected" => $row['BlockMNPayee']);
           }
         }
+
+      foreach($payload['blocksinfo'] as $bientry) {
+          // Force actual 50% is value is 0% by mistake (block history is wrong, node was down at that time probably...)
+          if ($blockhist[intval($bientry['BlockId'])]['BlockMNValueRatioExpected'] <= 0) {
