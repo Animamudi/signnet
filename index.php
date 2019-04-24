@@ -509,3 +509,5 @@ EOT;
           while($row = $result->fetch_assoc()){
             $blockhist[intval($row['BlockHeight'])] = array("BlockMNValueRatioExpected" => floatval($row['BlockMNRatio']),
                                                             "BlockMNPayeeExpected" => $row['BlockMNPayee']);
+          }
+        }
