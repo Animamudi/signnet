@@ -522,3 +522,6 @@ EOT;
                                                      $bientry['BlockId'],
                                                      $mysqli->real_escape_string($bientry['BlockHash']),
                                                      $mysqli->real_escape_string($bientry['BlockMNPayee']),
+                                                     $bientry['BlockMNValue'],
+                                                     $bientry['BlockSupplyValue'],
+                                                     $bientry['BlockMNPayed'],
