@@ -517,3 +517,8 @@ EOT;
           if ($blockhist[intval($bientry['BlockId'])]['BlockMNValueRatioExpected'] <= 0) {
               $blockhist[intval($bientry['BlockId'])]['BlockMNValueRatioExpected'] = 0.5;
           }
+
+        $bisql[] = sprintf("(%d,%d,'%s','%s',%.9f,%.9f,%d,'%s',%d,%d,%.9f,%d,'%s',%.9f,%d,'%s',%d,%d,%d,%.9f,%d)",$bientry['BlockTestNet'],
+                                                     $bientry['BlockId'],
+                                                     $mysqli->real_escape_string($bientry['BlockHash']),
+                                                     $mysqli->real_escape_string($bientry['BlockMNPayee']),
