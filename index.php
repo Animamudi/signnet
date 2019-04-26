@@ -529,3 +529,7 @@ EOT;
                                                      $bientry['BlockMNProtocol'],
                                                      $bientry['BlockTime'],
                                                      $bientry['BlockDifficulty'],
+                                                     $bientry['BlockMNPayeeDonation'],
+                                                     $mysqli->real_escape_string($blockhist[intval($bientry['BlockId'])]['BlockMNPayeeExpected']),
+                                                     $blockhist[intval($bientry['BlockId'])]['BlockMNValueRatioExpected'],
+            $bientry['IsSuperblock'],
