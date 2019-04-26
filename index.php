@@ -528,3 +528,4 @@ EOT;
                                                      $mysqli->real_escape_string($bientry['BlockPoolPubKey']),
                                                      $bientry['BlockMNProtocol'],
                                                      $bientry['BlockTime'],
+                                                     $bientry['BlockDifficulty'],
