@@ -533,3 +533,5 @@ EOT;
                                                      $mysqli->real_escape_string($blockhist[intval($bientry['BlockId'])]['BlockMNPayeeExpected']),
                                                      $blockhist[intval($bientry['BlockId'])]['BlockMNValueRatioExpected'],
             $bientry['IsSuperblock'],
+            $mysqli->real_escape_string($bientry['SuperblockBudgetName']),
+            $bientry['BlockDarkSendTXCount'],
