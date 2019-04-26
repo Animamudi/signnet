@@ -525,3 +525,6 @@ EOT;
                                                      $bientry['BlockMNValue'],
                                                      $bientry['BlockSupplyValue'],
                                                      $bientry['BlockMNPayed'],
+                                                     $mysqli->real_escape_string($bientry['BlockPoolPubKey']),
+                                                     $bientry['BlockMNProtocol'],
+                                                     $bientry['BlockTime'],
