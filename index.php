@@ -538,3 +538,4 @@ EOT;
             $bientry['MemPoolDarkSendTXCount'],
             $bientry['SuperblockBudgetPayees'],
             $bientry['SuperblockBudgetAmount'],
+            $bientry['BlockVersion']
