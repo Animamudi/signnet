@@ -535,3 +535,6 @@ EOT;
             $bientry['IsSuperblock'],
             $mysqli->real_escape_string($bientry['SuperblockBudgetName']),
             $bientry['BlockDarkSendTXCount'],
+            $bientry['MemPoolDarkSendTXCount'],
+            $bientry['SuperblockBudgetPayees'],
+            $bientry['SuperblockBudgetAmount'],
