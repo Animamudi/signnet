@@ -539,3 +539,6 @@ EOT;
             $bientry['SuperblockBudgetPayees'],
             $bientry['SuperblockBudgetAmount'],
             $bientry['BlockVersion']
+        );
+        if ((array_key_exists($bientry['BlockMNPayee'].":".$bientry['BlockTestNet'],$mninfo) && ($mninfo[$bientry['BlockMNPayee'].":".$bientry['BlockTestNet']] < $bientry['BlockId']))
+         || !(array_key_exists($bientry['BlockMNPayee'].":".$bientry['BlockTestNet'],$mninfo))) {
