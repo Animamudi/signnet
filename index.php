@@ -544,3 +544,5 @@ EOT;
          || !(array_key_exists($bientry['BlockMNPayee'].":".$bientry['BlockTestNet'],$mninfo))) {
           $mninfo[$bientry['BlockMNPayee'].":".$bientry['BlockTestNet']] = $bientry['BlockId'];
         }
+        if (array_key_exists("SuperblockDetails",$bientry) && (is_array($bientry["SuperblockDetails"])) && (count($bientry["SuperblockDetails"]) > 0)) {
+            foreach($bientry["SuperblockDetails"] as $item) {
