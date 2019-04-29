@@ -547,3 +547,6 @@ EOT;
         if (array_key_exists("SuperblockDetails",$bientry) && (is_array($bientry["SuperblockDetails"])) && (count($bientry["SuperblockDetails"]) > 0)) {
             foreach($bientry["SuperblockDetails"] as $item) {
                 $bsbsql[] = sprintf("(%d,%d,'%s',%.9f,'%s')",$bientry['BlockTestNet'],
+                    $bientry['BlockId'],
+                    $mysqli->real_escape_string($item['GovernanceObjectPaymentAddress']),
+                    floatval($item['GovernanceObjectPaymentAmount']),
