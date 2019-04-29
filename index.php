@@ -550,3 +550,8 @@ EOT;
                     $bientry['BlockId'],
                     $mysqli->real_escape_string($item['GovernanceObjectPaymentAddress']),
                     floatval($item['GovernanceObjectPaymentAmount']),
+                    $mysqli->real_escape_string($item['GovernanceObjectPaymentProposalHash']));
+            }
+        }
+      }
+      $mninfosql = array();
