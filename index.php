@@ -555,3 +555,6 @@ EOT;
         }
       }
       $mninfosql = array();
+      foreach($mninfo as $rawkey => $mnblock) {
+        $mnkey = explode(":",$rawkey);
+        $mninfosql[] = sprintf("(%d,'%s',%d)",$mnkey[1],
