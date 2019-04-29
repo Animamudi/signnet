@@ -558,3 +558,6 @@ EOT;
       foreach($mninfo as $rawkey => $mnblock) {
         $mnkey = explode(":",$rawkey);
         $mninfosql[] = sprintf("(%d,'%s',%d)",$mnkey[1],
+                                              $mysqli->real_escape_string($mnkey[0]),
+                                              $mnblock);
+      }
