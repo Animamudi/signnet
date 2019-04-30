@@ -561,3 +561,6 @@ EOT;
                                               $mysqli->real_escape_string($mnkey[0]),
                                               $mnblock);
       }
+      $biinfo = false;
+      $mninfoinfo = false;
+      if (count($bisql) > 0) {
