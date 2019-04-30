@@ -573,3 +573,6 @@ EOT;
               ." BlockMNProtocol = VALUES(BlockMNProtocol), BlockTime = VALUES(BlockTime), BlockDifficulty = VALUES(BlockDifficulty),"
               ." BlockMNPayeeDonation = VALUES(BlockMNPayeeDonation), BlockMNPayeeExpected = VALUES(BlockMNPayeeExpected),"
               ." BlockMNValueRatioExpected = VALUES(BlockMNValueRatioExpected), IsSuperblock = VALUES(IsSuperblock), SuperblockBudgetName = VALUES(SuperblockBudgetName),"
+              ." BlockDarkSendTXCount = VALUES(BlockDarkSendTXCount), MemPoolDarkSendTXCount = VALUES(MemPoolDarkSendTXCount),"
+              ." SuperblockBudgetPayees = VALUES(SuperblockBudgetPayees), SuperblockBudgetAmount = VALUES(SuperblockBudgetAmount),"
+              ." BlockVersion = VALUES(BlockVersion)";
