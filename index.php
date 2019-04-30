@@ -564,3 +564,7 @@ EOT;
       $biinfo = false;
       $mninfoinfo = false;
       if (count($bisql) > 0) {
+        $sql = "INSERT INTO cmd_info_blocks (BlockTestNet, BlockId, BlockHash, BlockMNPayee, BlockMNValue, BlockSupplyValue, BlockMNPayed, "
+              ."BlockPoolPubKey, BlockMNProtocol, BlockTime, BlockDifficulty, BlockMNPayeeDonation, BlockMNPayeeExpected, BlockMNValueRatioExpected, IsSuperblock, SuperblockBudgetName, "
+              ."BlockDarkSendTXCount, MemPoolDarkSendTXCount, SuperblockBudgetPayees, SuperblockBudgetAmount, BlockVersion)"
+              ." VALUES ".implode(',',$bisql)
