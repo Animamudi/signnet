@@ -582,3 +582,4 @@ EOT;
           if (is_null($biinfo)) {
             $biinfo = true;
           }
+        }
