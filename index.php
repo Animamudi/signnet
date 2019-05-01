@@ -576,3 +576,6 @@ EOT;
               ." BlockDarkSendTXCount = VALUES(BlockDarkSendTXCount), MemPoolDarkSendTXCount = VALUES(MemPoolDarkSendTXCount),"
               ." SuperblockBudgetPayees = VALUES(SuperblockBudgetPayees), SuperblockBudgetAmount = VALUES(SuperblockBudgetAmount),"
               ." BlockVersion = VALUES(BlockVersion)";
+
+        if ($result = $mysqli->query($sql)) {
+          $biinfo = $mysqli->info;
