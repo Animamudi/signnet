@@ -589,3 +589,4 @@ EOT;
           return $response;
         }
         $mninfores = 0;
+        $debugtxt = "";
