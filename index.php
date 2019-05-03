@@ -595,3 +595,6 @@ EOT;
         if ($result = $mysqli->query($sql)) {
           $mninfoinfo = $mysqli->info;
           if (is_null($biinfo)) {
+            $mninfoinfo = true;
+          }
+        }
