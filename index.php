@@ -592,3 +592,6 @@ EOT;
         $debugtxt = "";
         $sql = "INSERT INTO cmd_info_masternode_lastpaid (MNTestNet, MNPubKey, MNLastPaidBlock) VALUES ".implode(',',$mninfosql)
                ." ON DUPLICATE KEY UPDATE MNLastPaidBlock = VALUES(MNLastPaidBlock)";
+        if ($result = $mysqli->query($sql)) {
+          $mninfoinfo = $mysqli->info;
+          if (is_null($biinfo)) {
