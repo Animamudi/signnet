@@ -603,3 +603,5 @@ EOT;
           $response->setJsonContent(array('status' => 'ERROR', 'messages' => array($mysqli->errno.': '.$mysqli->error)));
           return $response;
         }
+
+        $interval = new DateInterval('P1D');
