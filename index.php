@@ -605,3 +605,7 @@ EOT;
         }
 
         $interval = new DateInterval('P1D');
+        $interval->invert = 1;
+        $datefrom = new DateTime();
+        $datefrom->add( $interval );
+        $datefrom = $datefrom->getTimestamp();
