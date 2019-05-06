@@ -612,3 +612,4 @@ EOT;
 
         $sql = sprintf("SELECT `BlockTestNet`, SUM(`BlockSupplyValue`) TotalSupplyValue, SUM(`BlockMNValue`) TotalMNValue, COUNT(1) NumBlocks, SUM(BlockMNPayed) NumPayed FROM `cmd_info_blocks` WHERE BlockTime >= %d GROUP BY `BlockTestNet`",$datefrom);
         if ($result = $mysqli->query($sql)) {
+          while($row = $result->fetch_assoc()){
