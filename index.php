@@ -616,3 +616,7 @@ EOT;
             $statkey = "last24hsupply";
             if ($row["BlockTestNet"] == 1) {
               $statkey .= "test";
+            }
+            $stats[] = sprintf("('%s','%s',%d,'dashninja')",$statkey,$row["TotalSupplyValue"],time());
+            $statkey = "paymentdrk";
+            if ($row["BlockTestNet"] == 1) {
