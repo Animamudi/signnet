@@ -626,3 +626,6 @@ EOT;
             $statkey = "mnpayments";
             if ($row["BlockTestNet"] == 1) {
               $statkey .= "test";
+            }
+            $stats[] = sprintf("('%s','%s',%d,'dashninja')",$statkey,round(($row["NumPayed"]/$row["NumBlocks"])*100,2),time());
+          }
