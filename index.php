@@ -623,3 +623,6 @@ EOT;
               $statkey .= "test";
             }
             $stats[] = sprintf("('%s','%s',%d,'dashninja')",$statkey,$row["TotalMNValue"],time());
+            $statkey = "mnpayments";
+            if ($row["BlockTestNet"] == 1) {
+              $statkey .= "test";
