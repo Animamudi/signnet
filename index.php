@@ -636,3 +636,5 @@ EOT;
         $sql = "INSERT INTO cmd_stats_values (StatKey, StatValue, LastUpdate, Source)"
              ." VALUES ".implode(',',$stats)
              ." ON DUPLICATE KEY UPDATE StatValue = VALUES(StatValue), LastUpdate = VALUES(LastUpdate), Source = VALUES(Source)";
+
+        if ($result = $mysqli->query($sql)) {
