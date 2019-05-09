@@ -629,3 +629,5 @@ EOT;
             }
             $stats[] = sprintf("('%s','%s',%d,'dashninja')",$statkey,round(($row["NumPayed"]/$row["NumBlocks"])*100,2),time());
           }
+        }
+      }
