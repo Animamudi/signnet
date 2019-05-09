@@ -631,3 +631,8 @@ EOT;
           }
         }
       }
+
+      if (count($stats) > 0) {
+        $sql = "INSERT INTO cmd_stats_values (StatKey, StatValue, LastUpdate, Source)"
+             ." VALUES ".implode(',',$stats)
+             ." ON DUPLICATE KEY UPDATE StatValue = VALUES(StatValue), LastUpdate = VALUES(LastUpdate), Source = VALUES(Source)";
