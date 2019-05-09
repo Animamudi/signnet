@@ -638,3 +638,5 @@ EOT;
              ." ON DUPLICATE KEY UPDATE StatValue = VALUES(StatValue), LastUpdate = VALUES(LastUpdate), Source = VALUES(Source)";
 
         if ($result = $mysqli->query($sql)) {
+          $statsinfo = $mysqli->info;
+          if (is_null($biinfo)) {
