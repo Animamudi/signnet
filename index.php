@@ -641,3 +641,5 @@ EOT;
           $statsinfo = $mysqli->info;
           if (is_null($biinfo)) {
             $statsinfo = true;
+          }
+        }
