@@ -649,3 +649,5 @@ EOT;
           return $response;
         }
       }
+
+      $superblockinfo = false;
