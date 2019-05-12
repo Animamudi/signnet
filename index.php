@@ -655,3 +655,8 @@ EOT;
           $sql = "INSERT INTO cmd_info_blocks_superblockpayments (BlockTestNet, BlockId, GovernanceObjectPaymentAddress, GovernanceObjectPaymentAmount, GovernanceObjectPaymentProposalHash)"
               . " VALUES " . implode(',', $bsbsql)
               . " ON DUPLICATE KEY UPDATE GovernanceObjectPaymentAddress = VALUES(GovernanceObjectPaymentAddress), GovernanceObjectPaymentAmount = VALUES(GovernanceObjectPaymentAmount)";
+
+          if ($result = $mysqli->query($sql)) {
+              $superblockinfo = $mysqli->info;
+              if (is_null($biinfo)) {
+                  $superblockinfo = true;
