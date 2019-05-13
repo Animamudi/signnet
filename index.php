@@ -660,3 +660,5 @@ EOT;
               $superblockinfo = $mysqli->info;
               if (is_null($biinfo)) {
                   $superblockinfo = true;
+              }
+          } else {
