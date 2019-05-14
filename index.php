@@ -666,3 +666,7 @@ EOT;
               $response->setJsonContent(array('status' => 'ERROR', 'messages' => array($mysqli->errno . ': ' . $mysqli->error)));
               return $response;
           }
+      }
+
+      //Change the HTTP status
+      $response->setStatusCode(202, "Accepted");
