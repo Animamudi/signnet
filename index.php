@@ -673,3 +673,6 @@ EOT;
       $response->setJsonContent(array('status' => 'OK', 'data' => array('blockshistory' => $bhinfo,
                                                                         'blocksinfo' => $biinfo,
                                                                         'superblockdetailsinfo' => $superblockinfo,
+                                                                        'mninfo' => $mninfoinfo)));
+
+    }
