@@ -676,3 +676,5 @@ EOT;
                                                                         'mninfo' => $mninfoinfo)));
 
     }
+  }
+  return $response;
