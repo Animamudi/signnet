@@ -696,3 +696,5 @@ $app->get('/budgetsexpected', function() use ($app,&$mysqli) {
     $response = new Phalcon\Http\Response();
 
     if (!array_key_exists('CONTENT_LENGTH',$_SERVER) || (intval($_SERVER['CONTENT_LENGTH']) != 0)) {
+        //Change the HTTP status
+        $response->setStatusCode(400, "Bad Request");
