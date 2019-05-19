@@ -698,3 +698,6 @@ $app->get('/budgetsexpected', function() use ($app,&$mysqli) {
     if (!array_key_exists('CONTENT_LENGTH',$_SERVER) || (intval($_SERVER['CONTENT_LENGTH']) != 0)) {
         //Change the HTTP status
         $response->setStatusCode(400, "Bad Request");
+        //Send errors to the client
+        $response->setJsonContent(array('status' => 'ERROR', 'messages' => array('Payload (or CONTENT_LENGTH) is missing')));
+    }
