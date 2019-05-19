@@ -705,3 +705,4 @@ $app->get('/budgetsexpected', function() use ($app,&$mysqli) {
         // Retrieve all known final budgets
         $sql = 'SELECT BudgetTestnet, BlockStart, BlockEnd, Proposals FROM cmd_budget_final WHERE VoteCount > 0 AND (IsValid = 1 OR IsValidReason = "Older than current blockHeight") AND Status = "OK"';
         $mnbudgets = array(array(),array());
+        $proposalsfinal = array(array(),array());
