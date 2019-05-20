@@ -710,3 +710,6 @@ $app->get('/budgetsexpected', function() use ($app,&$mysqli) {
             while($row = $result->fetch_assoc()){
                 $pos = 0;
                 $proposals = explode(",",$row['Proposals']);
+                for ($x = intval($row['BlockStart']);$x <= intval($row['BlockEnd']); $x++) {
+                    $mnbudgets[$row['BudgetTestnet']][$x] = array(
+                        "BlockId" => $x,
