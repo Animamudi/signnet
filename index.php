@@ -707,3 +707,6 @@ $app->get('/budgetsexpected', function() use ($app,&$mysqli) {
         $mnbudgets = array(array(),array());
         $proposalsfinal = array(array(),array());
         if ($result = $mysqli->query($sql)) {
+            while($row = $result->fetch_assoc()){
+                $pos = 0;
+                $proposals = explode(",",$row['Proposals']);
