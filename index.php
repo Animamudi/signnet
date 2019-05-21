@@ -719,3 +719,6 @@ $app->get('/budgetsexpected', function() use ($app,&$mysqli) {
                     $pos++;
                 }
             }
+
+            $proposalsvalues = array(array(),array());
+            $sql = "SELECT BudgetTestnet, BudgetId, MonthlyPayment, PaymentAddress FROM cmd_budget_projection";
