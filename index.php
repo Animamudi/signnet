@@ -716,3 +716,5 @@ $app->get('/budgetsexpected', function() use ($app,&$mysqli) {
                         "BlockProposal" => $proposals[$pos]
                     );
                     $proposalsfinal[$row['BudgetTestnet']][] = $proposals[$pos];
+                    $pos++;
+                }
