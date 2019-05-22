@@ -733,3 +733,7 @@ $app->get('/budgetsexpected', function() use ($app,&$mysqli) {
 
                 foreach ($mnbudgets as $mnbudgetestnet => $mnbudgetdata) {
                     foreach ($mnbudgetdata as $mnbudgetdataid => $mnbudgetdatadata) {
+                        if (array_key_exists($mnbudgetdatadata["BlockProposal"], $proposalsvalues[$mnbudgetestnet])) {
+                            $mnbudgets[$mnbudgetestnet][$mnbudgetdataid]["MonthlyPayment"] = $proposalsvalues[$mnbudgetestnet][$mnbudgetdatadata["BlockProposal"]]["MonthlyPayment"];
+                            $mnbudgets[$mnbudgetestnet][$mnbudgetdataid]["PaymentAddress"] = $proposalsvalues[$mnbudgetestnet][$mnbudgetdatadata["BlockProposal"]]["PaymentAddress"];
+                        } else {
