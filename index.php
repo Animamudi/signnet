@@ -737,3 +737,4 @@ $app->get('/budgetsexpected', function() use ($app,&$mysqli) {
                             $mnbudgets[$mnbudgetestnet][$mnbudgetdataid]["MonthlyPayment"] = $proposalsvalues[$mnbudgetestnet][$mnbudgetdatadata["BlockProposal"]]["MonthlyPayment"];
                             $mnbudgets[$mnbudgetestnet][$mnbudgetdataid]["PaymentAddress"] = $proposalsvalues[$mnbudgetestnet][$mnbudgetdatadata["BlockProposal"]]["PaymentAddress"];
                         } else {
+                            $mnbudgets[$mnbudgetestnet][$mnbudgetdataid]["MonthlyPayment"] = 0.0;
