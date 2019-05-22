@@ -722,3 +722,8 @@ $app->get('/budgetsexpected', function() use ($app,&$mysqli) {
 
             $proposalsvalues = array(array(),array());
             $sql = "SELECT BudgetTestnet, BudgetId, MonthlyPayment, PaymentAddress FROM cmd_budget_projection";
+            if ($result = $mysqli->query($sql)) {
+                $test = array();
+                while ($row = $result->fetch_assoc()) {
+                    $test[] = $row;
+                    if (in_array($row['BudgetId'], $proposalsfinal[$row['BudgetTestnet']])) {
