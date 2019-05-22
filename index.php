@@ -727,3 +727,9 @@ $app->get('/budgetsexpected', function() use ($app,&$mysqli) {
                 while ($row = $result->fetch_assoc()) {
                     $test[] = $row;
                     if (in_array($row['BudgetId'], $proposalsfinal[$row['BudgetTestnet']])) {
+                        $proposalsvalues[$row['BudgetTestnet']][$row['BudgetId']] = $row;
+                    }
+                }
+
+                foreach ($mnbudgets as $mnbudgetestnet => $mnbudgetdata) {
+                    foreach ($mnbudgetdata as $mnbudgetdataid => $mnbudgetdatadata) {
