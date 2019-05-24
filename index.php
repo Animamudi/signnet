@@ -748,3 +748,5 @@ $app->get('/budgetsexpected', function() use ($app,&$mysqli) {
                 $response->setJsonContent(array('status' => 'OK', 'data' => array('budgetsexpected' => $mnbudgets)));
             }
         else {
+            $response->setStatusCode(503, "Service Unavailable");
+            $response->setJsonContent(array('status' => 'ERROR', 'messages' => array($mysqli->errno . ': ' . $mysqli->error)));
