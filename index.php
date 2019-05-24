@@ -744,3 +744,4 @@ $app->get('/budgetsexpected', function() use ($app,&$mysqli) {
                 }
 
                 //Change the HTTP status
+                $response->setStatusCode(200, "OK");
