@@ -745,3 +745,6 @@ $app->get('/budgetsexpected', function() use ($app,&$mysqli) {
 
                 //Change the HTTP status
                 $response->setStatusCode(200, "OK");
+                $response->setJsonContent(array('status' => 'OK', 'data' => array('budgetsexpected' => $mnbudgets)));
+            }
+        else {
