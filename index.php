@@ -758,3 +758,6 @@ $app->get('/budgetsexpected', function() use ($app,&$mysqli) {
             $response->setJsonContent(array('status' => 'ERROR', 'messages' => array($mysqli->errno.': '.$mysqli->error)));
         }
     }
+    return $response;
+
+});
