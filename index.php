@@ -753,3 +753,5 @@ $app->get('/budgetsexpected', function() use ($app,&$mysqli) {
 
         }
         }
+        else {
+            $response->setStatusCode(503, "Service Unavailable");
