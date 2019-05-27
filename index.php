@@ -772,3 +772,6 @@ $app->get('/budgetsexpected', function() use ($app,&$mysqli) {
 //   None
 // ============================================================================
 $app->get('/superblocksexpected', function() use ($app,&$mysqli) {
+
+    //Create a response
+    $response = new Phalcon\Http\Response();
