@@ -765,3 +765,6 @@ $app->get('/budgetsexpected', function() use ($app,&$mysqli) {
 // ============================================================================
 // SUPERBLOCK PAYMENTS EXPECTED (for dmnblockparser)
 // ----------------------------------------------------------------------------
+// End-point to retrieve all expected superblocks payments (v12.1+)
+// HTTP method:
+//   GET
