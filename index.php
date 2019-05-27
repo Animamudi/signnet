@@ -768,3 +768,7 @@ $app->get('/budgetsexpected', function() use ($app,&$mysqli) {
 // End-point to retrieve all expected superblocks payments (v12.1+)
 // HTTP method:
 //   GET
+// Parameters:
+//   None
+// ============================================================================
+$app->get('/superblocksexpected', function() use ($app,&$mysqli) {
