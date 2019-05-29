@@ -786,3 +786,8 @@ $app->get('/superblocksexpected', function() use ($app,&$mysqli) {
         // Retrieve all known final budgets
         $sql = 'SELECT cgot.GovernanceObjectTestnet TestNet, cgot.GovernanceObjectEventBlockHeight BlockHeight, cgotp.GovernanceObjectPaymentAddress '
               .'ProposalPaymentAddress, cgotp.GovernanceObjectPaymentAmount ProposalPaymentAmount, cgotp.GovernanceObjectPaymentProposalHash '
+              .'ProposalHash FROM cmd_gobject_triggers cgot LEFT OUTER JOIN cmd_gobject_triggers_payments cgotp '
+              .'ON cgot.GovernanceObjectTestnet = cgotp.GovernanceObjectTestnet AND cgot.GovernanceObjectId = cgotp.GovernanceObjectId '
+              .'WHERE cgot.GovernanceObjectVotesAbsoluteYes > 0 AND cgot.GovernanceObjectCachedFunding = 1';
+        $mnsuperblocks = array(array(),array());
+        if ($result = $mysqli->query($sql)) {
