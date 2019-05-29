@@ -784,3 +784,5 @@ $app->get('/superblocksexpected', function() use ($app,&$mysqli) {
     }
     else {
         // Retrieve all known final budgets
+        $sql = 'SELECT cgot.GovernanceObjectTestnet TestNet, cgot.GovernanceObjectEventBlockHeight BlockHeight, cgotp.GovernanceObjectPaymentAddress '
+              .'ProposalPaymentAddress, cgotp.GovernanceObjectPaymentAmount ProposalPaymentAmount, cgotp.GovernanceObjectPaymentProposalHash '
