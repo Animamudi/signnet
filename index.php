@@ -799,3 +799,6 @@ $app->get('/superblocksexpected', function() use ($app,&$mysqli) {
                             "ProposalPaymentAddress" => $row["ProposalPaymentAddress"],
                             "ProposalPaymentAmount" => $row["ProposalPaymentAmount"],
                             "ProposalHash" => $row["ProposalHash"]
+                    );
+                }
+                else {
