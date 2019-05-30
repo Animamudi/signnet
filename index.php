@@ -791,3 +791,7 @@ $app->get('/superblocksexpected', function() use ($app,&$mysqli) {
               .'WHERE cgot.GovernanceObjectVotesAbsoluteYes > 0 AND cgot.GovernanceObjectCachedFunding = 1';
         $mnsuperblocks = array(array(),array());
         if ($result = $mysqli->query($sql)) {
+            while($row = $result->fetch_assoc()){
+                $row["TestNet"] = intval($row["TestNet"]);
+                $row["BlockHeight"] = intval($row["BlockHeight"]);
+                if (array_key_exists($row['BlockHeight'],$mnsuperblocks[$row["TestNet"]])) {
