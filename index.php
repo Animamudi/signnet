@@ -795,3 +795,7 @@ $app->get('/superblocksexpected', function() use ($app,&$mysqli) {
                 $row["TestNet"] = intval($row["TestNet"]);
                 $row["BlockHeight"] = intval($row["BlockHeight"]);
                 if (array_key_exists($row['BlockHeight'],$mnsuperblocks[$row["TestNet"]])) {
+                    $mnsuperblocks[$row["TestNet"]][$row["BlockHeight"]]["ProposalPayments"][] = array(
+                            "ProposalPaymentAddress" => $row["ProposalPaymentAddress"],
+                            "ProposalPaymentAmount" => $row["ProposalPaymentAmount"],
+                            "ProposalHash" => $row["ProposalHash"]
