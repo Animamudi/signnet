@@ -802,3 +802,5 @@ $app->get('/superblocksexpected', function() use ($app,&$mysqli) {
                     );
                 }
                 else {
+                    $mnsuperblocks[$row["TestNet"]][$row["BlockHeight"]] = array(
+                      "BlockHeight" => $row["BlockHeight"],
