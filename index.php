@@ -806,3 +806,7 @@ $app->get('/superblocksexpected', function() use ($app,&$mysqli) {
                       "BlockHeight" => $row["BlockHeight"],
                       "ProposalPayments" => array(array(
                           "ProposalPaymentAddress" => $row["ProposalPaymentAddress"],
+                          "ProposalPaymentAmount" => $row["ProposalPaymentAmount"],
+                          "ProposalHash" => $row["ProposalHash"]
+                      ))
+                    );
