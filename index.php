@@ -810,3 +810,5 @@ $app->get('/superblocksexpected', function() use ($app,&$mysqli) {
                           "ProposalHash" => $row["ProposalHash"]
                       ))
                     );
+                }
+            }
