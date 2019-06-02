@@ -817,3 +817,4 @@ $app->get('/superblocksexpected', function() use ($app,&$mysqli) {
             $response->setStatusCode(200, "OK");
             $response->setJsonContent(array('status' => 'OK', 'data' => array('superblocksexpected' => $mnsuperblocks)));
         }
+        else {
