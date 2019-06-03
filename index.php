@@ -828,3 +828,6 @@ $app->get('/superblocksexpected', function() use ($app,&$mysqli) {
 
 // Function to retrieve the masternode list
 function dashninja_masternodes_get($mysqli, $testnet = 0, $protocol = 0) {
+
+  $sqlmaxprotocol = sprintf("SELECT MAX(NodeProtocol) Protocol FROM cmd_nodes cn, cmd_nodes_status cns WHERE cn.NodeId = cns.NodeId AND NodeTestnet = %d GROUP BY NodeTestnet",$testnet);
+  // Run the query
