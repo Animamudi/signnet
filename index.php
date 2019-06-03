@@ -825,3 +825,6 @@ $app->get('/superblocksexpected', function() use ($app,&$mysqli) {
     return $response;
 
 });
+
+// Function to retrieve the masternode list
+function dashninja_masternodes_get($mysqli, $testnet = 0, $protocol = 0) {
