@@ -831,3 +831,7 @@ function dashninja_masternodes_get($mysqli, $testnet = 0, $protocol = 0) {
 
   $sqlmaxprotocol = sprintf("SELECT MAX(NodeProtocol) Protocol FROM cmd_nodes cn, cmd_nodes_status cns WHERE cn.NodeId = cns.NodeId AND NodeTestnet = %d GROUP BY NodeTestnet",$testnet);
   // Run the query
+  if ($result = $mysqli->query($sqlmaxprotocol)) {
+    $row = $result->fetch_assoc();
+    $protocol = 0;
+    if ($row !== false) {
