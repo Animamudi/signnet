@@ -835,3 +835,6 @@ function dashninja_masternodes_get($mysqli, $testnet = 0, $protocol = 0) {
     $row = $result->fetch_assoc();
     $protocol = 0;
     if ($row !== false) {
+      $protocol = $row['Protocol'];
+    }
+  }
