@@ -842,3 +842,6 @@ function dashninja_masternodes_get($mysqli, $testnet = 0, $protocol = 0) {
     $response->setStatusCode(503, "Service Unavailable");
     $response->setJsonContent(array('status' => 'ERROR', 'messages' => array($mysqli->errno.': '.$mysqli->error)));
     return $response;
+  }
+
+  $sqlprotocol = sprintf(" AND cns.NodeProtocol = %d",$protocol);
