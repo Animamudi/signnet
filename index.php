@@ -851,3 +851,5 @@ function dashninja_masternodes_get($mysqli, $testnet = 0, $protocol = 0) {
   $sqlactive = "(SELECT MasternodeIP, MasternodePort, MNTestNet, COUNT(1) ActiveCount FROM cmd_info_masternode_list ciml, cmd_nodes_status cns"
               ." WHERE ciml.NodeID = cns.NodeID"
               ." AND $sqltestnet"
+              ." AND (MasternodeStatus = 'active' OR MasternodeStatus = 'current')"
+              .$sqlprotocol
