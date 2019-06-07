@@ -853,3 +853,6 @@ function dashninja_masternodes_get($mysqli, $testnet = 0, $protocol = 0) {
               ." AND $sqltestnet"
               ." AND (MasternodeStatus = 'active' OR MasternodeStatus = 'current')"
               .$sqlprotocol
+              ." GROUP BY MasternodeIP, MasternodePort, MNTestNet) mnactive";
+
+  // Retrieve the number of time each masternode is seen as inactive
