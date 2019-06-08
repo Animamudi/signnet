@@ -862,3 +862,6 @@ function dashninja_masternodes_get($mysqli, $testnet = 0, $protocol = 0) {
               ." AND MasternodeStatus = 'inactive'"
               .$sqlprotocol
               ." GROUP BY MasternodeIP, MasternodePort, MNTestNet) mninactive";
+
+  // Retrieve the number of time each masternode is not seen (unlisted)
+  $sqlunlisted = "(SELECT MasternodeIP, MasternodePort, MNTestNet, COUNT(1) UnlistedCount FROM cmd_info_masternode_list ciml, cmd_nodes_status cns"
