@@ -860,3 +860,5 @@ function dashninja_masternodes_get($mysqli, $testnet = 0, $protocol = 0) {
               ." WHERE ciml.NodeID = cns.NodeID"
               ." AND $sqltestnet"
               ." AND MasternodeStatus = 'inactive'"
+              .$sqlprotocol
+              ." GROUP BY MasternodeIP, MasternodePort, MNTestNet) mninactive";
