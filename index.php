@@ -872,3 +872,7 @@ function dashninja_masternodes_get($mysqli, $testnet = 0, $protocol = 0) {
               ." GROUP BY MasternodeIP, MasternodePort, MNTestNet) mnunlisted";
 
   // Retrieve only the masternodes which are active or inactive (no need for fully unlisted)
+  $sql = "SELECT inet_ntoa(cim.MasternodeIP) MasternodeIP, cim.MasternodePort MasternodePort, cim.MNTestNet MNTestNet, cimpk.MNPubKey MNPubKey FROM cmd_info_masternode cim, cmd_info_masternode_pubkeys cimpk"
+        ." LEFT JOIN $sqlactive USING (MasternodeIP, MasternodePort, MNTestNet)"
+        ." LEFT JOIN $sqlinactive USING (MasternodeIP, MasternodePort, MNTestNet)"
+        ." LEFT JOIN $sqlunlisted USING (MasternodeIP, MasternodePort, MNTestNet)"
