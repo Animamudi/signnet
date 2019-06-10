@@ -868,3 +868,7 @@ function dashninja_masternodes_get($mysqli, $testnet = 0, $protocol = 0) {
               ." WHERE ciml.NodeID = cns.NodeID"
               ." AND $sqltestnet"
               ." AND MasternodeStatus = 'unlisted'"
+              .$sqlprotocol
+              ." GROUP BY MasternodeIP, MasternodePort, MNTestNet) mnunlisted";
+
+  // Retrieve only the masternodes which are active or inactive (no need for fully unlisted)
