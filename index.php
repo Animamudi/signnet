@@ -876,3 +876,4 @@ function dashninja_masternodes_get($mysqli, $testnet = 0, $protocol = 0) {
         ." LEFT JOIN $sqlactive USING (MasternodeIP, MasternodePort, MNTestNet)"
         ." LEFT JOIN $sqlinactive USING (MasternodeIP, MasternodePort, MNTestNet)"
         ." LEFT JOIN $sqlunlisted USING (MasternodeIP, MasternodePort, MNTestNet)"
+        ." WHERE cim.MasternodeIP = cimpk.MasternodeIP AND cim.MasternodePort = cimpk.MasternodePort AND cim.MNTestNet = cimpk.MNTestNet AND cim.$sqltestnet AND ((ActiveCount > 0) OR (InactiveCount > 0)) AND cimpk.MNLastReported = 1";
