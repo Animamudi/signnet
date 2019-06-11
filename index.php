@@ -882,3 +882,6 @@ function dashninja_masternodes_get($mysqli, $testnet = 0, $protocol = 0) {
   $numnodes = 0;
   if ($result = $mysqli->query($sql)) {
     $nodes = array();
+    while($row = $result->fetch_assoc()){
+      $numnodes++;
+      $nodes[] = $row;
