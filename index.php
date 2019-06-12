@@ -888,3 +888,4 @@ function dashninja_masternodes_get($mysqli, $testnet = 0, $protocol = 0) {
     }
   }
   else {
+    $nodes = false;
