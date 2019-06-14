@@ -896,3 +896,9 @@ function dashninja_masternodes_get($mysqli, $testnet = 0, $protocol = 0) {
 
 // Function to retrieve the masternode list
 function dmn_masternodes2_get($mysqli, $testnet = 0, $protocol = 0, $mnpubkeys = array(), $mnips = array(), $mnvins = array()) {
+
+    $sqlprotocol = sprintf("%d",$protocol);
+    $sqltestnet = sprintf("%d",$testnet);
+
+        // Add selection by pubkey
+        $sqlpks = "";
