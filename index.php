@@ -911,3 +911,4 @@ function dmn_masternodes2_get($mysqli, $testnet = 0, $protocol = 0, $mnpubkeys =
                 $sqls .= sprintf("cim.MasternodePubkey = '%s'",$mysqli->real_escape_string($mnpubkey));
             }
             $sqlpks = " AND (".$sqls.")";
+        }
