@@ -905,3 +905,4 @@ function dmn_masternodes2_get($mysqli, $testnet = 0, $protocol = 0, $mnpubkeys =
         if (count($mnpubkeys) > 0) {
             $sqls = '';
             foreach($mnpubkeys as $mnpubkey) {
+                if (strlen($sqls)>0) {
