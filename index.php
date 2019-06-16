@@ -917,3 +917,5 @@ function dmn_masternodes2_get($mysqli, $testnet = 0, $protocol = 0, $mnpubkeys =
         $sqlips = "";
         if (count($mnips) > 0) {
             $sqls = '';
+            foreach($mnips as $mnip) {
+                if (strlen($sqls)>0) {
