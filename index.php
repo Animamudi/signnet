@@ -919,3 +919,5 @@ function dmn_masternodes2_get($mysqli, $testnet = 0, $protocol = 0, $mnpubkeys =
             $sqls = '';
             foreach($mnips as $mnip) {
                 if (strlen($sqls)>0) {
+                    $sqls .= ' OR ';
+                }
