@@ -912,3 +912,6 @@ function dmn_masternodes2_get($mysqli, $testnet = 0, $protocol = 0, $mnpubkeys =
             }
             $sqlpks = " AND (".$sqls.")";
         }
+
+        // Add selection by IP:port
+        $sqlips = "";
