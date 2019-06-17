@@ -923,3 +923,8 @@ function dmn_masternodes2_get($mysqli, $testnet = 0, $protocol = 0, $mnpubkeys =
                 }
                 $sqls .= sprintf("(cim.MasternodeIPv6 = INET6_ATON('%s') AND cim.MasternodePort = %d)",$mysqli->real_escape_string($mnip[0]),$mnip[1]);
             }
+            $sqlips = " AND (".$sqls.")";
+        }
+
+        // Add selection by Output-Index
+        $sqlvins = "";
