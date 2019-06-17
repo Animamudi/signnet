@@ -928,3 +928,5 @@ function dmn_masternodes2_get($mysqli, $testnet = 0, $protocol = 0, $mnpubkeys =
 
         // Add selection by Output-Index
         $sqlvins = "";
+        if (count($mnvins) > 0) {
+            $sqls = '';
