@@ -934,3 +934,6 @@ function dmn_masternodes2_get($mysqli, $testnet = 0, $protocol = 0, $mnpubkeys =
                 $mnoutput = explode('-',$mnvin);
                 if (strlen($sqls)>0) {
                     $sqls .= ' OR ';
+                }
+                $sqls .= sprintf("(cim.MasternodeOutputHash = '%s' AND cim.MasternodeOutputIndex = %d)",$mysqli->real_escape_string($mnoutput[0]),$mnoutput[1]);
+            }
