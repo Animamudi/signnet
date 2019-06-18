@@ -931,3 +931,6 @@ function dmn_masternodes2_get($mysqli, $testnet = 0, $protocol = 0, $mnpubkeys =
         if (count($mnvins) > 0) {
             $sqls = '';
             foreach($mnvins as $mnvin) {
+                $mnoutput = explode('-',$mnvin);
+                if (strlen($sqls)>0) {
+                    $sqls .= ' OR ';
