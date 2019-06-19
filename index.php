@@ -942,3 +942,6 @@ function dmn_masternodes2_get($mysqli, $testnet = 0, $protocol = 0, $mnpubkeys =
 
         $sql = <<<EOT
 SELECT
+    cim.MasternodeOutputHash MasternodeOutputHash,
+    cim.MasternodeOutputIndex MasternodeOutputIndex,
+    inet6_ntoa(cim.MasternodeIPv6) AS MasternodeIP,
