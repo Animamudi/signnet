@@ -939,3 +939,6 @@ function dmn_masternodes2_get($mysqli, $testnet = 0, $protocol = 0, $mnpubkeys =
             }
             $sqlvins = " AND (".$sqls.")";
         }
+
+        $sql = <<<EOT
+SELECT
