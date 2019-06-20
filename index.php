@@ -950,3 +950,7 @@ SELECT
     cim.MasternodePubkey MasternodePubkey,
     cim.MasternodeProtocol MasternodeProtocol,
     MasternodeLastSeen,
+    MasternodeActiveSeconds,
+    MasternodeLastPaid,
+    ActiveCount,
+    InactiveCount,
