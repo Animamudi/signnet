@@ -945,3 +945,8 @@ SELECT
     cim.MasternodeOutputHash MasternodeOutputHash,
     cim.MasternodeOutputIndex MasternodeOutputIndex,
     inet6_ntoa(cim.MasternodeIPv6) AS MasternodeIP,
+    cim.MasternodeTor MasternodeTor,
+    cim.MasternodePort MasternodePort,
+    cim.MasternodePubkey MasternodePubkey,
+    cim.MasternodeProtocol MasternodeProtocol,
+    MasternodeLastSeen,
