@@ -954,3 +954,6 @@ SELECT
     MasternodeLastPaid,
     ActiveCount,
     InactiveCount,
+    UnlistedCount,
+    cimlp.MNLastPaidBlock MasternodeLastPaidBlockHeight,
+    cib.BlockTime MasternodeLastPaidBlockTime,
