@@ -957,3 +957,7 @@ SELECT
     UnlistedCount,
     cimlp.MNLastPaidBlock MasternodeLastPaidBlockHeight,
     cib.BlockTime MasternodeLastPaidBlockTime,
+    cib.BlockMNValue MasternodeLastPaidBlockAmount
+FROM
+    (cmd_info_masternode2 cim,
+    cmd_info_masternode_active cima)
