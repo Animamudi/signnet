@@ -961,3 +961,6 @@ SELECT
 FROM
     (cmd_info_masternode2 cim,
     cmd_info_masternode_active cima)
+    LEFT JOIN
+        cmd_info_masternode_lastpaid cimlp
+            ON (cimlp.MNTestNet = cim.MasternodeTestNet AND cimlp.MNPubKey = cim.MasternodePubkey)
