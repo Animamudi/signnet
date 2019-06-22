@@ -964,3 +964,6 @@ FROM
     LEFT JOIN
         cmd_info_masternode_lastpaid cimlp
             ON (cimlp.MNTestNet = cim.MasternodeTestNet AND cimlp.MNPubKey = cim.MasternodePubkey)
+    LEFT JOIN
+        cmd_info_blocks cib
+            ON (cib.BlockTestNet = cimlp.MNTestNet AND cib.BlockId = cimlp.MNLastPaidBlock)
