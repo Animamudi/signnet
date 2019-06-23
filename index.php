@@ -973,3 +973,6 @@ WHERE
     cim.MasternodeTestNet = cima.MasternodeTestNet AND
     cim.MasternodeTestNet = $sqltestnet AND
     cima.MasternodeProtocol = $sqlprotocol AND
+    ((ActiveCount > 0) OR (InactiveCount > 0))$sqlpks$sqlips$sqlvins
+ORDER BY MasternodeOutputHash, MasternodeOutputIndex;
+EOT;
