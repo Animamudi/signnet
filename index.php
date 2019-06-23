@@ -970,3 +970,6 @@ FROM
 WHERE
     cim.MasternodeOutputHash = cima.MasternodeOutputHash AND
     cim.MasternodeOutputIndex = cima.MasternodeOutputIndex AND
+    cim.MasternodeTestNet = cima.MasternodeTestNet AND
+    cim.MasternodeTestNet = $sqltestnet AND
+    cima.MasternodeProtocol = $sqlprotocol AND
