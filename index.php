@@ -967,3 +967,6 @@ FROM
     LEFT JOIN
         cmd_info_blocks cib
             ON (cib.BlockTestNet = cimlp.MNTestNet AND cib.BlockId = cimlp.MNLastPaidBlock)
+WHERE
+    cim.MasternodeOutputHash = cima.MasternodeOutputHash AND
+    cim.MasternodeOutputIndex = cima.MasternodeOutputIndex AND
