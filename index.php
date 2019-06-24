@@ -976,3 +976,5 @@ WHERE
     ((ActiveCount > 0) OR (InactiveCount > 0))$sqlpks$sqlips$sqlvins
 ORDER BY MasternodeOutputHash, MasternodeOutputIndex;
 EOT;
+
+        // Execute the query
