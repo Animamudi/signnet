@@ -978,3 +978,4 @@ ORDER BY MasternodeOutputHash, MasternodeOutputIndex;
 EOT;
 
         // Execute the query
+        $numnodes = 0;
