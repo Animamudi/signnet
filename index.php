@@ -979,3 +979,5 @@ EOT;
 
         // Execute the query
         $numnodes = 0;
+        if ($result = $mysqli->query($sql)) {
+            $nodes = array();
