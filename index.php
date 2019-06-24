@@ -981,3 +981,5 @@ EOT;
         $numnodes = 0;
         if ($result = $mysqli->query($sql)) {
             $nodes = array();
+            while($row = $result->fetch_assoc()){
+                $numnodes++;
