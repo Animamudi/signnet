@@ -984,3 +984,5 @@ EOT;
             while($row = $result->fetch_assoc()){
                 $numnodes++;
                 if (is_null($row['ActiveCount'])) {
+                    $row['ActiveCount'] = 0;
+                }
