@@ -987,3 +987,7 @@ EOT;
                     $row['ActiveCount'] = 0;
                 }
                 else {
+                    $row['ActiveCount'] = intval($row['ActiveCount']);
+                }
+                if (is_null($row['InactiveCount'])) {
+                    $row['InactiveCount'] = 0;
