@@ -986,3 +986,4 @@ EOT;
                 if (is_null($row['ActiveCount'])) {
                     $row['ActiveCount'] = 0;
                 }
+                else {
