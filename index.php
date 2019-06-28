@@ -1001,3 +1001,5 @@ EOT;
                 else {
                     $row['UnlistedCount'] = intval($row['UnlistedCount']);
                 }
+                if (strlen($row['MasternodeLastSeen']) == 16) {
+                    $row['MasternodeLastSeen'] = substr($row['MasternodeLastSeen'],0,-6);
