@@ -995,3 +995,7 @@ EOT;
                 else {
                     $row['InactiveCount'] = intval($row['InactiveCount']);
                 }
+                if (is_null($row['UnlistedCount'])) {
+                    $row['UnlistedCount'] = 0;
+                }
+                else {
