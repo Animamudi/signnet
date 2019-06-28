@@ -999,3 +999,5 @@ EOT;
                     $row['UnlistedCount'] = 0;
                 }
                 else {
+                    $row['UnlistedCount'] = intval($row['UnlistedCount']);
+                }
