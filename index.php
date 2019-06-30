@@ -1009,3 +1009,7 @@ EOT;
                         "MNLastPaidTime" => $row['MasternodeLastPaidBlockTime'],
                         "MNLastPaidAmount" => $row['MasternodeLastPaidBlockAmount']);
                 }
+                else {
+                    $row['LastPaidFromBlocks'] = false;
+                }
+                unset($row['MasternodeLastPaidBlockHeight'],$row['MasternodeLastPaidBlockTime'],$row['MasternodeLastPaidBlockAmount']);
