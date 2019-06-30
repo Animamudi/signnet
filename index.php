@@ -1013,3 +1013,8 @@ EOT;
                     $row['LastPaidFromBlocks'] = false;
                 }
                 unset($row['MasternodeLastPaidBlockHeight'],$row['MasternodeLastPaidBlockTime'],$row['MasternodeLastPaidBlockAmount']);
+                $nodes[] = $row;
+            }
+        }
+        else {
+            $nodes = false;
