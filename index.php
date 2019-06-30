@@ -1019,3 +1019,9 @@ EOT;
         else {
             $nodes = false;
         }
+
+    return $nodes;
+}
+
+// Function to retrieve the masternode count
+function dmn_masternodes_count($mysqli, $testnet, &$totalmncount, &$uniquemnips) {
