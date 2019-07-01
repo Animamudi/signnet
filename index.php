@@ -1025,3 +1025,6 @@ EOT;
 
 // Function to retrieve the masternode count
 function dmn_masternodes_count($mysqli, $testnet, &$totalmncount, &$uniquemnips) {
+
+    $protocols = array();
+        $sqlprotocols = sprintf("SELECT NodeProtocol FROM cmd_nodes cn, cmd_nodes_status cns WHERE cn.NodeId = cns.NodeId AND NodeTestnet = %d GROUP BY NodeProtocol",$testnet);
