@@ -1031,3 +1031,7 @@ function dmn_masternodes_count($mysqli, $testnet, &$totalmncount, &$uniquemnips)
         // Run the query
         $result = $mysqli->query($sqlprotocols);
         while ($row = $result->fetch_assoc()) {
+            $protocols[] = intval($row['NodeProtocol']);
+        }
+    $maxprotocol = 0;
+    $mninfo = array();
