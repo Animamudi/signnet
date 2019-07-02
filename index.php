@@ -1035,3 +1035,5 @@ function dmn_masternodes_count($mysqli, $testnet, &$totalmncount, &$uniquemnips)
         }
     $maxprotocol = 0;
     $mninfo = array();
+
+    foreach ($protocols as $protocol) {
