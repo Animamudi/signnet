@@ -1037,3 +1037,5 @@ function dmn_masternodes_count($mysqli, $testnet, &$totalmncount, &$uniquemnips)
     $mninfo = array();
 
     foreach ($protocols as $protocol) {
+        $mninfo[$protocol] = array("ActiveMasternodesUniqueIPs" => array(),
+            "ActiveMasternodesCount" => 0);
