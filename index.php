@@ -1043,3 +1043,6 @@ function dmn_masternodes_count($mysqli, $testnet, &$totalmncount, &$uniquemnips)
             $maxprotocol = $protocol;
         }
     }
+
+    $uniquemnips = 0;
+    $totalmncount = 0;
