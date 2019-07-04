@@ -1046,3 +1046,6 @@ function dmn_masternodes_count($mysqli, $testnet, &$totalmncount, &$uniquemnips)
 
     $uniquemnips = 0;
     $totalmncount = 0;
+
+    foreach ($protocols as $protocol) {
+        $fulllist = dmn_masternodes2_get($mysqli, $testnet, $protocol);
