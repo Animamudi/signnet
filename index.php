@@ -1051,3 +1051,5 @@ function dmn_masternodes_count($mysqli, $testnet, &$totalmncount, &$uniquemnips)
         $fulllist = dmn_masternodes2_get($mysqli, $testnet, $protocol);
 
         $mninfo[$protocol]["ActiveMasternodesCount"] = 0;
+
+        foreach ($fulllist as $masternode) {
