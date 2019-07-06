@@ -1056,3 +1056,4 @@ function dmn_masternodes_count($mysqli, $testnet, &$totalmncount, &$uniquemnips)
             if ($masternode["ActiveCount"] > 0) {
                 if (!in_array($masternode["MasternodeIP"], $mninfo[$protocol]["ActiveMasternodesUniqueIPs"])) {
                     $mninfo[$protocol]["ActiveMasternodesUniqueIPs"][] = $masternode["MasternodeIP"];
+                }
