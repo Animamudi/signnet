@@ -1059,3 +1059,7 @@ function dmn_masternodes_count($mysqli, $testnet, &$totalmncount, &$uniquemnips)
                 }
                 $mninfo[$protocol]["ActiveMasternodesCount"]++;
             }
+        }
+        if ($protocol == $maxprotocol) {
+            $totalmncount = $mninfo[$protocol]["ActiveMasternodesCount"];
+        }
