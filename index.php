@@ -1075,3 +1075,8 @@ function dmn_masternodes_count($mysqli, $testnet, &$totalmncount, &$uniquemnips)
 }
 
 function drkmn_masternodes_count($mysqli,$testnet,&$totalmncount,&$uniquemnips) {
+
+    // Retrieve the total unique IPs per protocol version
+/*    $sqlmnnum1 = sprintf("(SELECT first.Protocol Protocol, COUNT(1) UniqueActiveMasternodesIPs FROM "
+                       ."(SELECT ciml.MasternodeIP MNIP, ciml.MasternodePort MNPort, cns.NodeProtocol Protocol, COUNT(1) ActiveCount FROM cmd_info_masternode_list ciml, cmd_nodes_status cns, cmd_nodes cmn WHERE"
+                       ." ciml.NodeID = cns.NodeID AND ciml.NodeID = cmn.NodeID AND cmn.NodeEnabled = 1 AND ciml.MNTestNet = %d"
