@@ -1071,3 +1071,5 @@ function dmn_masternodes_count($mysqli, $testnet, &$totalmncount, &$uniquemnips)
     $uniquemnips = $mninfo[$maxprotocol]["ActiveMasternodesUniqueIPs"];
 
     return $mninfo;
+
+}
