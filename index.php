@@ -1073,3 +1073,5 @@ function dmn_masternodes_count($mysqli, $testnet, &$totalmncount, &$uniquemnips)
     return $mninfo;
 
 }
+
+function drkmn_masternodes_count($mysqli,$testnet,&$totalmncount,&$uniquemnips) {
