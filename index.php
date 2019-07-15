@@ -1118,3 +1118,4 @@ function drkmn_masternodes_count($mysqli,$testnet,&$totalmncount,&$uniquemnips) 
   $uniquemnips = 0;
   // Run the queries
   if ($result = $mysqli->query($sqlmnnum)) {
+    $mninfo = array();
