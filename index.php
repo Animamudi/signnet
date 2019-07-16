@@ -1123,3 +1123,5 @@ function drkmn_masternodes_count($mysqli,$testnet,&$totalmncount,&$uniquemnips) 
     // Group the result by masternode ip:port (status is per protocolversion and nodename)
     while($row = $result->fetch_assoc()){
       $mninfo[$row['Protocol']] = array("UniqueActiveMasternodesIPs" => $row['UniqueActiveMasternodesIPs'],
+                                        "ActiveMasternodesCount" => $row['ActiveMasternodesCount']);
+      if ($curprotocol < $row['Protocol']) {
