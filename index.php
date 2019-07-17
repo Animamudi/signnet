@@ -1130,3 +1130,6 @@ function drkmn_masternodes_count($mysqli,$testnet,&$totalmncount,&$uniquemnips) 
       $uniquemnips += $row['UniqueActiveMasternodesIPs'];
       $totalmncount += $row['ActiveMasternodesCount'];
     }
+  }
+  else {
+    $mninfo = false;
