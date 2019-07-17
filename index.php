@@ -1125,3 +1125,5 @@ function drkmn_masternodes_count($mysqli,$testnet,&$totalmncount,&$uniquemnips) 
       $mninfo[$row['Protocol']] = array("UniqueActiveMasternodesIPs" => $row['UniqueActiveMasternodesIPs'],
                                         "ActiveMasternodesCount" => $row['ActiveMasternodesCount']);
       if ($curprotocol < $row['Protocol']) {
+        $curprotocol = $row['Protocol'];
+      }
