@@ -1140,3 +1140,6 @@ function drkmn_masternodes_count($mysqli,$testnet,&$totalmncount,&$uniquemnips) 
 }
 
 // Function to retrieve the masternode list
+function dmn_cmd_masternodes2_get($mysqli, $testnet = 0) {
+
+    $sqltestnet = sprintf("%d",$testnet);
