@@ -1133,3 +1133,4 @@ function drkmn_masternodes_count($mysqli,$testnet,&$totalmncount,&$uniquemnips) 
   }
   else {
     $mninfo = false;
+  }
