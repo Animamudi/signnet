@@ -1134,3 +1134,9 @@ function drkmn_masternodes_count($mysqli,$testnet,&$totalmncount,&$uniquemnips) 
   else {
     $mninfo = false;
   }
+
+  return $mninfo;
+
+}
+
+// Function to retrieve the masternode list
