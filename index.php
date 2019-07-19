@@ -1148,3 +1148,6 @@ function dmn_cmd_masternodes2_get($mysqli, $testnet = 0) {
 DROP TABLE IF EXISTS _node_status2;
 CREATE TEMPORARY TABLE IF NOT EXISTS
     _node_status2 ENGINE=MEMORY AS (
+    SELECT
+        ciml.MasternodeOutputHash,
+        ciml.MasternodeOutputIndex,
