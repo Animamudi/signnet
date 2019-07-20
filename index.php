@@ -1151,3 +1151,5 @@ CREATE TEMPORARY TABLE IF NOT EXISTS
     SELECT
         ciml.MasternodeOutputHash,
         ciml.MasternodeOutputIndex,
+        ciml.MasternodeStatus,
+        ciml.MasternodeTestNet,
