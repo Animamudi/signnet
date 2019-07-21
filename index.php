@@ -1158,3 +1158,6 @@ CREATE TEMPORARY TABLE IF NOT EXISTS
             WHEN MasternodeStatus = 'current' THEN 1
             ELSE NULL END) AS ActiveCount,
         SUM(CASE
+            WHEN MasternodeStatus = 'inactive' THEN 1
+            ELSE NULL END) AS InactiveCount,
+        SUM(CASE
