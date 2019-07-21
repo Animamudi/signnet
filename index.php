@@ -1153,3 +1153,6 @@ CREATE TEMPORARY TABLE IF NOT EXISTS
         ciml.MasternodeOutputIndex,
         ciml.MasternodeStatus,
         ciml.MasternodeTestNet,
+        SUM(CASE
+            WHEN MasternodeStatus = 'active' THEN 1
+            WHEN MasternodeStatus = 'current' THEN 1
