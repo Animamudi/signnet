@@ -1162,3 +1162,4 @@ CREATE TEMPORARY TABLE IF NOT EXISTS
             ELSE NULL END) AS InactiveCount,
         SUM(CASE
             WHEN MasternodeStatus = 'unlisted' THEN 1
+            ELSE NULL END) AS UnlistedCount
