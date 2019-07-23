@@ -1165,3 +1165,6 @@ CREATE TEMPORARY TABLE IF NOT EXISTS
             ELSE NULL END) AS UnlistedCount
     FROM
         cmd_info_masternode2_list ciml, cmd_nodes_status cns
+    WHERE
+        ciml.NodeID = cns.NodeID AND
+        ciml.MasternodeTestNet = $sqltestnet
