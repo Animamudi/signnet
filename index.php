@@ -1163,3 +1163,5 @@ CREATE TEMPORARY TABLE IF NOT EXISTS
         SUM(CASE
             WHEN MasternodeStatus = 'unlisted' THEN 1
             ELSE NULL END) AS UnlistedCount
+    FROM
+        cmd_info_masternode2_list ciml, cmd_nodes_status cns
