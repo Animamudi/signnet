@@ -1168,3 +1168,7 @@ CREATE TEMPORARY TABLE IF NOT EXISTS
     WHERE
         ciml.NodeID = cns.NodeID AND
         ciml.MasternodeTestNet = $sqltestnet
+    GROUP BY
+        ciml.MasternodeOutputHash, ciml.MasternodeOutputIndex, ciml.MasternodeTestNet
+    );
+SELECT
