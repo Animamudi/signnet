@@ -1172,3 +1172,5 @@ CREATE TEMPORARY TABLE IF NOT EXISTS
         ciml.MasternodeOutputHash, ciml.MasternodeOutputIndex, ciml.MasternodeTestNet
     );
 SELECT
+    cim.MasternodeOutputHash MasternodeOutputHash,
+    cim.MasternodeOutputIndex MasternodeOutputIndex,
