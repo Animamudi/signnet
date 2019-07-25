@@ -1180,3 +1180,7 @@ SELECT
     cim.MasternodePubkey MasternodePubkey,
     MasternodeProtocol
 FROM
+    (cmd_info_masternode2 cim,
+    _node_status2)
+WHERE
+    cim.MasternodeOutputHash = _node_status2.MasternodeOutputHash AND
