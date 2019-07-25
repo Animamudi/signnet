@@ -1174,3 +1174,5 @@ CREATE TEMPORARY TABLE IF NOT EXISTS
 SELECT
     cim.MasternodeOutputHash MasternodeOutputHash,
     cim.MasternodeOutputIndex MasternodeOutputIndex,
+    inet6_ntoa(cim.MasternodeIPv6) AS MasternodeIP,
+    cim.MasternodeTor MasternodeTor,
