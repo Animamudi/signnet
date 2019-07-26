@@ -1184,3 +1184,7 @@ FROM
     _node_status2)
 WHERE
     cim.MasternodeOutputHash = _node_status2.MasternodeOutputHash AND
+    cim.MasternodeOutputIndex = _node_status2.MasternodeOutputIndex AND
+    cim.MasternodeTestNet = _node_status2.MasternodeTestNet AND
+    cim.MasternodeTestNet = $sqltestnet AND
+    ((ActiveCount > 0) OR (InactiveCount > 0))
