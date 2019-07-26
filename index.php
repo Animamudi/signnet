@@ -1188,3 +1188,5 @@ WHERE
     cim.MasternodeTestNet = _node_status2.MasternodeTestNet AND
     cim.MasternodeTestNet = $sqltestnet AND
     ((ActiveCount > 0) OR (InactiveCount > 0))
+ORDER BY MasternodeOutputHash, MasternodeOutputIndex;
+EOT;
