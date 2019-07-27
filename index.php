@@ -1192,3 +1192,6 @@ ORDER BY MasternodeOutputHash, MasternodeOutputIndex;
 EOT;
 
     // Execute the query
+    $numnodes = 0;
+    if ($mysqli->multi_query($sql)) {
+        if ($mysqli->more_results() && $mysqli->next_result()) {
