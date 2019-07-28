@@ -1195,3 +1195,4 @@ EOT;
     $numnodes = 0;
     if ($mysqli->multi_query($sql)) {
         if ($mysqli->more_results() && $mysqli->next_result()) {
+            if ($mysqli->more_results() && $mysqli->next_result()) {
