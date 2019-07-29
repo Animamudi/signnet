@@ -1203,3 +1203,6 @@ EOT;
                         $row["OperadorReward"] = floatval(0.0);
                         $row["OperadorRewardAddress"] = "";
                         $nodes[] = $row;
+                    }
+                }
+                else {
