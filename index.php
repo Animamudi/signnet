@@ -1196,3 +1196,6 @@ EOT;
     if ($mysqli->multi_query($sql)) {
         if ($mysqli->more_results() && $mysqli->next_result()) {
             if ($mysqli->more_results() && $mysqli->next_result()) {
+                if ($result = $mysqli->store_result()) {
+                    $nodes = array();
+                    while($row = $result->fetch_assoc()){
