@@ -1199,3 +1199,6 @@ EOT;
                 if ($result = $mysqli->store_result()) {
                     $nodes = array();
                     while($row = $result->fetch_assoc()){
+                        $numnodes++;
+                        $row["OperadorReward"] = floatval(0.0);
+                        $row["OperadorRewardAddress"] = "";
