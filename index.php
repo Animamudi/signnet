@@ -1208,3 +1208,6 @@ EOT;
                 else {
                     $nodes = false;
                 }
+            }
+            else {
+                $nodes = false;
