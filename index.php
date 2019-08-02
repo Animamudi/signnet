@@ -1218,3 +1218,5 @@ EOT;
         }
     }
     else {
+        $nodes = false;
+    }
