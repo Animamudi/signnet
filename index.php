@@ -1215,3 +1215,5 @@ EOT;
         }
         else {
             $nodes = false;
+        }
+    }
