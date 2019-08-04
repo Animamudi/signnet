@@ -1229,3 +1229,7 @@ EOT;
 function dmn_cmd_protx_get($mysqli, $testnet = 0) {
 
   $sqltestnet = sprintf("%d",$testnet);
+
+  $sql = <<<EOT
+SELECT
+    cp.proTxHash proTxHash,
