@@ -1227,3 +1227,5 @@ EOT;
 
 // Function to retrieve the deterministic masternode list
 function dmn_cmd_protx_get($mysqli, $testnet = 0) {
+
+  $sqltestnet = sprintf("%d",$testnet);
