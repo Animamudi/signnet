@@ -1233,3 +1233,4 @@ function dmn_cmd_protx_get($mysqli, $testnet = 0) {
   $sql = <<<EOT
 SELECT
     cp.proTxHash proTxHash,
+    cp.collateralHash MasternodeOutputHash,
