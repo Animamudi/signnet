@@ -1234,3 +1234,7 @@ function dmn_cmd_protx_get($mysqli, $testnet = 0) {
 SELECT
     cp.proTxHash proTxHash,
     cp.collateralHash MasternodeOutputHash,
+    cp.collateralIndex MasternodeOutputIndex,
+    inet6_ntoa(cps.addrIP) MasternodeIP,
+    cps.addrPort MasternodePort,
+    cps.payoutAddress MasternodePubkey,
