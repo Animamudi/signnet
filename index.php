@@ -1238,3 +1238,7 @@ SELECT
     inet6_ntoa(cps.addrIP) MasternodeIP,
     cps.addrPort MasternodePort,
     cps.payoutAddress MasternodePubkey,
+    cps.operatorRewardAddress OperatorRewardAddress,
+    cp.operatorReward OperatorReward,
+    UNIX_TIMESTAMP(cp.LastSeen) lastSeen
+FROM
