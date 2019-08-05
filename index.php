@@ -1242,3 +1242,5 @@ SELECT
     cp.operatorReward OperatorReward,
     UNIX_TIMESTAMP(cp.LastSeen) lastSeen
 FROM
+    cmd_protx cp
+LEFT JOIN cmd_protx_state cps USING (proTxTestNet, proTxHash)
