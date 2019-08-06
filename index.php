@@ -1244,3 +1244,7 @@ SELECT
 FROM
     cmd_protx cp
 LEFT JOIN cmd_protx_state cps USING (proTxTestNet, proTxHash)
+LEFT JOIN cmd_nodes cn USING (NodeID)
+WHERE
+    cp.proTxTestNet = $sqltestnet AND (UNIX_TIMESTAMP()-UNIX_TIMESTAMP(cp.LastSeen) <= 3600)
+ORDER BY proTxHash;
