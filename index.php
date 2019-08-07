@@ -1248,3 +1248,10 @@ LEFT JOIN cmd_nodes cn USING (NodeID)
 WHERE
     cp.proTxTestNet = $sqltestnet AND (UNIX_TIMESTAMP()-UNIX_TIMESTAMP(cp.LastSeen) <= 3600)
 ORDER BY proTxHash;
+EOT;
+
+    // Execute the query
+    if ($result = $mysqli->query($sql)) {
+      $nodestmp = array();
+      while($row = $result->fetch_assoc()){
+        if ((time() - intval($row["lastSeen"])) > 300) {
