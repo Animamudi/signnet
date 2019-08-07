@@ -1255,3 +1255,4 @@ EOT;
       $nodestmp = array();
       while($row = $result->fetch_assoc()){
         if ((time() - intval($row["lastSeen"])) > 300) {
+          $active = 0;
