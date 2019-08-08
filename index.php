@@ -1258,3 +1258,10 @@ EOT;
           $active = 0;
         }
         else {
+          $active = 1;
+        }
+        if (!array_key_exists($row["proTxHash"],$nodestmp)) {
+          $nodestmp[$row["proTxHash"]] = array(
+            "MasternodeOutputHash" => $row["MasternodeOutputHash"],
+            "MasternodeOutputIndex" => intval($row["MasternodeOutputIndex"]),
+            "MasternodeIP" => $row["MasternodeIP"],
