@@ -1266,3 +1266,6 @@ EOT;
             "MasternodeOutputIndex" => intval($row["MasternodeOutputIndex"]),
             "MasternodeIP" => $row["MasternodeIP"],
             "MasternodeTor" => "",
+            "MasternodePort" => intval($row["MasternodePort"]),
+            "MasternodePubkey" => $row["MasternodePubkey"],
+            "MasternodeProtocol" => 70212,
