@@ -1265,3 +1265,4 @@ EOT;
             "MasternodeOutputHash" => $row["MasternodeOutputHash"],
             "MasternodeOutputIndex" => intval($row["MasternodeOutputIndex"]),
             "MasternodeIP" => $row["MasternodeIP"],
+            "MasternodeTor" => "",
