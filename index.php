@@ -1272,3 +1272,5 @@ EOT;
             "OperatorRewardAddress" => $row["OperatorRewardAddress"],
             "OperatorReward" => floatval($row["OperatorReward"]),
             "activeCount" => $active,
+          );
+        }
