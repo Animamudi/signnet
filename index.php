@@ -1269,3 +1269,6 @@ EOT;
             "MasternodePort" => intval($row["MasternodePort"]),
             "MasternodePubkey" => $row["MasternodePubkey"],
             "MasternodeProtocol" => 70212,
+            "OperatorRewardAddress" => $row["OperatorRewardAddress"],
+            "OperatorReward" => floatval($row["OperatorReward"]),
+            "activeCount" => $active,
