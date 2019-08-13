@@ -1274,3 +1274,6 @@ EOT;
             "activeCount" => $active,
           );
         }
+        else {
+          $nodestmp[$row["proTxHash"]]["activeCount"] += $active;
+        }
