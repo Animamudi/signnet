@@ -1277,3 +1277,7 @@ EOT;
         else {
           $nodestmp[$row["proTxHash"]]["activeCount"] += $active;
         }
+      }
+      $nodes = array();
+      foreach($nodestmp as $node) {
+        if ($node["activeCount"] > 0) {
