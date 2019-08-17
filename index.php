@@ -1281,3 +1281,6 @@ EOT;
       $nodes = array();
       foreach($nodestmp as $node) {
         if ($node["activeCount"] > 0) {
+          unset($node["activeCount"]);
+          $nodes[] = $node;
+        }
