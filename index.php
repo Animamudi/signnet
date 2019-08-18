@@ -1284,3 +1284,6 @@ EOT;
           unset($node["activeCount"]);
           $nodes[] = $node;
         }
+      }
+    }
+    else {
