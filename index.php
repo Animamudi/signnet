@@ -1298,3 +1298,6 @@ EOT;
 // ----------------------------------------------------------------------------
 // End-point to retrieve all masternodes ip, port, testnet and pubkeys
 // HTTP method:
+//   GET
+// Parameters:
+//   None
