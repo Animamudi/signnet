@@ -1303,3 +1303,7 @@ EOT;
 //   None
 // ============================================================================
 $app->get('/masternodes', function() use ($app,&$mysqli) {
+
+  global $authinfo;
+
+  //Create a response
