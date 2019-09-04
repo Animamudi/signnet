@@ -1310,3 +1310,5 @@ $app->get('/masternodes', function() use ($app,&$mysqli) {
   $response = new Phalcon\Http\Response();
 
   $request = $app->request;
+
+  // Retrieve the 'testnet' parameter
