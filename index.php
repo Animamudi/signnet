@@ -1319,3 +1319,5 @@ $app->get('/masternodes', function() use ($app,&$mysqli) {
     }
   }
   else {
+    $testnet = 0;
+  }
