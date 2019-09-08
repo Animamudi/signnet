@@ -1330,3 +1330,7 @@ $app->get('/masternodes', function() use ($app,&$mysqli) {
   else {
 
     $protxlist = dmn_cmd_protx_get($mysqli, $testnet);;
+    $protxlisterrno = $mysqli->errno;
+    $protxlisterror = $mysqli->error;
+    if ($protxlist !== false) {
+      //Change the HTTP status
