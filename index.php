@@ -1327,3 +1327,6 @@ $app->get('/masternodes', function() use ($app,&$mysqli) {
     //Send errors to the client
     $response->setJsonContent(array('status' => 'ERROR', 'messages' => array('Payload (or CONTENT_LENGTH) is missing')));
   }
+  else {
+
+    $protxlist = dmn_cmd_protx_get($mysqli, $testnet);;
