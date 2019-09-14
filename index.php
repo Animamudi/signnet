@@ -1334,3 +1334,7 @@ $app->get('/masternodes', function() use ($app,&$mysqli) {
     $protxlisterror = $mysqli->error;
     if ($protxlist !== false) {
       //Change the HTTP status
+      $response->setStatusCode(200, "OK");
+      $response->setJsonContent(array('status' => 'OK', 'data' => array('masternodes' => $protxlist)));
+    }
+    else {
