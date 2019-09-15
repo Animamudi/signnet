@@ -1341,3 +1341,5 @@ $app->get('/masternodes', function() use ($app,&$mysqli) {
       $response->setStatusCode(503, "Service Unavailable");
       $response->setJsonContent(array('status' => 'ERROR', 'messages' => array($protxlisterrno.': '.$protxlisterror,print_r($protxlist,true))));
     }
+  }
+  return $response;
