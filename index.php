@@ -1356,3 +1356,5 @@ $app->get('/masternodes', function() use ($app,&$mysqli) {
 //   None
 // ============================================================================
 $app->get('/masternodes/donations', function() use ($app,&$mysqli) {
+
+  global $authinfo;
