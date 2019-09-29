@@ -1358,3 +1358,6 @@ $app->get('/masternodes', function() use ($app,&$mysqli) {
 $app->get('/masternodes/donations', function() use ($app,&$mysqli) {
 
   global $authinfo;
+
+  //Create a response
+  $response = new Phalcon\Http\Response();
