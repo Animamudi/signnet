@@ -1371,3 +1371,5 @@ $app->get('/masternodes/donations', function() use ($app,&$mysqli) {
     $response->setJsonContent(array('status' => 'ERROR', 'messages' => array('Payload (or CONTENT_LENGTH) is missing')));
   }
   else {
+    if ($request->hasQuery('all') && ($request->getQuery('all')==1)) {
+      $sql = "SELECT MNPubKey FROM cmd_info_masternode_donation "
