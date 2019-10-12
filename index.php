@@ -1373,3 +1373,8 @@ $app->get('/masternodes/donations', function() use ($app,&$mysqli) {
   else {
     if ($request->hasQuery('all') && ($request->getQuery('all')==1)) {
       $sql = "SELECT MNPubKey FROM cmd_info_masternode_donation "
+            ."GROUP BY MNPubKey ORDER BY MNPubKey";
+    }
+    else {
+      $sql = "SELECT MNPubKey, MAX(NodeProtocol) MaxProtocol FROM cmd_info_masternode_donation mn, cmd_info_masternode_list mnl, cmd_nodes_status ns "
+            ."WHERE mn.MasternodeIP = mnl.MasternodeIP "
