@@ -1382,3 +1382,6 @@ $app->get('/masternodes/donations', function() use ($app,&$mysqli) {
             ."AND mn.MNTestNet = mnl.MNTestNet "
             ."AND mnl.NodeID = ns.NodeID "
             ."AND (mnl.MasternodeStatus = 'active' OR mnl.MasternodeStatus = 'current') "
+            ."AND (mnl.MasternodeStatus = 'active' OR mnl.MasternodeStatus = 'current') "
+            ."GROUP BY MNPubKey ORDER BY MNPubKey";
+    }
