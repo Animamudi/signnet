@@ -1378,3 +1378,7 @@ $app->get('/masternodes/donations', function() use ($app,&$mysqli) {
     else {
       $sql = "SELECT MNPubKey, MAX(NodeProtocol) MaxProtocol FROM cmd_info_masternode_donation mn, cmd_info_masternode_list mnl, cmd_nodes_status ns "
             ."WHERE mn.MasternodeIP = mnl.MasternodeIP "
+            ."AND mn.MasternodePort = mnl.MasternodePort "
+            ."AND mn.MNTestNet = mnl.MNTestNet "
+            ."AND mnl.NodeID = ns.NodeID "
+            ."AND (mnl.MasternodeStatus = 'active' OR mnl.MasternodeStatus = 'current') "
