@@ -1385,3 +1385,6 @@ $app->get('/masternodes/donations', function() use ($app,&$mysqli) {
             ."AND (mnl.MasternodeStatus = 'active' OR mnl.MasternodeStatus = 'current') "
             ."GROUP BY MNPubKey ORDER BY MNPubKey";
     }
+
+    $mndonations = array();
+    if ($result = $mysqli->query($sql)) {
