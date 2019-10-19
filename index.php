@@ -1388,3 +1388,6 @@ $app->get('/masternodes/donations', function() use ($app,&$mysqli) {
 
     $mndonations = array();
     if ($result = $mysqli->query($sql)) {
+      while($row = $result->fetch_array()){
+        $mndonations[$row[0]] = $row[1];
+      }
