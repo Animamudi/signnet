@@ -1391,3 +1391,5 @@ $app->get('/masternodes/donations', function() use ($app,&$mysqli) {
       while($row = $result->fetch_array()){
         $mndonations[$row[0]] = $row[1];
       }
+
+      //Change the HTTP status
