@@ -1408,3 +1408,5 @@ $app->get('/masternodes/donations', function() use ($app,&$mysqli) {
 // ============================================================================
 // MASTERNODES/PUBKEYS
 // ----------------------------------------------------------------------------
+// End-point to retrieve all masternodes pubkeys and max protocol
+// HTTP method:
