@@ -1417,3 +1417,5 @@ $app->get('/masternodes/donations', function() use ($app,&$mysqli) {
 $app->get('/masternodes/pubkeys', function() use ($app,&$mysqli) {
 
   global $authinfo;
+
+  //Create a response
