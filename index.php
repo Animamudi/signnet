@@ -1430,3 +1430,6 @@ $app->get('/masternodes/pubkeys', function() use ($app,&$mysqli) {
     $response->setJsonContent(array('status' => 'ERROR', 'messages' => array('Payload (or CONTENT_LENGTH) is missing')));
   }
   else {
+    if ($request->hasQuery('all') && ($request->getQuery('all')==1)) {
+      $sql = "SELECT MasternodePubkey FROM cmd_info_masternode2 "
+            ."GROUP BY MasternodePubkey ORDER BY MasternodePubkey";
