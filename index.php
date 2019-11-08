@@ -1447,3 +1447,4 @@ $app->get('/masternodes/pubkeys', function() use ($app,&$mysqli) {
       }
 
       //Change the HTTP status
+      $response->setStatusCode(200, "OK");
