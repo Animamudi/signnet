@@ -1443,3 +1443,7 @@ $app->get('/masternodes/pubkeys', function() use ($app,&$mysqli) {
     $mnpubkeys = array();
     if ($result = $mysqli->query($sql)) {
       while($row = $result->fetch_array()){
+        $mnpubkeys[$row[0]] = $row[1];
+      }
+
+      //Change the HTTP status
