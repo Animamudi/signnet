@@ -1433,3 +1433,5 @@ $app->get('/masternodes/pubkeys', function() use ($app,&$mysqli) {
     if ($request->hasQuery('all') && ($request->getQuery('all')==1)) {
       $sql = "SELECT MasternodePubkey FROM cmd_info_masternode2 "
             ."GROUP BY MasternodePubkey ORDER BY MasternodePubkey";
+    }
+    else {
