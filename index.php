@@ -1435,3 +1435,5 @@ $app->get('/masternodes/pubkeys', function() use ($app,&$mysqli) {
             ."GROUP BY MasternodePubkey ORDER BY MasternodePubkey";
     }
     else {
+      // Retrieve all known nodes for current hub
+      $sql = "SELECT MasternodePubkey, MAX(MasternodeProtocol) MaxProtocol FROM cmd_info_masternode2 "
