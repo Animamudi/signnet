@@ -1449,3 +1449,6 @@ $app->get('/masternodes/pubkeys', function() use ($app,&$mysqli) {
       //Change the HTTP status
       $response->setStatusCode(200, "OK");
       $response->setJsonContent(array('status' => 'OK', 'data' => array('mnpubkeys' => $mnpubkeys)));
+    }
+    else {
+      $response->setStatusCode(503, "Service Unavailable");
