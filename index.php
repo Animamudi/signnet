@@ -1464,3 +1464,6 @@ $app->get('/masternodes/pubkeys', function() use ($app,&$mysqli) {
 // ----------------------------------------------------------------------------
 // End-point to retrieve all known nodes for current hub (as identified by SSL)
 // HTTP method:
+//   GET
+// Parameters:
+//   NodeTestnet=1|0 (optional)
