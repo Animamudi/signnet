@@ -1456,3 +1456,5 @@ $app->get('/masternodes/pubkeys', function() use ($app,&$mysqli) {
     }
   }
   return $response;
+
+});
