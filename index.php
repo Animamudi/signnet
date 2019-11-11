@@ -1458,3 +1458,8 @@ $app->get('/masternodes/pubkeys', function() use ($app,&$mysqli) {
   return $response;
 
 });
+
+// ============================================================================
+// NODES
+// ----------------------------------------------------------------------------
+// End-point to retrieve all known nodes for current hub (as identified by SSL)
