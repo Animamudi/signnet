@@ -1469,3 +1469,5 @@ $app->get('/masternodes/pubkeys', function() use ($app,&$mysqli) {
 //   NodeTestnet=1|0 (optional)
 //   NodeEnabled=1|0 (optional)
 //   NodeType=p2pool|masternode (optional)
+// ============================================================================
+$app->get('/nodes', function() use ($app,&$mysqli) {
