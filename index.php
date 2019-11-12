@@ -1471,3 +1471,8 @@ $app->get('/masternodes/pubkeys', function() use ($app,&$mysqli) {
 //   NodeType=p2pool|masternode (optional)
 // ============================================================================
 $app->get('/nodes', function() use ($app,&$mysqli) {
+
+  global $authinfo;
+
+  //Create a response
+  $response = new Phalcon\Http\Response();
