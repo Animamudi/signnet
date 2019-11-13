@@ -1484,3 +1484,7 @@ $app->get('/nodes', function() use ($app,&$mysqli) {
     $response->setStatusCode(400, "Bad Request");
 
     //Send errors to the client
+    $response->setJsonContent(array('status' => 'ERROR', 'messages' => array('Payload (or CONTENT_LENGTH) is missing')));
+  }
+  else {
+    // Retrieve all known nodes for current hub
