@@ -1488,3 +1488,5 @@ $app->get('/nodes', function() use ($app,&$mysqli) {
   }
   else {
     // Retrieve all known nodes for current hub
+    $sql = "SELECT NodeName, NodeTestNet, NodeEnabled, NodeType, VersionPath, VersionRaw, VersionDisplay, VersionHandling, KeepUpToDate, KeepRunning FROM cmd_nodes n, cmd_hub_nodes h, cmd_versions v WHERE n.NodeId = h.NodeId AND n.VersionID = v.VersionID AND h.HubId = %d";
+    if ($request->hasQuery('NodeTestnet')) {
