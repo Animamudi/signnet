@@ -1493,3 +1493,5 @@ $app->get('/nodes', function() use ($app,&$mysqli) {
       $sql .= sprintf(" AND NodeTestnet = %d",$request->getQuery('NodeTestnet'));
     }
     if ($request->hasQuery('NodeEnabled')) {
+      $sql .= sprintf(" AND NodeEnabled = %d",$request->getQuery('NodeEnabled'));
+    }
