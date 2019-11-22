@@ -1495,3 +1495,6 @@ $app->get('/nodes', function() use ($app,&$mysqli) {
     if ($request->hasQuery('NodeEnabled')) {
       $sql .= sprintf(" AND NodeEnabled = %d",$request->getQuery('NodeEnabled'));
     }
+    if ($request->hasQuery('NodeType')) {
+      $sql .= sprintf(" AND NodeType = '%s'",$mysqli->real_escape_string($request->getQuery('NodeType')));
+    }
