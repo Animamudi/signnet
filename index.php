@@ -1498,3 +1498,6 @@ $app->get('/nodes', function() use ($app,&$mysqli) {
     if ($request->hasQuery('NodeType')) {
       $sql .= sprintf(" AND NodeType = '%s'",$mysqli->real_escape_string($request->getQuery('NodeType')));
     }
+    $sqlx = sprintf($sql,$authinfo['HubId']);
+    $numnodes = 0;
+    $nodes = array();
