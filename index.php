@@ -1501,3 +1501,4 @@ $app->get('/nodes', function() use ($app,&$mysqli) {
     $sqlx = sprintf($sql,$authinfo['HubId']);
     $numnodes = 0;
     $nodes = array();
+    if ($result = $mysqli->query($sqlx)) {
