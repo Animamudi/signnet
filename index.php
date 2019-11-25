@@ -1502,3 +1502,7 @@ $app->get('/nodes', function() use ($app,&$mysqli) {
     $numnodes = 0;
     $nodes = array();
     if ($result = $mysqli->query($sqlx)) {
+      while($row = $result->fetch_assoc()){
+        $numnodes++;
+        $nodes[$row['NodeName']] = $row;
+      }
