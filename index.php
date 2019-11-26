@@ -1506,3 +1506,6 @@ $app->get('/nodes', function() use ($app,&$mysqli) {
         $numnodes++;
         $nodes[$row['NodeName']] = $row;
       }
+
+      //Change the HTTP status
+      $response->setStatusCode(200, "OK");
