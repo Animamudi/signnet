@@ -1517,3 +1517,7 @@ $app->get('/nodes', function() use ($app,&$mysqli) {
     }
   }
   return $response;
+
+});
+
+function dashninja_cmd_getnodes($mysqli,$hubid = -1,$testnet = 0) {
