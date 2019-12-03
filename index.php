@@ -1521,3 +1521,7 @@ $app->get('/nodes', function() use ($app,&$mysqli) {
 });
 
 function dashninja_cmd_getnodes($mysqli,$hubid = -1,$testnet = 0) {
+
+  $cachefnam = CACHEFOLDER.sprintf("dashninja_cmd_getnodes_%d_%d",$hubid,$testnet);
+  $cachevalid = (is_readable($cachefnam) && ((filemtime($cachefnam)+3600)>=time()));
+  if ($cachevalid) {
