@@ -1526,3 +1526,7 @@ function dashninja_cmd_getnodes($mysqli,$hubid = -1,$testnet = 0) {
   $cachevalid = (is_readable($cachefnam) && ((filemtime($cachefnam)+3600)>=time()));
   if ($cachevalid) {
     $nodes = unserialize(file_get_contents($cachefnam));
+  }
+  else {
+    $sql = sprintf("SELECT n.NodeId NodeId, NodeName, NodeTestNet, NodeEnabled, NodeType FROM cmd_nodes n, cmd_hub_nodes h WHERE n.NodeId = h.NodeId AND n.NodeTestNet = %d",intval($testnet));
+    if ($hubid > -1) {
