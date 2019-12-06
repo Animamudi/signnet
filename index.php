@@ -1530,3 +1530,6 @@ function dashninja_cmd_getnodes($mysqli,$hubid = -1,$testnet = 0) {
   else {
     $sql = sprintf("SELECT n.NodeId NodeId, NodeName, NodeTestNet, NodeEnabled, NodeType FROM cmd_nodes n, cmd_hub_nodes h WHERE n.NodeId = h.NodeId AND n.NodeTestNet = %d",intval($testnet));
     if ($hubid > -1) {
+      $sql = sprintf($sql." AND h.HubId = %d",$hubid);
+    }
+    $result = $mysqli->query($sql);
