@@ -1533,3 +1533,5 @@ function dashninja_cmd_getnodes($mysqli,$hubid = -1,$testnet = 0) {
       $sql = sprintf($sql." AND h.HubId = %d",$hubid);
     }
     $result = $mysqli->query($sql);
+    $nodes = array();
+    if ($result !== false) {
