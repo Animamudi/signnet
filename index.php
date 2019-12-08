@@ -1537,3 +1537,9 @@ function dashninja_cmd_getnodes($mysqli,$hubid = -1,$testnet = 0) {
     if ($result !== false) {
       while($row = $result->fetch_assoc()){
         $nodes[$row['NodeName']] = $row;
+      }
+    }
+    file_put_contents($cachefnam,serialize($nodes),LOCK_EX);
+  }
+
+  return $nodes;
