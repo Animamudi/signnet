@@ -1549,3 +1549,6 @@ function dashninja_cmd_getnodes($mysqli,$hubid = -1,$testnet = 0) {
 // ============================================================================
 // PING (Reporting for dmnctl status)
 // ----------------------------------------------------------------------------
+// End-point for the hubs to report their statuses
+// HTTP method:
+//   POST
