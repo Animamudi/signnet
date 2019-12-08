@@ -1543,3 +1543,5 @@ function dashninja_cmd_getnodes($mysqli,$hubid = -1,$testnet = 0) {
   }
 
   return $nodes;
+
+}
