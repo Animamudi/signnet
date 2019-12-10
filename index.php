@@ -1552,3 +1552,6 @@ function dashninja_cmd_getnodes($mysqli,$hubid = -1,$testnet = 0) {
 // End-point for the hubs to report their statuses
 // HTTP method:
 //   POST
+// Parameters (JSON body):
+//   nodes=array of node information (mandatory)
+//   mninfo=array of masternode information (mandatory)
