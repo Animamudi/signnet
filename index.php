@@ -1555,3 +1555,5 @@ function dashninja_cmd_getnodes($mysqli,$hubid = -1,$testnet = 0) {
 // Parameters (JSON body):
 //   nodes=array of node information (mandatory)
 //   mninfo=array of masternode information (mandatory)
+//   mnlist=array of masternode status (mandatory)
+// Result (JSON body):
