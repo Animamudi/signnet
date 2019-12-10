@@ -1560,3 +1560,9 @@ function dashninja_cmd_getnodes($mysqli,$hubid = -1,$testnet = 0) {
 //   status=OK|ERROR
 //   messages=array of error messages (only if status is ERROR)
 //   data=array of insert/update information (only if status is OK)
+// ============================================================================
+$app->post('/ping', function() use ($app,&$mysqli) {
+
+  global $authinfo;
+
+  //Create a response
