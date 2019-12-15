@@ -1578,3 +1578,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
    || !array_key_exists('mninfo2',$payload) || !is_array($payload['mninfo2'])
    || !array_key_exists('mnpubkeys',$payload) || !is_array($payload['mnpubkeys'])
    || !array_key_exists('mnbudgetshow',$payload) || !is_array($payload['mnbudgetshow'])
+   || !array_key_exists('mnbudgetprojection',$payload) || !is_array($payload['mnbudgetprojection'])
+   || !array_key_exists('mnbudgetfinal',$payload) || !is_array($payload['mnbudgetfinal'])
