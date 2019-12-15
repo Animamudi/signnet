@@ -1573,3 +1573,8 @@ $app->post('/ping', function() use ($app,&$mysqli) {
 
   if (!array_key_exists('CONTENT_LENGTH',$_SERVER) || (intval($_SERVER['CONTENT_LENGTH']) == 0)
    || !array_key_exists('nodes',$payload) || !array_key_exists('testnet',$payload)
+   || !array_key_exists('stats',$payload) || !is_array($payload['stats'])
+   || !array_key_exists('mninfo',$payload) || !is_array($payload['mninfo'])
+   || !array_key_exists('mninfo2',$payload) || !is_array($payload['mninfo2'])
+   || !array_key_exists('mnpubkeys',$payload) || !is_array($payload['mnpubkeys'])
+   || !array_key_exists('mnbudgetshow',$payload) || !is_array($payload['mnbudgetshow'])
