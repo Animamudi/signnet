@@ -1585,3 +1585,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
    || !array_key_exists('gobjtriggers',$payload) || !is_array($payload['gobjtriggers'])
    || !array_key_exists('gobjvotes',$payload) || !is_array($payload['gobjvotes'])
    || !array_key_exists('protx',$payload) || !is_array($payload['protx'])
+   || !array_key_exists('mnlist',$payload) || !is_array($payload['mnlist'])
