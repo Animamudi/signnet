@@ -1588,3 +1588,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
    || !array_key_exists('mnlist',$payload) || !is_array($payload['mnlist'])
    || !array_key_exists('mnlist2',$payload) || !is_array($payload['mnlist2'])) {
     //Change the HTTP status
+    $response->setStatusCode(400, "Bad Request");
