@@ -1589,3 +1589,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
    || !array_key_exists('mnlist2',$payload) || !is_array($payload['mnlist2'])) {
     //Change the HTTP status
     $response->setStatusCode(400, "Bad Request");
+
+    //Send errors to the client
+    $response->setJsonContent(array('status' => 'ERROR', 'messages' => array('Payload is wrong or CONTENT_LENGTH is missing')));
