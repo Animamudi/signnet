@@ -1595,3 +1595,9 @@ $app->post('/ping', function() use ($app,&$mysqli) {
   }
   else {
     // Retrieve all known nodes for current hub
+    $istestnet = intval($payload['testnet']);
+    $nodes = dashninja_cmd_getnodes($mysqli,$authinfo['HubId'],$istestnet);
+    $numnodes = count($nodes);
+    if ($numnodes > 0) {
+      if ($numnodes == count($payload['nodes'])) {
+        $sqlstatus = array();
