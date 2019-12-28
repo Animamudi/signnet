@@ -1601,3 +1601,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
     if ($numnodes > 0) {
       if ($numnodes == count($payload['nodes'])) {
         $sqlstatus = array();
+        $sqlspork = array();
+          $sporkprunepernodeid = array();
+          $sqlsporksprune = null;
