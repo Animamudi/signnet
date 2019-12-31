@@ -1604,3 +1604,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
         $sqlspork = array();
           $sporkprunepernodeid = array();
           $sqlsporksprune = null;
+
+          foreach($payload['nodes'] as $uname => $node) {
+              if (!array_key_exists($uname, $nodes)) {
