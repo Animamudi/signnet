@@ -1610,3 +1610,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                   $response->setStatusCode(503, "Service Unavailable");
                   $response->setJsonContent(array('status' => 'ERROR', 'messages' => array("Unknown node reported")));
                   return $response;
+              }
+              $sqlstatus[] = sprintf("(%d,'%s',%d,%d,%d,'%s',%d,'%s','%s',NOW())",
+                  $nodes[$uname]['NodeId'],
