@@ -1613,3 +1613,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
               }
               $sqlstatus[] = sprintf("(%d,'%s',%d,%d,%d,'%s',%d,'%s','%s',NOW())",
                   $nodes[$uname]['NodeId'],
+                  $mysqli->real_escape_string($node['ProcessStatus']),
+                  $node['Version'],
