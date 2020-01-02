@@ -1615,3 +1615,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                   $nodes[$uname]['NodeId'],
                   $mysqli->real_escape_string($node['ProcessStatus']),
                   $node['Version'],
+                  $node['Protocol'],
+                  $node['Blocks'],
+                  $mysqli->real_escape_string($node['LastBlockHash']),
+                  $node['Connections'],
