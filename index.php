@@ -1619,3 +1619,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                   $node['Blocks'],
                   $mysqli->real_escape_string($node['LastBlockHash']),
                   $node['Connections'],
+                  $mysqli->real_escape_string($node['Country']),
