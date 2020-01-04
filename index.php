@@ -1620,3 +1620,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                   $mysqli->real_escape_string($node['LastBlockHash']),
                   $node['Connections'],
                   $mysqli->real_escape_string($node['Country']),
+                  $mysqli->real_escape_string($node['CountryCode'])
+              );
