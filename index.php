@@ -1622,3 +1622,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                   $mysqli->real_escape_string($node['Country']),
                   $mysqli->real_escape_string($node['CountryCode'])
               );
+              if (array_key_exists("Spork", $node) && is_array($node['Spork'])) {
+                  $sporkprunepernodeid[intval($nodes[$uname]['NodeId'])] = array();
+                  foreach ($node['Spork'] as $sporkname => $sporkvalue) {
