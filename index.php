@@ -1628,3 +1628,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                       $sporknameesc = $mysqli->real_escape_string($sporkname);
                       $sporkprunepernodeid[intval($nodes[$uname]['NodeId'])][] = sprintf('(SporkName <> "%s")', $sporknameesc);
                       $sqlspork[] = sprintf("(%d,'%s',%d)",
+                          $nodes[$uname]['NodeId'],
+                          $mysqli->real_escape_string($sporknameesc),
+                          $sporkvalue
+                      );
