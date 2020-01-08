@@ -1625,3 +1625,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
               if (array_key_exists("Spork", $node) && is_array($node['Spork'])) {
                   $sporkprunepernodeid[intval($nodes[$uname]['NodeId'])] = array();
                   foreach ($node['Spork'] as $sporkname => $sporkvalue) {
+                      $sporknameesc = $mysqli->real_escape_string($sporkname);
+                      $sporkprunepernodeid[intval($nodes[$uname]['NodeId'])][] = sprintf('(SporkName <> "%s")', $sporknameesc);
+                      $sqlspork[] = sprintf("(%d,'%s',%d)",
