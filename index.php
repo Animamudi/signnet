@@ -1641,3 +1641,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           foreach ($sporkprunepernodeid as $nodeid => $sporks) {
               if (count($sporks) > 0) {
                   $sporksprune[] = sprintf("(NodeID = %d AND ".implode(" AND ",$sporks).")",$nodeid);
+              }
+              else {
+                  $sporksprune[] = sprintf("(NodeID = %d)",$nodeid);
