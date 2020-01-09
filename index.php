@@ -1644,3 +1644,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
               }
               else {
                   $sporksprune[] = sprintf("(NodeID = %d)",$nodeid);
+              }
+          }
