@@ -1635,3 +1635,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                   }
               }
           }
+
+          $debugspork = var_export($sporkprunepernodeid,true)."\n";
