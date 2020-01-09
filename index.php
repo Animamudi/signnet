@@ -1633,3 +1633,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                           $sporkvalue
                       );
                   }
+              }
+          }
