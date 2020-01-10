@@ -1646,3 +1646,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                   $sporksprune[] = sprintf("(NodeID = %d)",$nodeid);
               }
           }
+          $sqlsporksprune = "DELETE FROM cmd_nodes_spork WHERE ".implode(" OR ",$sporksprune);
+          unset($sporksprune,$sporkprunepernodeid);
