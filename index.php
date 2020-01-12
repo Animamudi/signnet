@@ -1648,3 +1648,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           }
           $sqlsporksprune = "DELETE FROM cmd_nodes_spork WHERE ".implode(" OR ",$sporksprune);
           unset($sporksprune,$sporkprunepernodeid);
+
+        $sql = "INSERT INTO cmd_nodes_status (NodeId, NodeProcessStatus, NodeVersion, NodeProtocol, NodeBlocks, NodeLastBlockHash,"
