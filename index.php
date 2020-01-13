@@ -1650,3 +1650,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           unset($sporksprune,$sporkprunepernodeid);
 
         $sql = "INSERT INTO cmd_nodes_status (NodeId, NodeProcessStatus, NodeVersion, NodeProtocol, NodeBlocks, NodeLastBlockHash,"
+                                   ." NodeConnections, NodeCountry, NodeCountryCode, LastUpdate)"
+                           ." VALUES ".implode(',',$sqlstatus)
+            ." ON DUPLICATE KEY UPDATE NodeProcessStatus = VALUES(NodeProcessStatus), NodeVersion = VALUES(NodeVersion),"
