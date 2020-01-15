@@ -1653,3 +1653,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                    ." NodeConnections, NodeCountry, NodeCountryCode, LastUpdate)"
                            ." VALUES ".implode(',',$sqlstatus)
             ." ON DUPLICATE KEY UPDATE NodeProcessStatus = VALUES(NodeProcessStatus), NodeVersion = VALUES(NodeVersion),"
+            ." NodeProtocol = VALUES(NodeProtocol), NodeBlocks = VALUES(NodeBlocks), NodeLastBlockHash = VALUES(NodeLastBlockHash),"
