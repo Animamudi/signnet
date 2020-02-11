@@ -1662,3 +1662,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
 
           $sql = "INSERT INTO cmd_nodes_spork (NodeID, SporkName, SporkValue) VALUE ".implode(',',$sqlspork)
                 ." ON DUPLICATE KEY UPDATE SporkValue = VALUES(SporkValue)";
+          $result = $mysqli->query($sql);
