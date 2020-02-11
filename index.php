@@ -1658,3 +1658,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             ." NodeCountryCode = VALUES(NodeCountryCode), LastUpdate = NOW()";
 
         if ($result = $mysqli->query($sql)) {
+          $nodesinfo = $mysqli->info;
+
+          $sql = "INSERT INTO cmd_nodes_spork (NodeID, SporkName, SporkValue) VALUE ".implode(',',$sqlspork)
