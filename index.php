@@ -1664,3 +1664,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                 ." ON DUPLICATE KEY UPDATE SporkValue = VALUES(SporkValue)";
           $result = $mysqli->query($sql);
           $sporkinfo = "Insert: ".$mysqli->info." / Delete: ";
+
+          if (is_null($sqlsporksprune)) {
+             $sporkinfo .= "Nothing to prune";
