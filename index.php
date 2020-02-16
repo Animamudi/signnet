@@ -1667,3 +1667,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
 
           if (is_null($sqlsporksprune)) {
              $sporkinfo .= "Nothing to prune";
+          }
+          else {
+             $result = $mysqli->query($sqlsporksprune);
