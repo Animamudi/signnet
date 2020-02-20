@@ -1672,3 +1672,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
              $result = $mysqli->query($sqlsporksprune);
              $sporkinfo .= $mysqli->info;
           }
+
+          $mninfosql = array();
