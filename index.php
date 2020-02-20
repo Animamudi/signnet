@@ -1676,3 +1676,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           $mninfosql = array();
           $mnqueryexc = array();
           $sqlpc = array();
+          foreach($payload['mninfo'] as $mninfo) {
+            $mniplong = ip2long($mninfo['MasternodeIP']);
