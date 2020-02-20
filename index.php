@@ -1674,3 +1674,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           }
 
           $mninfosql = array();
+          $mnqueryexc = array();
+          $sqlpc = array();
