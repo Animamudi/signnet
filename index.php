@@ -1678,3 +1678,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           $sqlpc = array();
           foreach($payload['mninfo'] as $mninfo) {
             $mniplong = ip2long($mninfo['MasternodeIP']);
+            if ($mniplong === false) {
+              $mniplong = 0;
+            }
