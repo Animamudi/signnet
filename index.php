@@ -1684,3 +1684,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
               $mninfosql[] = sprintf("(%d, %d, %d, %d, %d, '%s', '%s')",
                                      $mniplong,
                                      $mninfo['MasternodePort'],
+                                     $mninfo['MNTestNet'],
+                                     $mninfo['MNActiveSeconds'],
+                                     $mninfo['MNLastSeen'],
+                                     $mysqli->real_escape_string($mninfo['MNCountry']),
