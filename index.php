@@ -1688,3 +1688,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                      $mninfo['MNActiveSeconds'],
                                      $mninfo['MNLastSeen'],
                                      $mysqli->real_escape_string($mninfo['MNCountry']),
+                                     $mysqli->real_escape_string($mninfo['MNCountryCode'])
