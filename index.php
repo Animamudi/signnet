@@ -1681,3 +1681,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             if ($mniplong === false) {
               $mniplong = 0;
             }
+              $mninfosql[] = sprintf("(%d, %d, %d, %d, %d, '%s', '%s')",
+                                     $mniplong,
+                                     $mninfo['MasternodePort'],
