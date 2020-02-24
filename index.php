@@ -1689,3 +1689,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                      $mninfo['MNLastSeen'],
                                      $mysqli->real_escape_string($mninfo['MNCountry']),
                                      $mysqli->real_escape_string($mninfo['MNCountryCode'])
+                                    );
+              $mnqueryexc[] = sprintf("!(MasternodeIP = %d AND MasternodePort = %d AND MNTestNet = %d)",$mniplong,$mninfo['MasternodePort'],$mninfo['MNTestNet']);
