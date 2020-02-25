@@ -1693,3 +1693,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
               $mnqueryexc[] = sprintf("!(MasternodeIP = %d AND MasternodePort = %d AND MNTestNet = %d)",$mniplong,$mninfo['MasternodePort'],$mninfo['MNTestNet']);
               $mngeoip = geoip_record_by_name($mninfo['MasternodeIP']);
               if ($mngeoip !== FALSE) {
+                 $mnipcountry = $mngeoip["country_name"];
+                 $mnipcountrycode = strtolower($mngeoip["country_code"]);
+              }
+              else {
