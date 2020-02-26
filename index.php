@@ -1697,3 +1697,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                  $mnipcountrycode = strtolower($mngeoip["country_code"]);
               }
               else {
+                 $mnipcountry = "Unknown";
+                 $mnipcountrycode = "__";
