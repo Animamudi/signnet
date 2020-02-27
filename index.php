@@ -1699,3 +1699,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
               else {
                  $mnipcountry = "Unknown";
                  $mnipcountrycode = "__";
+              }
