@@ -1705,3 +1705,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                   $mninfo['MasternodePort'],
                                      $mninfo['MNTestNet'],
                                      $mnipcountry,
+                                     $mnipcountrycode
+                                    );
