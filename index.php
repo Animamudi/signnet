@@ -1709,3 +1709,8 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                     );
 
           }
+
+          $mninfoinfo = false;
+          if (count($mninfosql) > 0) {
+            $sql = "INSERT INTO cmd_info_masternode (MasternodeIP, MasternodePort, MNTestNet,"
+                           ." MNActiveSeconds, MNLastSeen, MNCountry, MNCountryCode) VALUES ".implode(',',$mninfosql)
