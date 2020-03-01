@@ -1707,3 +1707,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                      $mnipcountry,
                                      $mnipcountrycode
                                     );
+
+          }
