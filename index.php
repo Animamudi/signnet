@@ -1714,3 +1714,8 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           if (count($mninfosql) > 0) {
             $sql = "INSERT INTO cmd_info_masternode (MasternodeIP, MasternodePort, MNTestNet,"
                            ." MNActiveSeconds, MNLastSeen, MNCountry, MNCountryCode) VALUES ".implode(',',$mninfosql)
+                ." ON DUPLICATE KEY UPDATE MNActiveSeconds = VALUES(MNActiveSeconds),"
+                ." MNLastSeen = VALUES(MNLastSeen), MNCountry = VALUES(MNCountry), MNCountryCode = VALUES(MNCountryCode)";
+
+            $result2 = $mysqli->query($sql);
+            $mninfoinfo = $mysqli->info;
