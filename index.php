@@ -1719,3 +1719,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
 
             $result2 = $mysqli->query($sql);
             $mninfoinfo = $mysqli->info;
+            unset($mninfosql);
+          }
