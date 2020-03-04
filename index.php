@@ -1721,3 +1721,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             $mninfoinfo = $mysqli->info;
             unset($mninfosql);
           }
+
+          // VersionHandling 3 (v12)
