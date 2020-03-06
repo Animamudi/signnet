@@ -1723,3 +1723,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           }
 
           // VersionHandling 3 (v12)
+/*      $wsmninfo2[] = array("MasternodeOutputHash" => $mnoutputhash,
+                           "MasternodeOutputIndex" => $mnoutputindex,
