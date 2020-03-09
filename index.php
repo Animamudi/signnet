@@ -1730,3 +1730,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                            "MasternodePubkey" => $mninfo["MasternodePubkey"],
                            "MasternodeIP" => $mninfo["MasternodeIP"],
                            "MasternodePort" => $mninfo["MasternodePort"],
+                           "MasternodeLastSeen" => $mninfo["MasternodeLastSeen"],
+                           "MasternodeActiveSeconds" => $mninfo["MasternodeActiveSeconds"],
