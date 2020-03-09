@@ -1728,3 +1728,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                            "MasternodeTestNet" => $mntestnet,
                            "MasternodeProtocol" => $mninfo["MasternodeProtocol"],
                            "MasternodePubkey" => $mninfo["MasternodePubkey"],
+                           "MasternodeIP" => $mninfo["MasternodeIP"],
+                           "MasternodePort" => $mninfo["MasternodePort"],
