@@ -1734,3 +1734,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                            "MasternodeActiveSeconds" => $mninfo["MasternodeActiveSeconds"],
                            "MasternodeLastPaid" => $mninfo["MasternodeLastPaid"]);*/
 /*          $sql = "SELECT MasternodeOutputHash, MasternodeOutputIndex, MasternodeTestNet FROM cmd_info_masternode2";
+          $unlistedmn2 = array();
