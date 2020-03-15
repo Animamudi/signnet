@@ -1740,3 +1740,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
               $unlistedmn2[] = $row;
             }
           }*/
+
+            $protxsql = array();
+            $protxstatesql = array();
+            $activemncount = 0;
