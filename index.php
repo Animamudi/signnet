@@ -1746,3 +1746,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             $activemncount = 0;
             $mnuniqueiplist = array();
             foreach($payload['protx'] as $testnet => $protxlist) {
+              foreach($protxlist as $protxhash => $protx) {
+                  $protxhash = $mysqli->real_escape_string($protxhash);
