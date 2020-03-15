@@ -1744,3 +1744,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             $protxsql = array();
             $protxstatesql = array();
             $activemncount = 0;
+            $mnuniqueiplist = array();
+            foreach($payload['protx'] as $testnet => $protxlist) {
