@@ -1748,3 +1748,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             foreach($payload['protx'] as $testnet => $protxlist) {
               foreach($protxlist as $protxhash => $protx) {
                   $protxhash = $mysqli->real_escape_string($protxhash);
+                  $protxcollateralhash = $mysqli->real_escape_string($protx['collateralHash']);
