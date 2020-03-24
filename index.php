@@ -1751,3 +1751,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                   $protxcollateralhash = $mysqli->real_escape_string($protx['collateralHash']);
                   // ProTx info
                   $protxsql[] = sprintf("(%d, '%s', '%s', %d, %5.2f, %d, NOW())",
+                      $testnet,
+                      $protxhash,
