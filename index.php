@@ -1760,3 +1760,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                   // ProTx States d
                   foreach ($protx["state"] as $uname => $protxstate) {
                       if (!array_key_exists($uname, $nodes)) {
+                          $response->setStatusCode(503, "Service Unavailable");
+                          $response->setJsonContent(array('status' => 'ERROR', 'messages' => array("Unknown node reported")));
