@@ -1758,3 +1758,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                       $protx['operatorReward'],
                       $protx['confirmations']);
                   // ProTx States d
+                  foreach ($protx["state"] as $uname => $protxstate) {
+                      if (!array_key_exists($uname, $nodes)) {
