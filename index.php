@@ -1756,3 +1756,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                       $protxcollateralhash,
                       $protx['collateralIndex'],
                       $protx['operatorReward'],
+                      $protx['confirmations']);
+                  // ProTx States d
