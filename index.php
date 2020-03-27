@@ -1762,3 +1762,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                       if (!array_key_exists($uname, $nodes)) {
                           $response->setStatusCode(503, "Service Unavailable");
                           $response->setJsonContent(array('status' => 'ERROR', 'messages' => array("Unknown node reported")));
+                          return $response;
+                      }
+                      $nodeid = $nodes[$uname]['NodeId'];
+                      $keyIDOwner = $mysqli->real_escape_string($protxstate['ownerAddress']);
