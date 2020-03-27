@@ -1753,3 +1753,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                   $protxsql[] = sprintf("(%d, '%s', '%s', %d, %5.2f, %d, NOW())",
                       $testnet,
                       $protxhash,
+                      $protxcollateralhash,
+                      $protx['collateralIndex'],
+                      $protx['operatorReward'],
