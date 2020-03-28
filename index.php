@@ -1766,3 +1766,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                       }
                       $nodeid = $nodes[$uname]['NodeId'];
                       $keyIDOwner = $mysqli->real_escape_string($protxstate['ownerAddress']);
+                      $pubKeyOperator = $mysqli->real_escape_string($protxstate['pubKeyOperator']);
