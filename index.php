@@ -1770,3 +1770,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                       $keyIDVoting = $mysqli->real_escape_string($protxstate['votingAddress']);
                       $addr = $mysqli->real_escape_string($protxstate['service']);
                       $payoutAddress = $mysqli->real_escape_string($protxstate['payoutAddress']);
+                      if (array_key_exists('operatorRewardAddress',$protxstate)) {
+                          $operatorRewardAddress = $mysqli->real_escape_string($protxstate['operatorRewardAddress']);
