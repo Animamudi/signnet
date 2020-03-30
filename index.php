@@ -1778,3 +1778,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                       }
 
                       $mnip = $mysqli->real_escape_string(substr($addr,0,strrpos($addr,":")));
+                      $mnport = intval(substr($addr,0-strlen($addr)+strlen($mnip)+1));
