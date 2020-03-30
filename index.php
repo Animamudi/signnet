@@ -1772,3 +1772,9 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                       $payoutAddress = $mysqli->real_escape_string($protxstate['payoutAddress']);
                       if (array_key_exists('operatorRewardAddress',$protxstate)) {
                           $operatorRewardAddress = $mysqli->real_escape_string($protxstate['operatorRewardAddress']);
+                      }
+                      else {
+                          $operatorRewardAddress = "";
+                      }
+
+                      $mnip = $mysqli->real_escape_string(substr($addr,0,strrpos($addr,":")));
