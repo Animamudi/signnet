@@ -1787,3 +1787,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
 
                       $protxstatesql[] = sprintf("(%d, '%s', %d, %d, %d, %d, %d, %d, %d, '%s', '%s', '%s', INET6_ATON('%s'), %d, '%s', '%s')",
                           $testnet,
+                          $protxhash,
+                          $nodeid,
+                          $protxstate['registeredHeight'],
+                          $protxstate['lastPaidHeight'],
