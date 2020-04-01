@@ -1784,3 +1784,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                         $mnactivelist[$protxhash] = $protxhash;
                         $mnuniqueiplist[$mnip] = $mnip;
                       }
+
+                      $protxstatesql[] = sprintf("(%d, '%s', %d, %d, %d, %d, %d, %d, %d, '%s', '%s', '%s', INET6_ATON('%s'), %d, '%s', '%s')",
+                          $testnet,
