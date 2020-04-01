@@ -1791,3 +1791,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                           $nodeid,
                           $protxstate['registeredHeight'],
                           $protxstate['lastPaidHeight'],
+                          $protxstate['PoSePenalty'],
+                          $protxstate['PoSeRevivedHeight'],
+                          $protxstate['PoSeBanHeight'],
