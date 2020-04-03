@@ -1797,3 +1797,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                           $protxstate['revocationReason'],
                           $keyIDOwner,
                           $pubKeyOperator,
+                          $keyIDVoting,
+                          $mnip,
