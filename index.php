@@ -1799,3 +1799,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                           $pubKeyOperator,
                           $keyIDVoting,
                           $mnip,
+                          $mnport,
