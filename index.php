@@ -1800,3 +1800,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                           $keyIDVoting,
                           $mnip,
                           $mnport,
+                          $payoutAddress,
+                          $operatorRewardAddress
+                      );
