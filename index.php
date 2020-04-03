@@ -1794,3 +1794,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                           $protxstate['PoSePenalty'],
                           $protxstate['PoSeRevivedHeight'],
                           $protxstate['PoSeBanHeight'],
+                          $protxstate['revocationReason'],
+                          $keyIDOwner,
+                          $pubKeyOperator,
