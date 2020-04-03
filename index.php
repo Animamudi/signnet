@@ -1803,3 +1803,8 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                           $payoutAddress,
                           $operatorRewardAddress
                       );
+
+                      $mngeoip = geoip_record_by_name($mnip);
+                      if ($mngeoip !== FALSE) {
+                          $mnipcountry = $mngeoip["country_name"];
+                          $mnipcountrycode = strtolower($mngeoip["country_code"]);
