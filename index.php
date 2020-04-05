@@ -1811,3 +1811,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                       } else {
                           $mnipcountry = "Unknown";
                           $mnipcountrycode = "__";
+                      }
+                      $sqlpc[] = sprintf("(INET6_ATON('%s'), %d, %d, 'unknown', '%s', '%s')",
+                          $mnip,
