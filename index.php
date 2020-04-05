@@ -1814,3 +1814,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                       }
                       $sqlpc[] = sprintf("(INET6_ATON('%s'), %d, %d, 'unknown', '%s', '%s')",
                           $mnip,
+                          $mnport,
+                          $testnet,
+                          $mnipcountry,
