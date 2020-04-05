@@ -1817,3 +1817,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                           $mnport,
                           $testnet,
                           $mnipcountry,
+                          $mnipcountrycode
+                      );
+                  }
+              }
