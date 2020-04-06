@@ -1821,3 +1821,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                       );
                   }
               }
+            }
+
+            if (count($protxsql) > 0) {
