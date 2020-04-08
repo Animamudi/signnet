@@ -1824,3 +1824,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             }
 
             if (count($protxsql) > 0) {
+                $sql = "INSERT INTO cmd_protx (proTxTestNet, proTxHash, collateralHash, collateralIndex, operatorReward, confirmations, LastSeen) "
+                    ." VALUE ".implode(',',$protxsql)
+                    ." ON DUPLICATE KEY UPDATE collateralHash = VALUES(collateralHash),"
