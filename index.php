@@ -1829,3 +1829,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     ." ON DUPLICATE KEY UPDATE collateralHash = VALUES(collateralHash),"
                     ." collateralIndex = VALUES(collateralIndex), operatorReward = VALUES(operatorReward),"
                     ." confirmations = VALUES(confirmations), LastSeen = VALUES(LastSeen)";
+
+                if ($result91 = $mysqli->query($sql)) {
+                    $protxinfo = $mysqli->info;
+                }
