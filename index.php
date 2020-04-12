@@ -1833,3 +1833,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                 if ($result91 = $mysqli->query($sql)) {
                     $protxinfo = $mysqli->info;
                 }
+                else {
+                    $protxinfo = $mysqli->error;
