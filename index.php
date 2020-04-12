@@ -1835,3 +1835,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                 }
                 else {
                     $protxinfo = $mysqli->error;
+                }
+                unset($protxsql);
+            }
+            else {
