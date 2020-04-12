@@ -1841,3 +1841,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             else {
                 $protxinfo = "Nothing to do";
             }
+
+            if (count($protxstatesql) > 0) {
+                $sql = "INSERT INTO cmd_protx_state (proTxTestNet, proTxHash, NodeID, registeredHeight, lastPaidHeight,"
