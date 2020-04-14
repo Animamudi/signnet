@@ -1849,3 +1849,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     ." VALUE ".implode(',',$protxstatesql)
                     ." ON DUPLICATE KEY UPDATE registeredHeight = VALUES(registeredHeight),"
                     ." lastPaidHeight = VALUES(lastPaidHeight), PoSePenalty = VALUES(PoSePenalty),"
+                    ." PoSeRevivedHeight = VALUES(PoSeRevivedHeight), PoSeBanHeight = VALUES(PoSeBanHeight),"
