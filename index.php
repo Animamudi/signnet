@@ -1846,3 +1846,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                 $sql = "INSERT INTO cmd_protx_state (proTxTestNet, proTxHash, NodeID, registeredHeight, lastPaidHeight,"
                     ." PoSePenalty, PoSeRevivedHeight, PoSeBanHeight, revocationReason, keyIDOwner, pubKeyOperator,"
                     ." keyIDVoting, addrIP, addrPort, payoutAddress, operatorRewardAddress)"
+                    ." VALUE ".implode(',',$protxstatesql)
+                    ." ON DUPLICATE KEY UPDATE registeredHeight = VALUES(registeredHeight),"
+                    ." lastPaidHeight = VALUES(lastPaidHeight), PoSePenalty = VALUES(PoSePenalty),"
