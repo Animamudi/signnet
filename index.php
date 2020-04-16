@@ -1850,3 +1850,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     ." ON DUPLICATE KEY UPDATE registeredHeight = VALUES(registeredHeight),"
                     ." lastPaidHeight = VALUES(lastPaidHeight), PoSePenalty = VALUES(PoSePenalty),"
                     ." PoSeRevivedHeight = VALUES(PoSeRevivedHeight), PoSeBanHeight = VALUES(PoSeBanHeight),"
+                    ." revocationReason = VALUES(revocationReason), keyIDOwner = VALUES(keyIDOwner),"
+                    ." pubKeyOperator = VALUES(pubKeyOperator), keyIDVoting = VALUES(keyIDVoting),"
+                    ." addrIP = VALUES(addrIP), addrPort = VALUES(addrPort), payoutAddress = VALUES(payoutAddress),"
