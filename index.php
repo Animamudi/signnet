@@ -1856,3 +1856,11 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     ." operatorRewardAddress = VALUES(operatorRewardAddress), StateDate = VALUES(StateDate)";
 
                 if ($result92 = $mysqli->query($sql)) {
+                    $protxstateinfo = $mysqli->info;
+                }
+                else {
+                    $protxstateinfo = $mysqli->error;
+                }
+                unset($protxstatesql);
+            }
+            else {
