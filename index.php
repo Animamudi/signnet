@@ -1853,3 +1853,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     ." revocationReason = VALUES(revocationReason), keyIDOwner = VALUES(keyIDOwner),"
                     ." pubKeyOperator = VALUES(pubKeyOperator), keyIDVoting = VALUES(keyIDVoting),"
                     ." addrIP = VALUES(addrIP), addrPort = VALUES(addrPort), payoutAddress = VALUES(payoutAddress),"
+                    ." operatorRewardAddress = VALUES(operatorRewardAddress), StateDate = VALUES(StateDate)";
+
+                if ($result92 = $mysqli->query($sql)) {
