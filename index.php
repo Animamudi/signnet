@@ -1864,3 +1864,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                 unset($protxstatesql);
             }
             else {
+                $protxstateinfo = "Nothing to do";
