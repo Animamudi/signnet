@@ -1865,3 +1865,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             }
             else {
                 $protxstateinfo = "Nothing to do";
+            }
