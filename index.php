@@ -1869,3 +1869,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
 
             $mninfosql2 = array();
           $mnqueryexc2 = array();
+          $skipinfo = "";
