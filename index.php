@@ -1866,3 +1866,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             else {
                 $protxstateinfo = "Nothing to do";
             }
+
+            $mninfosql2 = array();
+          $mnqueryexc2 = array();
