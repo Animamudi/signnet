@@ -1871,3 +1871,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           $mnqueryexc2 = array();
           $skipinfo = "";
           foreach($payload['mninfo2'] as $mninfo) {
+              $mniplong = ip2long($mninfo['MasternodeIP']);
+              if ($mniplong === false) {
+                  $mniplong = 0;
