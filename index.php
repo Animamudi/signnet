@@ -1874,3 +1874,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
               $mniplong = ip2long($mninfo['MasternodeIP']);
               if ($mniplong === false) {
                   $mniplong = 0;
+              }
+              if (filter_var($mninfo['MasternodeIP'], FILTER_VALIDATE_IP) === false) {
+                  $mnipv6 = "::";
