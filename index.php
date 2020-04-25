@@ -1877,3 +1877,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
               }
               if (filter_var($mninfo['MasternodeIP'], FILTER_VALIDATE_IP) === false) {
                   $mnipv6 = "::";
+                  if ((strlen($mninfo['MasternodeIP']) == 22) && (substr($mninfo['MasternodeIP'], -6) == ".onion")) {
+                      $mntor = substr($mninfo['MasternodeIP'], 0, 16);
