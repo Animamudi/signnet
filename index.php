@@ -1882,3 +1882,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                   } else {
                       $skipinfo .= "\nError with " . $mninfo['MasternodeOutputHash'] . "-" . $mninfo['MasternodeOutputIndex'] . " IP = " . $mninfo['MasternodeIP'];
                       $mntor = false;
+                  }
+              } else {
+                  $mnipv6 = $mninfo['MasternodeIP'];
+                  $mntor = "";
