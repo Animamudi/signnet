@@ -1886,3 +1886,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
               } else {
                   $mnipv6 = $mninfo['MasternodeIP'];
                   $mntor = "";
+              }
+              if ($mntor !== false) {
