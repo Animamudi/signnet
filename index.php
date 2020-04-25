@@ -1879,3 +1879,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                   $mnipv6 = "::";
                   if ((strlen($mninfo['MasternodeIP']) == 22) && (substr($mninfo['MasternodeIP'], -6) == ".onion")) {
                       $mntor = substr($mninfo['MasternodeIP'], 0, 16);
+                  } else {
+                      $skipinfo .= "\nError with " . $mninfo['MasternodeOutputHash'] . "-" . $mninfo['MasternodeOutputIndex'] . " IP = " . $mninfo['MasternodeIP'];
+                      $mntor = false;
