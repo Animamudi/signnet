@@ -1892,3 +1892,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                   $mninfosql2[] = sprintf("('%s', %d, %d, %d, '%s', %d, INET6_ATON('%s'), '%s', %d, %d, %d, %d, %d, '%s', '%s', '%s')",
                       $mnoutputhash,
                       $mninfo['MasternodeOutputIndex'],
+                      $mninfo['MasternodeTestNet'],
+                      $mninfo['MasternodeProtocol'],
+                      $mysqli->real_escape_string($mninfo['MasternodePubkey']),
