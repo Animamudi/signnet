@@ -1888,3 +1888,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                   $mntor = "";
               }
               if ($mntor !== false) {
+                  $mnoutputhash = $mysqli->real_escape_string($mninfo['MasternodeOutputHash']);
+                  $mninfosql2[] = sprintf("('%s', %d, %d, %d, '%s', %d, INET6_ATON('%s'), '%s', %d, %d, %d, %d, %d, '%s', '%s', '%s')",
+                      $mnoutputhash,
+                      $mninfo['MasternodeOutputIndex'],
