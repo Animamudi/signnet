@@ -1900,3 +1900,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                       $mysqli->real_escape_string($mntor),
                       $mninfo['MasternodePort'],
                       $mninfo['MasternodeLastSeen'],
+                      $mninfo['MasternodeActiveSeconds'],
+                      $mninfo['MasternodeLastPaid'],
