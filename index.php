@@ -1895,3 +1895,8 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                       $mninfo['MasternodeTestNet'],
                       $mninfo['MasternodeProtocol'],
                       $mysqli->real_escape_string($mninfo['MasternodePubkey']),
+                      $mniplong,
+                      $mnipv6,
+                      $mysqli->real_escape_string($mntor),
+                      $mninfo['MasternodePort'],
+                      $mninfo['MasternodeLastSeen'],
