@@ -1902,3 +1902,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                       $mninfo['MasternodeLastSeen'],
                       $mninfo['MasternodeActiveSeconds'],
                       $mninfo['MasternodeLastPaid'],
+                      $mninfo['MasternodeLastPaidBlock'],
+                      $mysqli->real_escape_string($mninfo['MasternodeDaemonVersion']),
+                      $mysqli->real_escape_string($mninfo['MasternodeSentinelVersion']),
