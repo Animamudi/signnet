@@ -1905,3 +1905,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                       $mninfo['MasternodeLastPaidBlock'],
                       $mysqli->real_escape_string($mninfo['MasternodeDaemonVersion']),
                       $mysqli->real_escape_string($mninfo['MasternodeSentinelVersion']),
+                      $mysqli->real_escape_string($mninfo['MasternodeSentinelState'])
+                  );
+                  $mngeoip = geoip_record_by_name($mninfo['MasternodeIP']);
+                  if ($mngeoip !== FALSE) {
