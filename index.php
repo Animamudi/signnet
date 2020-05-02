@@ -1916,3 +1916,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                       $mnipcountrycode = "__";
                   }
                   $sqlpc[] = sprintf("(INET6_ATON('%s'), %d, %d, 'unknown', '%s', '%s')",
+                      $mysqli->real_escape_string($mninfo['MasternodeIP']),
+                      $mninfo['MasternodePort'],
