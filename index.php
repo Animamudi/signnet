@@ -1912,3 +1912,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                       $mnipcountry = $mngeoip["country_name"];
                       $mnipcountrycode = strtolower($mngeoip["country_code"]);
                   } else {
+                      $mnipcountry = "Unknown";
+                      $mnipcountrycode = "__";
+                  }
+                  $sqlpc[] = sprintf("(INET6_ATON('%s'), %d, %d, 'unknown', '%s', '%s')",
