@@ -1919,3 +1919,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                       $mysqli->real_escape_string($mninfo['MasternodeIP']),
                       $mninfo['MasternodePort'],
                       $mninfo['MasternodeTestNet'],
+                      $mnipcountry,
+                      $mnipcountrycode
