@@ -1926,3 +1926,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           }
 
           $mninfo2info = false;
+          if (count($mninfosql2) > 0) {
