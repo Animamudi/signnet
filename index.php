@@ -1923,3 +1923,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                       $mnipcountrycode
                   );
               }
+          }
+
+          $mninfo2info = false;
