@@ -1929,3 +1929,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           if (count($mninfosql2) > 0) {
             $sql = "INSERT INTO cmd_info_masternode2 (MasternodeOutputHash, MasternodeOutputIndex, MasternodeTestNet,"
                   ." MasternodeProtocol, MasternodePubkey, MasternodeIP, MasternodeIPv6, MasternodeTor, MasternodePort,"
+                  ." MasternodeLastSeen, MasternodeActiveSeconds, MasternodeLastPaid, MasternodeLastPaidBlock, MasternodeDaemonVersion,"
+                  ." MasternodeSentinelVersion, MasternodeSentinelState) VALUE ".implode(',',$mninfosql2)
+                  ." ON DUPLICATE KEY UPDATE MasternodeActiveSeconds = VALUES(MasternodeActiveSeconds),"
