@@ -1927,3 +1927,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
 
           $mninfo2info = false;
           if (count($mninfosql2) > 0) {
+            $sql = "INSERT INTO cmd_info_masternode2 (MasternodeOutputHash, MasternodeOutputIndex, MasternodeTestNet,"
+                  ." MasternodeProtocol, MasternodePubkey, MasternodeIP, MasternodeIPv6, MasternodeTor, MasternodePort,"
