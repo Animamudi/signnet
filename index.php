@@ -1933,3 +1933,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                   ." MasternodeSentinelVersion, MasternodeSentinelState) VALUE ".implode(',',$mninfosql2)
                   ." ON DUPLICATE KEY UPDATE MasternodeActiveSeconds = VALUES(MasternodeActiveSeconds),"
                   ." MasternodeLastSeen = VALUES(MasternodeLastSeen), MasternodeProtocol = VALUES(MasternodeProtocol),"
+                  ." MasternodePubkey = VALUES(MasternodePubkey), MasternodeIP = VALUES(MasternodeIP), MasternodeIPv6 = VALUES(MasternodeIPv6),"
+                  ." MasternodeTor = VALUES(MasternodeTor), MasternodePort = VALUES(MasternodePort), MasternodeLastPaid = VALUES(MasternodeLastPaid),"
