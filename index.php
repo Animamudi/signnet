@@ -1932,3 +1932,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                   ." MasternodeLastSeen, MasternodeActiveSeconds, MasternodeLastPaid, MasternodeLastPaidBlock, MasternodeDaemonVersion,"
                   ." MasternodeSentinelVersion, MasternodeSentinelState) VALUE ".implode(',',$mninfosql2)
                   ." ON DUPLICATE KEY UPDATE MasternodeActiveSeconds = VALUES(MasternodeActiveSeconds),"
+                  ." MasternodeLastSeen = VALUES(MasternodeLastSeen), MasternodeProtocol = VALUES(MasternodeProtocol),"
