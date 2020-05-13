@@ -1936,3 +1936,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                   ." MasternodePubkey = VALUES(MasternodePubkey), MasternodeIP = VALUES(MasternodeIP), MasternodeIPv6 = VALUES(MasternodeIPv6),"
                   ." MasternodeTor = VALUES(MasternodeTor), MasternodePort = VALUES(MasternodePort), MasternodeLastPaid = VALUES(MasternodeLastPaid),"
                   ." MasternodeLastPaidBlock = VALUES(MasternodeLastPaidBlock), MasternodeDaemonVersion = VALUES(MasternodeDaemonVersion),"
+                  ." MasternodeSentinelVersion = VALUES(MasternodeSentinelVersion), MasternodeSentinelState = VALUES(MasternodeSentinelState)";
+
+            if ($result22 = $mysqli->query($sql)) {
