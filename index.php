@@ -1939,3 +1939,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                   ." MasternodeSentinelVersion = VALUES(MasternodeSentinelVersion), MasternodeSentinelState = VALUES(MasternodeSentinelState)";
 
             if ($result22 = $mysqli->query($sql)) {
+                $mninfo2info = $mysqli->info . $skipinfo;
+            }
+            else {
+                $mninfo2info = $mysqli->error;
