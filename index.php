@@ -1943,3 +1943,8 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             }
             else {
                 $mninfo2info = $mysqli->error;
+            }
+            unset($mninfosql2);
+          }
+          else {
+            $mninfo2info = "Nothing to do";
