@@ -1948,3 +1948,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           }
           else {
             $mninfo2info = "Nothing to do";
+          }
+
+          $mnvotessql = array();
