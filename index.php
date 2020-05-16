@@ -1953,3 +1953,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           $mnvotessql = array();
           foreach($payload['mnvotes'] as $mnvotes) {
             if (!array_key_exists($mnvotes['FromNodeUName'],$nodes)) {
+              $response->setStatusCode(503, "Service Unavailable");
+              $response->setJsonContent(array('status' => 'ERROR', 'messages' => array("Unknown node reported")));
+              return $response;
