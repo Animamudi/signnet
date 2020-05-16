@@ -1951,3 +1951,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           }
 
           $mnvotessql = array();
+          foreach($payload['mnvotes'] as $mnvotes) {
+            if (!array_key_exists($mnvotes['FromNodeUName'],$nodes)) {
