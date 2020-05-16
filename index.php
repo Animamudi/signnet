@@ -1956,3 +1956,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
               $response->setStatusCode(503, "Service Unavailable");
               $response->setJsonContent(array('status' => 'ERROR', 'messages' => array("Unknown node reported")));
               return $response;
+            }
+            $mniplong = ip2long($mnvotes['MasternodeIP']);
+            $nodeid = $nodes[$mnvotes['FromNodeUName']]['NodeId'];
+            if ($mniplong !== false) {
