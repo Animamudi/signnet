@@ -1968,3 +1968,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                      $mnvotes['MasternodeVote']
                                     );
             }
+          }
+          $mnvotesinfo = false;
