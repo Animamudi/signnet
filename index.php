@@ -1965,3 +1965,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                      $mnvotes['MasternodePort'],
                                      $mnvotes['MNTestNet'],
                                      $nodeid,
+                                     $mnvotes['MasternodeVote']
+                                    );
+            }
