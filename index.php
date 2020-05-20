@@ -1961,3 +1961,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             $nodeid = $nodes[$mnvotes['FromNodeUName']]['NodeId'];
             if ($mniplong !== false) {
               $mnvotessql[] = sprintf("(%d, %d, %d, %d, '%s')",
+                                     $mniplong,
+                                     $mnvotes['MasternodePort'],
