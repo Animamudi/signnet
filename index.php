@@ -1963,3 +1963,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
               $mnvotessql[] = sprintf("(%d, %d, %d, %d, '%s')",
                                      $mniplong,
                                      $mnvotes['MasternodePort'],
+                                     $mnvotes['MNTestNet'],
+                                     $nodeid,
