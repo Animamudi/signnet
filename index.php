@@ -1974,3 +1974,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             $sql = "INSERT INTO cmd_info_masternode_votes (MasternodeIP, MasternodePort, MNTestNet, NodeID,"
                        ." MasternodeVote) VALUES ".implode(',',$mnvotessql)
                 ." ON DUPLICATE KEY UPDATE MasternodeVote = VALUES(MasternodeVote)";
+
+            if ($result9 = $mysqli->query($sql)) {
+              $mnvotesinfo = $mysqli->info;
+            }
