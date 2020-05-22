@@ -1978,3 +1978,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             if ($result9 = $mysqli->query($sql)) {
               $mnvotesinfo = $mysqli->info;
             }
+            unset($mnvotessql);
+          }
+
+          $mnpksql = array();
