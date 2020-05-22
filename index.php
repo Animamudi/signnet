@@ -1972,3 +1972,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           $mnvotesinfo = false;
           if (count($mnvotessql) > 0) {
             $sql = "INSERT INTO cmd_info_masternode_votes (MasternodeIP, MasternodePort, MNTestNet, NodeID,"
+                       ." MasternodeVote) VALUES ".implode(',',$mnvotessql)
+                ." ON DUPLICATE KEY UPDATE MasternodeVote = VALUES(MasternodeVote)";
