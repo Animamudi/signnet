@@ -1982,3 +1982,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           }
 
           $mnpksql = array();
+          $mnpkexc = array();
