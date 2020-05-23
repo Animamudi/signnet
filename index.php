@@ -1985,3 +1985,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           $mnpkexc = array();
           foreach($payload['mnpubkeys'] as $mninfo) {
             $mniplong = ip2long($mninfo['MasternodeIP']);
+            if ($mniplong !== false) {
+              $mnpksql[] = sprintf("(%d, %d, %d, '%s', 1)",
+                                     $mniplong,
+                                     $mninfo['MasternodePort'],
