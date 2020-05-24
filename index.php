@@ -1995,3 +1995,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
               $mnpkexc[] = sprintf("!(MasternodeIP = %d AND MasternodePort = %d AND MNTestNet = %d AND MNPubKey = '%s')",$mniplong,$mninfo['MasternodePort'],$mninfo['MNTestNet'],$mysqli->real_escape_string($mninfo['MNPubKey']));
             }
           }
+
+          $sql = sprintf("SELECT MasternodeIP, MasternodePort, MNTestNet, MNPubKey FROM cmd_info_masternode_pubkeys WHERE ".implode(' AND ',$mnpkexc)." AND MNLastReported != 0 AND MNTestNet = %d",$istestnet);
