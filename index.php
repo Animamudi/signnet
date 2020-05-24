@@ -1989,3 +1989,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
               $mnpksql[] = sprintf("(%d, %d, %d, '%s', 1)",
                                      $mniplong,
                                      $mninfo['MasternodePort'],
+                                     $mninfo['MNTestNet'],
+                                     $mysqli->real_escape_string($mninfo['MNPubKey'])
