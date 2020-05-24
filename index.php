@@ -1997,3 +1997,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           }
 
           $sql = sprintf("SELECT MasternodeIP, MasternodePort, MNTestNet, MNPubKey FROM cmd_info_masternode_pubkeys WHERE ".implode(' AND ',$mnpkexc)." AND MNLastReported != 0 AND MNTestNet = %d",$istestnet);
+          $unlistedpk = array();
