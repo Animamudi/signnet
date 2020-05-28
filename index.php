@@ -2001,3 +2001,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           if ($result1c = $mysqli->query($sql)) {
             while($row = $result1c->fetch_assoc()){
               $mnpksql[] = sprintf("(%d, %d, %d, '%s', 0)",
+                                     $row['MasternodeIP'],
+                                     $row['MasternodePort'],
+                                     $row['MNTestNet'],
