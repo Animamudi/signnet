@@ -2010,3 +2010,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           }
 
           $mnpubkeysinfo = false;
+          if (count($mnpksql) > 0) {
+            $sql = "INSERT INTO cmd_info_masternode_pubkeys (MasternodeIP, MasternodePort, MNTestNet,"
+                           ." MNPubKey, MNLastReported) VALUES ".implode(',',$mnpksql)
+                ." ON DUPLICATE KEY UPDATE MNLastReported = VALUES(MNLastReported)";
