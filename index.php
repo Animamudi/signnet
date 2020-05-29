@@ -2004,3 +2004,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                      $row['MasternodeIP'],
                                      $row['MasternodePort'],
                                      $row['MNTestNet'],
+                                     $row['MNPubKey']
+                                    );
+            }
