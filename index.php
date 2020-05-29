@@ -2007,3 +2007,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                      $row['MNPubKey']
                                     );
             }
+          }
+
+          $mnpubkeysinfo = false;
