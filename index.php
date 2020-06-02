@@ -2016,3 +2016,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                 ." ON DUPLICATE KEY UPDATE MNLastReported = VALUES(MNLastReported)";
 
             $result2b = $mysqli->query($sql);
+            $mnpubkeysinfo = $mysqli->info;
+            unset($mnpksql);
+          }
