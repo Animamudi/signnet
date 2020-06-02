@@ -2014,3 +2014,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             $sql = "INSERT INTO cmd_info_masternode_pubkeys (MasternodeIP, MasternodePort, MNTestNet,"
                            ." MNPubKey, MNLastReported) VALUES ".implode(',',$mnpksql)
                 ." ON DUPLICATE KEY UPDATE MNLastReported = VALUES(MNLastReported)";
+
+            $result2b = $mysqli->query($sql);
