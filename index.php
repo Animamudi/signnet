@@ -2019,3 +2019,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             $mnpubkeysinfo = $mysqli->info;
             unset($mnpksql);
           }
+
+          $mndonationsql = array();
+          $mndonationexc = array();
