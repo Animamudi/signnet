@@ -2029,3 +2029,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                      $mniplong,
                                      $mninfo['MasternodePort'],
                                      $mninfo['MNTestNet'],
+                                     $mysqli->real_escape_string($mninfo['MNPubKey']),
+                                     $mninfo['MNDonationPercentage']
+                                    );
