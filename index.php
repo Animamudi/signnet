@@ -2025,3 +2025,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           foreach($payload['mndonation'] as $mninfo) {
             $mniplong = ip2long($mninfo['MasternodeIP']);
             if ($mniplong !== false) {
+              $mndonationsql[] = sprintf("(%d, %d, %d, '%s', %d, 1)",
+                                     $mniplong,
+                                     $mninfo['MasternodePort'],
+                                     $mninfo['MNTestNet'],
