@@ -2022,3 +2022,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
 
           $mndonationsql = array();
           $mndonationexc = array();
+          foreach($payload['mndonation'] as $mninfo) {
+            $mniplong = ip2long($mninfo['MasternodeIP']);
+            if ($mniplong !== false) {
