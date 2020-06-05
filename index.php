@@ -2032,3 +2032,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                      $mysqli->real_escape_string($mninfo['MNPubKey']),
                                      $mninfo['MNDonationPercentage']
                                     );
+              $mndonationexc[] = sprintf("!(MasternodeIP = %d AND MasternodePort = %d AND MNTestNet = %d AND MNPubKey = '%s')",$mniplong,$mninfo['MasternodePort'],$mninfo['MNTestNet'],$mysqli->real_escape_string($mninfo['MNPubKey']));
+            }
