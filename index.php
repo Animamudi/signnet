@@ -2039,3 +2039,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           $sql = "SELECT MasternodeIP, MasternodePort, MNTestNet, MNPubKey FROM cmd_info_masternode_donation WHERE ".implode(' AND ',$mndonationexc).sprintf(" AND MNLastReported != 0 AND MNTestNet = %d",$istestnet);
           $unlisteddonation = array();
           if ($result1d = $mysqli->query($sql)) {
+            while($row = $result1d->fetch_assoc()){
+              $mndonationsql[] = sprintf("(%d, %d, %d, '%s', 0, 0)",
