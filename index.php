@@ -2048,3 +2048,9 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                     );
             }
           }
+
+          $mndonationinfo = false;
+          if (count($mndonationsql) > 0) {
+            $sql = "INSERT INTO cmd_info_masternode_donation (MasternodeIP, MasternodePort, MNTestNet,"
+                           ." MNPubKey, MNDonationPercentage, MNLastReported) VALUES ".implode(',',$mndonationsql)
+                ." ON DUPLICATE KEY UPDATE MNDonationPercentage = VALUES(MNDonationPercentage), MNLastReported = VALUES(MNLastReported)";
