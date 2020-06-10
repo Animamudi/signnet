@@ -2041,3 +2041,10 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           if ($result1d = $mysqli->query($sql)) {
             while($row = $result1d->fetch_assoc()){
               $mndonationsql[] = sprintf("(%d, %d, %d, '%s', 0, 0)",
+                                     $row['MasternodeIP'],
+                                     $row['MasternodePort'],
+                                     $row['MNTestNet'],
+                                     $row['MNPubKey']
+                                    );
+            }
+          }
