@@ -2056,3 +2056,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                 ." ON DUPLICATE KEY UPDATE MNDonationPercentage = VALUES(MNDonationPercentage), MNLastReported = VALUES(MNLastReported)";
 
             $result2d = $mysqli->query($sql);
+            $mndonationinfo = $mysqli->info;
+            unset($mndonationsql);
