@@ -2058,3 +2058,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             $result2d = $mysqli->query($sql);
             $mndonationinfo = $mysqli->info;
             unset($mndonationsql);
+          }
+
+          $curnodes = array(array(),array());
