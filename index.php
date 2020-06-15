@@ -2063,3 +2063,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           $curnodes = array(array(),array());
           foreach($nodes as $node) {
             $curnodes[intval($node['NodeTestNet'])][] = $node['NodeId'];
+          }
+          $sql = sprintf("SELECT MasternodeIP, MasternodePort, MNTestNet FROM cmd_info_masternode WHERE MNTestNet = %d",$istestnet);
+          $unlistedmn = array();
+          if ($result1b = $mysqli->query($sql)) {
