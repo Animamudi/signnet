@@ -2061,3 +2061,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           }
 
           $curnodes = array(array(),array());
+          foreach($nodes as $node) {
+            $curnodes[intval($node['NodeTestNet'])][] = $node['NodeId'];
