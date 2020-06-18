@@ -2067,3 +2067,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           $sql = sprintf("SELECT MasternodeIP, MasternodePort, MNTestNet FROM cmd_info_masternode WHERE MNTestNet = %d",$istestnet);
           $unlistedmn = array();
           if ($result1b = $mysqli->query($sql)) {
+            while($row = $result1b->fetch_assoc()){
+              $unlistedmn[] = $row;
