@@ -2076,3 +2076,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           $inlist = array();
           foreach($payload['mnlist'] as $mninfo) {
             if (!array_key_exists($mninfo['FromNodeUName'],$nodes)) {
+              $response->setStatusCode(503, "Service Unavailable");
+              $response->setJsonContent(array('status' => 'ERROR', 'messages' => array("Unknown node reported")));
+              return $response;
