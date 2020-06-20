@@ -2071,3 +2071,8 @@ $app->post('/ping', function() use ($app,&$mysqli) {
               $unlistedmn[] = $row;
             }
           }
+
+          $mnlistsql = array();
+          $inlist = array();
+          foreach($payload['mnlist'] as $mninfo) {
+            if (!array_key_exists($mninfo['FromNodeUName'],$nodes)) {
