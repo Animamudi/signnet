@@ -2084,3 +2084,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             $nodeid = $nodes[$mninfo['FromNodeUName']]['NodeId'];
             if ($mniplong !== false) {
               $mnlistsql[] = sprintf("(%d, %d, %d, %d, '%s', %d, '%s')",
+                                     $mniplong,
+                                     $mninfo['MasternodePort'],
+                                     $mninfo['MNTestNet'],
