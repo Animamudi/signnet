@@ -2088,3 +2088,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                      $mninfo['MasternodePort'],
                                      $mninfo['MNTestNet'],
                                      $nodeid,
+                                     $mninfo['MasternodeStatus'],
+                                     $mninfo['MasternodeStatusPoS'],
+                                     $mninfo['MasternodeStatusEx']
+                                    );
