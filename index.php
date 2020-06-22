@@ -2087,3 +2087,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                      $mniplong,
                                      $mninfo['MasternodePort'],
                                      $mninfo['MNTestNet'],
+                                     $nodeid,
