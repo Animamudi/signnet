@@ -2092,3 +2092,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                      $mninfo['MasternodeStatusPoS'],
                                      $mninfo['MasternodeStatusEx']
                                     );
+              if (!array_key_exists($nodeid,$inlist)) {
+                $inlist[$nodeid] = array();
+              }
+              $inlist[$nodeid][] = $mniplong.':'.$mninfo['MasternodePort'].':'.$mninfo['MNTestNet'];
