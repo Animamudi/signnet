@@ -2097,3 +2097,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
               }
               $inlist[$nodeid][] = $mniplong.':'.$mninfo['MasternodePort'].':'.$mninfo['MNTestNet'];
             }
+          }
+          foreach($unlistedmn as $mninfo) {
+            foreach($curnodes[$mninfo['MNTestNet']] as $nodeid) {
