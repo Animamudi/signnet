@@ -2100,3 +2100,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           }
           foreach($unlistedmn as $mninfo) {
             foreach($curnodes[$mninfo['MNTestNet']] as $nodeid) {
+              if (array_key_exists($nodeid,$inlist) && (!in_array($mninfo['MasternodeIP'].':'.$mninfo['MasternodePort'].':'.$mninfo['MNTestNet'],$inlist[$nodeid]))) {
+                $mnlistsql[] = sprintf("(%d, %d, %d, %d, 'unlisted',-1,'')",
