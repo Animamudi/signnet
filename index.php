@@ -2107,3 +2107,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                        $mninfo['MNTestNet'],
                                        $nodeid
                                   );
+              }
