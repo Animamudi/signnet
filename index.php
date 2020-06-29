@@ -2108,3 +2108,8 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                        $nodeid
                                   );
               }
+            }
+          }
+
+          $mnlistinfo = false;
+          if (count($mnlistsql) > 0) {
