@@ -2121,3 +2121,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
               $mnlistinfo = $mysqli->info;
             }
             unset($mnlistsql);
+          }
