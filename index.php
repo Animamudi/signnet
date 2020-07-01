@@ -2118,3 +2118,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                 ." ON DUPLICATE KEY UPDATE MasternodeStatus = VALUES(MasternodeStatus), MasternodeStatusPoS = VALUES(MasternodeStatusPoS), MasternodeStatusEx = VALUES(MasternodeStatusEx)";
 
             if ($result3 = $mysqli->query($sql)) {
+              $mnlistinfo = $mysqli->info;
