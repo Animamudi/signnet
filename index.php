@@ -2119,3 +2119,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
 
             if ($result3 = $mysqli->query($sql)) {
               $mnlistinfo = $mysqli->info;
+            }
+            unset($mnlistsql);
