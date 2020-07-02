@@ -2122,3 +2122,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             }
             unset($mnlistsql);
           }
+
+          $sql = sprintf("SELECT MasternodeOutputHash, MasternodeOutputIndex, MasternodeTestNet FROM cmd_info_masternode2 WHERE MasternodeTestNet = %d",$istestnet);
+          $unlistedmn2 = array();
