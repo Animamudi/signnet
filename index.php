@@ -2125,3 +2125,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
 
           $sql = sprintf("SELECT MasternodeOutputHash, MasternodeOutputIndex, MasternodeTestNet FROM cmd_info_masternode2 WHERE MasternodeTestNet = %d",$istestnet);
           $unlistedmn2 = array();
+          if ($result1xb = $mysqli->query($sql)) {
