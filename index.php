@@ -2127,3 +2127,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           $unlistedmn2 = array();
           if ($result1xb = $mysqli->query($sql)) {
             while($row = $result1xb->fetch_assoc()){
+              $unlistedmn2[] = $row;
+            }
+          }
