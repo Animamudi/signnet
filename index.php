@@ -2130,3 +2130,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
               $unlistedmn2[] = $row;
             }
           }
+
+          // v12 handling (masternodes ID = vins)
