@@ -2132,3 +2132,9 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           }
 
           // v12 handling (masternodes ID = vins)
+          $mnlist2sql = array();
+          $inlist2 = array();
+          foreach($payload['mnlist2'] as $mninfo) {
+            if (!array_key_exists($mninfo['FromNodeUName'],$nodes)) {
+              $response->setStatusCode(503, "Service Unavailable");
+              $response->setJsonContent(array('status' => 'ERROR', 'messages' => array("Unknown node reported")));
