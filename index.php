@@ -2140,3 +2140,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
               $response->setJsonContent(array('status' => 'ERROR', 'messages' => array("Unknown node reported")));
               return $response;
             }
+            $nodeid = $nodes[$mninfo['FromNodeUName']]['NodeId'];
+            $mnlist2sql[] = sprintf("('%s', %d, %d, %d, '%s', '%s')",
+                                     $mninfo['MasternodeOutputHash'],
