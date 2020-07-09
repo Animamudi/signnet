@@ -2144,3 +2144,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             $mnlist2sql[] = sprintf("('%s', %d, %d, %d, '%s', '%s')",
                                      $mninfo['MasternodeOutputHash'],
                                      $mninfo['MasternodeOutputIndex'],
+                                     $mninfo['MasternodeTestNet'],
+                                     $nodeid,
+                                     $mninfo['MasternodeStatus'],
