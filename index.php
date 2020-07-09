@@ -2147,3 +2147,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                      $mninfo['MasternodeTestNet'],
                                      $nodeid,
                                      $mninfo['MasternodeStatus'],
+                                     $mninfo['MasternodeStatusEx']
+                                    );
+            if (!array_key_exists($nodeid,$inlist2)) {
+              $inlist2[$nodeid] = array();
