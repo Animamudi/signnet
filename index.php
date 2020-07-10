@@ -2157,3 +2157,9 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           foreach($unlistedmn2 as $mninfo) {
             foreach($curnodes[$mninfo['MasternodeTestNet']] as $nodeid) {
               if (array_key_exists($nodeid,$inlist2) && (!in_array($mninfo['MasternodeOutputHash']."-".$mninfo['MasternodeOutputIndex']."-".$mninfo['MasternodeTestNet'],$inlist2[$nodeid]))) {
+                $mnlist2sql[] = sprintf("('%s', %d, %d, %d, 'unlisted', '')",
+                                     $mninfo['MasternodeOutputHash'],
+                                     $mninfo['MasternodeOutputIndex'],
+                                     $mninfo['MasternodeTestNet'],
+                                     $nodeid
+                                  );
