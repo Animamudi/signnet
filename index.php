@@ -2163,3 +2163,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                      $mninfo['MasternodeTestNet'],
                                      $nodeid
                                   );
+              }
+            }
+          }
