@@ -2166,3 +2166,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
               }
             }
           }
+
+          $mnlist2info = false;
+          if (count($mnlist2sql) > 0) {
