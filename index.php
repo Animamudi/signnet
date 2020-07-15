@@ -2171,3 +2171,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           if (count($mnlist2sql) > 0) {
             $sql = "INSERT INTO cmd_info_masternode2_list (MasternodeOutputHash, MasternodeOutputIndex, MasternodeTestNet, NodeID,"
                        ." MasternodeStatus, MasternodeStatusEx) VALUES ".implode(',',$mnlist2sql)
+                ." ON DUPLICATE KEY UPDATE MasternodeStatus = VALUES(MasternodeStatus), MasternodeStatusEx = VALUES(MasternodeStatusEx)";
