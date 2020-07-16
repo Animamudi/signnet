@@ -2175,3 +2175,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
 
             if ($result3x = $mysqli->query($sql)) {
               $mnlist2info = $mysqli->info;
+            }
