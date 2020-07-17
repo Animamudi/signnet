@@ -2184,3 +2184,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           else {
             $mnlist2info = "Nothing to do";
           }
+
+          $pcinfo = false;
+          if (count($sqlpc) > 0) {
+            $sql = "INSERT IGNORE INTO cmd_portcheck (NodeIP, NodePort, NodeTestNet, NodePortCheck, NodeCountry, NodeCountryCode)"
