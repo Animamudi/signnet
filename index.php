@@ -2192,3 +2192,9 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             if ($result4 = $mysqli->query($sql)) {
               $pcinfo = $mysqli->info;
             }
+          }
+
+          //$activemncount = array(0,0);
+          $networkhashps = 0;
+          $governancenextsuperblock = 0;
+          $governancebudget = 0;
