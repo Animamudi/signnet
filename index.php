@@ -2190,3 +2190,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             $sql = "INSERT IGNORE INTO cmd_portcheck (NodeIP, NodePort, NodeTestNet, NodePortCheck, NodeCountry, NodeCountryCode)"
                   ." VALUES ".implode(',',$sqlpc);
             if ($result4 = $mysqli->query($sql)) {
+              $pcinfo = $mysqli->info;
+            }
