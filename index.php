@@ -2198,3 +2198,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           $networkhashps = 0;
           $governancenextsuperblock = 0;
           $governancebudget = 0;
+          $pricebtc = 0.0;
+          $priceeuro = 0.0;
+          $priceusd = 0.0;
+          foreach($payload['stats'] as $statid => $statval) {
