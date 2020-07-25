@@ -2207,3 +2207,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             }
             elseif ($statid == "governancenextsuperblock") {
               $governancenextsuperblock = intval($statval);
+            }
+            elseif ($statid == "governancebudget") {
+              $governancebudget = floatval($statval);
