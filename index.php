@@ -2202,3 +2202,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           $priceeuro = 0.0;
           $priceusd = 0.0;
           foreach($payload['stats'] as $statid => $statval) {
+            if ($statid == "networkhashps") {
+              $networkhashps = intval($statval);
