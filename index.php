@@ -2204,3 +2204,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           foreach($payload['stats'] as $statid => $statval) {
             if ($statid == "networkhashps") {
               $networkhashps = intval($statval);
+            }
+            elseif ($statid == "governancenextsuperblock") {
+              $governancenextsuperblock = intval($statval);
