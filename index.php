@@ -2212,3 +2212,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
               $governancebudget = floatval($statval);
             }
           }
+
+          $sqlstats2 = array();
+          $activemncount = count($mnactivelist);
+          $uniquemnips = count($mnuniqueiplist);
