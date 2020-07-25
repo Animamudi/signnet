@@ -2217,3 +2217,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           $activemncount = count($mnactivelist);
           $uniquemnips = count($mnuniqueiplist);
           //dmn_masternodes_count($mysqli,$istestnet,$activemncount,$uniquemnips);
+          $teststr = "";
+          if ($istestnet == 1) {
