@@ -2222,3 +2222,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             $teststr = "test";
           }
           $sqlstats2[] = sprintf("('%s','%s',%d,'dashninja')","mnactive$teststr",$activemncount,time());
+          $sqlstats2[] = sprintf("('%s','%s',%d,'dashninja')","mnuniqip$teststr",$uniquemnips,time());
