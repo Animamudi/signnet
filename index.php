@@ -2219,3 +2219,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           //dmn_masternodes_count($mysqli,$istestnet,$activemncount,$uniquemnips);
           $teststr = "";
           if ($istestnet == 1) {
+            $teststr = "test";
+          }
+          $sqlstats2[] = sprintf("('%s','%s',%d,'dashninja')","mnactive$teststr",$activemncount,time());
