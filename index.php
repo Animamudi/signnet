@@ -2229,3 +2229,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           if ($result = $mysqli->query($sql)) {
             while ($row = $result->fetch_assoc()) {
               $tmp[$row['StatKey']] = floatval($row['StatValue']);
+            }
+            $result->free();
