@@ -2231,3 +2231,8 @@ $app->post('/ping', function() use ($app,&$mysqli) {
               $tmp[$row['StatKey']] = floatval($row['StatValue']);
             }
             $result->free();
+          }
+          $pricebtc = $tmp['btcdrk'];
+          $priceeur = $pricebtc*$tmp['eurobtc'];
+          $priceusd = $pricebtc*$tmp['usdbtc'];
+          $activemncountath = $tmp["mnactiveath$teststr"];
