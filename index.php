@@ -2236,3 +2236,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           $priceeur = $pricebtc*$tmp['eurobtc'];
           $priceusd = $pricebtc*$tmp['usdbtc'];
           $activemncountath = $tmp["mnactiveath$teststr"];
+          if ($activemncount > $activemncountath) {
+            $sqlstats2[] = sprintf("('%s','%s',%d,'dashninja')","mnactiveath$teststr",$activemncount,time());
