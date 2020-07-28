@@ -2223,3 +2223,9 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           }
           $sqlstats2[] = sprintf("('%s','%s',%d,'dashninja')","mnactive$teststr",$activemncount,time());
           $sqlstats2[] = sprintf("('%s','%s',%d,'dashninja')","mnuniqip$teststr",$uniquemnips,time());
+
+          $sql = "SELECT StatKey, StatValue FROM cmd_stats_values WHERE StatKey = 'usdbtc' OR StatKey = 'btcdrk' OR StatKey = 'eurobtc' OR StatKey = 'mnactiveath$teststr'";
+          $tmp = array("btcdrk" => 0.0, "eurobtc" => 0.0, "usdbtc" => 0.0, "mnactiveath$teststr" => 0);
+          if ($result = $mysqli->query($sql)) {
+            while ($row = $result->fetch_assoc()) {
+              $tmp[$row['StatKey']] = floatval($row['StatValue']);
