@@ -2238,3 +2238,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           $activemncountath = $tmp["mnactiveath$teststr"];
           if ($activemncount > $activemncountath) {
             $sqlstats2[] = sprintf("('%s','%s',%d,'dashninja')","mnactiveath$teststr",$activemncount,time());
+          }
