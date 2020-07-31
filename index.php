@@ -2239,3 +2239,11 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           if ($activemncount > $activemncountath) {
             $sqlstats2[] = sprintf("('%s','%s',%d,'dashninja')","mnactiveath$teststr",$activemncount,time());
           }
+
+          $sqlstats[] = sprintf("(%d,NOW(),%d,%d,%01.9f,%01.9f,%01.9f)",
+                                       $istestnet,
+                                       $activemncount,
+                                       $networkhashps,
+                                       $pricebtc,
+                                       $priceusd,
+                                       $priceeur
