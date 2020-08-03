@@ -2247,3 +2247,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                        $pricebtc,
                                        $priceusd,
                                        $priceeur
+                                  );
