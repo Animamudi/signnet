@@ -2249,3 +2249,8 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                        $priceeur
                                   );
           $statkey = "networkhashpers";
+          if ($istestnet == 1) {
+            $statkey .= "test";
+          }
+          $sqlstats2[] = sprintf("('%s','%s',%d,'dashninja')",$statkey,$networkhashps,time());
+          if ((isset($governancenextsuperblock)) && (!is_null($governancenextsuperblock)) && ($governancenextsuperblock > 0)) {
