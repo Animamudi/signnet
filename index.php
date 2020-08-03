@@ -2248,3 +2248,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                        $priceusd,
                                        $priceeur
                                   );
+          $statkey = "networkhashpers";
