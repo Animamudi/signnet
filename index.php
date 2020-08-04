@@ -2254,3 +2254,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           }
           $sqlstats2[] = sprintf("('%s','%s',%d,'dashninja')",$statkey,$networkhashps,time());
           if ((isset($governancenextsuperblock)) && (!is_null($governancenextsuperblock)) && ($governancenextsuperblock > 0)) {
+            $statkey = "governancesb";
+            if ($istestnet == 1) {
+              $statkey .= "test";
+            }
