@@ -2264,3 +2264,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             $statkey = "governancebudget";
             if ($istestnet == 1) {
               $statkey .= "test";
+            }
+            $sqlstats2[] = sprintf("('%s','%s',%01.9f,'dashninja')", $statkey, $governancebudget, time());
+          }
