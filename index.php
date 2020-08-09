@@ -2267,3 +2267,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             }
             $sqlstats2[] = sprintf("('%s','%s',%01.9f,'dashninja')", $statkey, $governancebudget, time());
           }
+
+          $statsinfo = false;
+          if (count($sqlstats) > 0) {
+            $sql = "INSERT IGNORE INTO cmd_stats_history (TestNet, StatDate, ActiveMNCount, NetworkHashPerSec, PriceBTC, PriceUSD, PriceEUR)"
