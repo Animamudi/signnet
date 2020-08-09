@@ -2271,3 +2271,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           $statsinfo = false;
           if (count($sqlstats) > 0) {
             $sql = "INSERT IGNORE INTO cmd_stats_history (TestNet, StatDate, ActiveMNCount, NetworkHashPerSec, PriceBTC, PriceUSD, PriceEUR)"
+                  ." VALUES ".implode(',',$sqlstats);
+            if ($result5 = $mysqli->query($sql)) {
