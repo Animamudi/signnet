@@ -2274,3 +2274,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                   ." VALUES ".implode(',',$sqlstats);
             if ($result5 = $mysqli->query($sql)) {
               $statsinfo = $mysqli->info;
+              if (is_null($statsinfo)) {
+                $statsinfo = true;
