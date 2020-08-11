@@ -2276,3 +2276,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
               $statsinfo = $mysqli->info;
               if (is_null($statsinfo)) {
                 $statsinfo = true;
+              }
+            }
