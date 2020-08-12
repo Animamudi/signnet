@@ -2278,3 +2278,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                 $statsinfo = true;
               }
             }
+          }
