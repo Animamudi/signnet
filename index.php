@@ -2279,3 +2279,10 @@ $app->post('/ping', function() use ($app,&$mysqli) {
               }
             }
           }
+
+          if (count($sqlstats2) > 0) {
+            $sql = "INSERT INTO cmd_stats_values (StatKey, StatValue, LastUpdate, Source)"
+              ." VALUES ".implode(',',$sqlstats2)
+              ." ON DUPLICATE KEY UPDATE StatValue = VALUES(StatValue), LastUpdate = VALUES(LastUpdate), Source = VALUES(Source)";
+
+            if ($result = $mysqli->query($sql)) {
