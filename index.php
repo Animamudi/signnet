@@ -2286,3 +2286,8 @@ $app->post('/ping', function() use ($app,&$mysqli) {
               ." ON DUPLICATE KEY UPDATE StatValue = VALUES(StatValue), LastUpdate = VALUES(LastUpdate), Source = VALUES(Source)";
 
             if ($result = $mysqli->query($sql)) {
+              $stats2info = $mysqli->info;
+              if (is_null($stats2info)) {
+                $stats2info = true;
+              }
+            }
