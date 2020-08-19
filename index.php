@@ -2315,3 +2315,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                           $mnbudget["IsEstablished"] ? 1 : 0,
                                           $mnbudget["IsValid"] ? 1 : 0,
                                           $mysqli->real_escape_string($mnbudget["IsValidReason"]),
+                                          $mnbudget["fValid"] ? 1 : 0
+                                        );
+          }
