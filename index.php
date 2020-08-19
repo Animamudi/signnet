@@ -2299,3 +2299,8 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                           $mnbudget["BudgetTesnet"],
                                           $mysqli->real_escape_string($mnbudget["Hash"]),
                                           $mysqli->real_escape_string($mnbudget["BudgetId"]),
+                                          $mysqli->real_escape_string($mnbudget["URL"]),
+                                          $mysqli->real_escape_string($mnbudget["FeeHash"]),
+                                          $mnbudget["BlockStart"],
+                                          $mnbudget["BlockEnd"],
+                                          $mnbudget["TotalPaymentCount"],
