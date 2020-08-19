@@ -2292,3 +2292,8 @@ $app->post('/ping', function() use ($app,&$mysqli) {
               }
             }
           }
+
+          $sqlbudgetshow = array();
+          foreach($payload['mnbudgetshow'] as $mnbudget) {
+            $sqlbudgetshow[] = sprintf("(%d, '%s','%s','%s','%s',%d,%d,%d,%d,'%s',%.8f,%d,%d,%d,%.8f,%.8f,%d,%d,'%s',%d,NOW(),NOW())",
+                                          $mnbudget["BudgetTesnet"],
