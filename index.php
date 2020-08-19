@@ -2304,3 +2304,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                           $mnbudget["BlockStart"],
                                           $mnbudget["BlockEnd"],
                                           $mnbudget["TotalPaymentCount"],
+                                          $mnbudget["RemainingPaymentCount"],
+                                          $mysqli->real_escape_string($mnbudget["PaymentAddress"]),
