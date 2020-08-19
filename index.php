@@ -2309,3 +2309,8 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                           $mnbudget["Ratio"],
                                           $mnbudget["Yeas"],
                                           $mnbudget["Nays"],
+                                          $mnbudget["Abstains"],
+                                          $mnbudget["TotalPayment"],
+                                          $mnbudget["MonthlyPayment"],
+                                          $mnbudget["IsEstablished"] ? 1 : 0,
+                                          $mnbudget["IsValid"] ? 1 : 0,
