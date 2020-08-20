@@ -2318,3 +2318,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                           $mnbudget["fValid"] ? 1 : 0
                                         );
           }
+          $mnbudgetshowinfo = false;
+          if (count($sqlbudgetshow) > 0) {
