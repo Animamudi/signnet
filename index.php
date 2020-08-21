@@ -2325,3 +2325,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                   ." `TotalPayment`, `MonthlyPayment`, `IsEstablished`, `IsValid`, `IsValidReason`, `fValid`, `FirstReported`, LastReported)"
                   ." VALUES ".implode(',',$sqlbudgetshow)
                   ." ON DUPLICATE KEY UPDATE BudgetId = VALUES(BudgetId), BudgetURL = VALUES(BudgetURL), FeeHash = VALUES(FeeHash),"
+                  ." BlockStart = VALUES(BlockStart), BlockEnd = VALUES(BlockEnd), TotalPaymentCount = VALUES(TotalPaymentCount),"
