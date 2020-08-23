@@ -2333,3 +2333,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             if ($result60 = $mysqli->query($sql)) {
               $mnbudgetshowinfo = $mysqli->info;
               if (is_null($mnbudgetshowinfo)) {
+                $mnbudgetshowinfo = true;
