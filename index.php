@@ -2339,3 +2339,8 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           }
 
           $sqlbudgetprojection = array();
+          foreach($payload['mnbudgetprojection'] as $mnbudget) {
+            $sqlbudgetprojection[] = sprintf("(%d, '%s','%s','%s',%d,%d,%d,%d,'%s',%.8f,%d,%d,%d,%.8f,%.8f,%.8f,%.8f,%d,'%s',%d,NOW(),NOW())",
+                                          $mnbudget["BudgetTesnet"],
+                                          $mysqli->real_escape_string($mnbudget["Hash"]),
+                                          $mysqli->real_escape_string($mnbudget["BudgetId"]),
