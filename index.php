@@ -2337,3 +2337,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
               }
             }
           }
+
+          $sqlbudgetprojection = array();
