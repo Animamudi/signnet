@@ -2329,3 +2329,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                   ." RemainingPaymentCount = VALUES(RemainingPaymentCount), PaymentAddress = VALUES(PaymentAddress),"
                   ." Ratio = VALUES(Ratio), Yeas = VALUES(Yeas), Nays = VALUES(Nays), Abstains = VALUES(Abstains),"
                   ." TotalPayment = VALUES(TotalPayment), MonthlyPayment = VALUES(MonthlyPayment), IsEstablished = VALUES(IsEstablished),"
+                  ." IsValid = VALUES(IsValid), IsValidReason = VALUES(IsValidReason), fValid = VALUES(fValid), LastReported = VALUES(LastReported)";
+            if ($result60 = $mysqli->query($sql)) {
+              $mnbudgetshowinfo = $mysqli->info;
+              if (is_null($mnbudgetshowinfo)) {
