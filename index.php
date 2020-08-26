@@ -2352,3 +2352,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                           $mysqli->real_escape_string($mnbudget["PaymentAddress"]),
                                           $mnbudget["Ratio"],
                                           $mnbudget["Yeas"],
+                                          $mnbudget["Nays"],
+                                          $mnbudget["Abstains"],
