@@ -2358,3 +2358,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                           $mnbudget["MonthlyPayment"],
                                           $mnbudget["Alloted"],
                                           $mnbudget["TotalBudgetAlloted"],
+                                          $mnbudget["IsValid"] ? 1 : 0,
