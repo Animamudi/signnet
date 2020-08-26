@@ -2357,3 +2357,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                           $mnbudget["TotalPayment"],
                                           $mnbudget["MonthlyPayment"],
                                           $mnbudget["Alloted"],
+                                          $mnbudget["TotalBudgetAlloted"],
