@@ -2359,3 +2359,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                           $mnbudget["Alloted"],
                                           $mnbudget["TotalBudgetAlloted"],
                                           $mnbudget["IsValid"] ? 1 : 0,
+                                          $mysqli->real_escape_string($mnbudget["IsValidReason"]),
