@@ -2376,3 +2376,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                   ." TotalPayment = VALUES(TotalPayment), MonthlyPayment = VALUES(MonthlyPayment), Alloted = VALUES(Alloted),"
                   ." TotalBudgetAlloted = VALUES(TotalBudgetAlloted), IsValid = VALUES(IsValid), IsValidReason = VALUES(IsValidReason),"
                   ." fValid = VALUES(fValid), LastReported = VALUES(LastReported)";
+            if ($result61 = $mysqli->query($sql)) {
+              $mnbudgetprojectioninfo = $mysqli->info;
