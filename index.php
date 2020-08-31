@@ -2371,3 +2371,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                   ." VALUES ".implode(',',$sqlbudgetprojection)
                   ." ON DUPLICATE KEY UPDATE BudgetId = VALUES(BudgetId), BudgetURL = VALUES(BudgetURL),"
                   ." BlockStart = VALUES(BlockStart), BlockEnd = VALUES(BlockEnd), TotalPaymentCount = VALUES(TotalPaymentCount),"
+                  ." RemainingPaymentCount = VALUES(RemainingPaymentCount), PaymentAddress = VALUES(PaymentAddress),"
+                  ." Ratio = VALUES(Ratio), Yeas = VALUES(Yeas), Nays = VALUES(Nays), Abstains = VALUES(Abstains),"
