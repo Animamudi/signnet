@@ -2378,3 +2378,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                   ." fValid = VALUES(fValid), LastReported = VALUES(LastReported)";
             if ($result61 = $mysqli->query($sql)) {
               $mnbudgetprojectioninfo = $mysqli->info;
+              if (is_null($mnbudgetprojectioninfo)) {
+                $mnbudgetprojectioninfo = true;
+              }
+            }
