@@ -2368,3 +2368,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             $sql = "INSERT INTO `cmd_budget_projection` (BudgetTestnet, `BudgetHash`, `BudgetId`, `BudgetURL`, `BlockStart`, `BlockEnd`,"
                   ." `TotalPaymentCount`, `RemainingPaymentCount`, `PaymentAddress`, `Ratio`, `Yeas`, `Nays`, `Abstains`,"
                   ." `TotalPayment`, `MonthlyPayment`, Alloted, TotalBudgetAlloted, `IsValid`, `IsValidReason`, `fValid`, `FirstReported`, LastReported)"
+                  ." VALUES ".implode(',',$sqlbudgetprojection)
+                  ." ON DUPLICATE KEY UPDATE BudgetId = VALUES(BudgetId), BudgetURL = VALUES(BudgetURL),"
+                  ." BlockStart = VALUES(BlockStart), BlockEnd = VALUES(BlockEnd), TotalPaymentCount = VALUES(TotalPaymentCount),"
