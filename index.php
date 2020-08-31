@@ -2373,3 +2373,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                   ." BlockStart = VALUES(BlockStart), BlockEnd = VALUES(BlockEnd), TotalPaymentCount = VALUES(TotalPaymentCount),"
                   ." RemainingPaymentCount = VALUES(RemainingPaymentCount), PaymentAddress = VALUES(PaymentAddress),"
                   ." Ratio = VALUES(Ratio), Yeas = VALUES(Yeas), Nays = VALUES(Nays), Abstains = VALUES(Abstains),"
+                  ." TotalPayment = VALUES(TotalPayment), MonthlyPayment = VALUES(MonthlyPayment), Alloted = VALUES(Alloted),"
+                  ." TotalBudgetAlloted = VALUES(TotalBudgetAlloted), IsValid = VALUES(IsValid), IsValidReason = VALUES(IsValidReason),"
+                  ." fValid = VALUES(fValid), LastReported = VALUES(LastReported)";
