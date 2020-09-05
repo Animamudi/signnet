@@ -2392,3 +2392,8 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     $mysqli->real_escape_string($mnbudget["FeeTX"]),
                     $mysqli->real_escape_string($mnbudget["BudgetName"]),
                     $mnbudget["BlockStart"],
+                    $mnbudget["BlockEnd"],
+                    $mnbudget["VoteCount"],
+                    $mysqli->real_escape_string($mnbudget["Status"]),
+                    $mnbudget["IsValid"] ? 1 : 0,
+                    $mysqli->real_escape_string($mnbudget["IsValidReason"]),
