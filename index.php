@@ -2397,3 +2397,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     $mysqli->real_escape_string($mnbudget["Status"]),
                     $mnbudget["IsValid"] ? 1 : 0,
                     $mysqli->real_escape_string($mnbudget["IsValidReason"]),
+                    $mysqli->real_escape_string($mnbudget["Proposals"])
+                );
+            }
