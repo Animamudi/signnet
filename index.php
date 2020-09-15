@@ -2402,3 +2402,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             }
             $mnbudgetfinalinfo = false;
             if (count($sqlbudgetfinal) > 0) {
+                $sql = "INSERT INTO `cmd_budget_final` (BudgetTestnet, `BudgetHash`, `FeeTx`, `BudgetName`, `BlockStart`, `BlockEnd`,"
+                    ." `VoteCount`, `Status`, `IsValid`, `IsValidReason`, `Proposals`, `FirstReported`, LastReported)"
+                    ." VALUES ".implode(',',$sqlbudgetfinal)
