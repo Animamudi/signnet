@@ -2400,3 +2400,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     $mysqli->real_escape_string($mnbudget["Proposals"])
                 );
             }
+            $mnbudgetfinalinfo = false;
+            if (count($sqlbudgetfinal) > 0) {
