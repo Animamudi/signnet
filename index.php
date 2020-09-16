@@ -2405,3 +2405,8 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                 $sql = "INSERT INTO `cmd_budget_final` (BudgetTestnet, `BudgetHash`, `FeeTx`, `BudgetName`, `BlockStart`, `BlockEnd`,"
                     ." `VoteCount`, `Status`, `IsValid`, `IsValidReason`, `Proposals`, `FirstReported`, LastReported)"
                     ." VALUES ".implode(',',$sqlbudgetfinal)
+                    ." ON DUPLICATE KEY UPDATE BudgetName = VALUES(BudgetName), FeeTx = VALUES(FeeTx),"
+                    ." BlockStart = VALUES(BlockStart), BlockEnd = VALUES(BlockEnd), VoteCount = VALUES(VoteCount),"
+                    ." Status = VALUES(Status), IsValid = VALUES(IsValid), IsValidReason = VALUES(IsValidReason),"
+                    ." Proposals = VALUES(Proposals), LastReported = VALUES(LastReported)";
+                if ($result62 = $mysqli->query($sql)) {
