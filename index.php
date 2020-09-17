@@ -2410,3 +2410,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     ." Status = VALUES(Status), IsValid = VALUES(IsValid), IsValidReason = VALUES(IsValidReason),"
                     ." Proposals = VALUES(Proposals), LastReported = VALUES(LastReported)";
                 if ($result62 = $mysqli->query($sql)) {
+                    $mnbudgetfinalinfo = $mysqli->info;
+                    if (is_null($mnbudgetfinalinfo)) {
+                        $mnbudgetfinalinfo = true;
+                    }
