@@ -2415,3 +2415,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                         $mnbudgetfinalinfo = true;
                     }
                 }
+            }
