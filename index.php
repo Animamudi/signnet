@@ -2436,3 +2436,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     ." MasternodeOutputIndex, VoteHash, VoteValue, VoteTime, VoteIsValid)"
                     ." VALUES ".implode(',',$sqlbudgetvotes)
                     ." ON DUPLICATE KEY UPDATE VoteHash = VALUES(VoteHash), VoteValue = VALUES(VoteValue), "
+                    ." VoteTime = VALUES(VoteTime), VoteIsValid = VALUES(VoteIsValid)";
+                if ($result605 = $mysqli->query($sql)) {
+                    $mnbudgetvotesinfo = $mysqli->info;
