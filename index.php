@@ -2426,3 +2426,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     $mnbudget["MasternodeOutputIndex"],
                     $mysqli->real_escape_string($mnbudget["VoteHash"]),
                     $mysqli->real_escape_string($mnbudget["VoteValue"]),
+                    $mnbudget["VoteTime"],
+                    $mnbudget["VoteIsValid"] ? 1 : 0
+                );
