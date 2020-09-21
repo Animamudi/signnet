@@ -2422,3 +2422,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                 $sqlbudgetvotes[] = sprintf("(%d, '%s','%s',%d,'%s','%s',%d,%d)",
                     $mnbudget["BudgetTestnet"],
                     $mysqli->real_escape_string($mnbudget["BudgetId"]),
+                    $mysqli->real_escape_string($mnbudget["MasternodeOutputHash"]),
+                    $mnbudget["MasternodeOutputIndex"],
+                    $mysqli->real_escape_string($mnbudget["VoteHash"]),
+                    $mysqli->real_escape_string($mnbudget["VoteValue"]),
