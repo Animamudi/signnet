@@ -2433,3 +2433,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             $mnbudgetvotesinfo = false;
             if (count($sqlbudgetvotes) > 0) {
                 $sql = "INSERT INTO `cmd_budget_votes` (BudgetTestnet, BudgetId, MasternodeOutputHash,"
+                    ." MasternodeOutputIndex, VoteHash, VoteValue, VoteTime, VoteIsValid)"
+                    ." VALUES ".implode(',',$sqlbudgetvotes)
+                    ." ON DUPLICATE KEY UPDATE VoteHash = VALUES(VoteHash), VoteValue = VALUES(VoteValue), "
