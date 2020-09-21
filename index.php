@@ -2429,3 +2429,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     $mnbudget["VoteTime"],
                     $mnbudget["VoteIsValid"] ? 1 : 0
                 );
+            }
+            $mnbudgetvotesinfo = false;
+            if (count($sqlbudgetvotes) > 0) {
+                $sql = "INSERT INTO `cmd_budget_votes` (BudgetTestnet, BudgetId, MasternodeOutputHash,"
