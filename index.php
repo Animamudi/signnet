@@ -2420,3 +2420,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             $sqlbudgetvotes = array();
             foreach($payload['mnbudgetvotes'] as $mnbudget) {
                 $sqlbudgetvotes[] = sprintf("(%d, '%s','%s',%d,'%s','%s',%d,%d)",
+                    $mnbudget["BudgetTestnet"],
+                    $mysqli->real_escape_string($mnbudget["BudgetId"]),
