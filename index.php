@@ -2439,3 +2439,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     ." VoteTime = VALUES(VoteTime), VoteIsValid = VALUES(VoteIsValid)";
                 if ($result605 = $mysqli->query($sql)) {
                     $mnbudgetvotesinfo = $mysqli->info;
+                    if (is_null($mnbudgetvotesinfo)) {
