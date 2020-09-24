@@ -2442,3 +2442,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     if (is_null($mnbudgetvotesinfo)) {
                         $mnbudgetvotesinfo = true;
                     }
+                }
+                else {
+                    $mnbudgetvotesinfo = $mysqli->error;
