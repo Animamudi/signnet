@@ -2440,3 +2440,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                 if ($result605 = $mysqli->query($sql)) {
                     $mnbudgetvotesinfo = $mysqli->info;
                     if (is_null($mnbudgetvotesinfo)) {
+                        $mnbudgetvotesinfo = true;
+                    }
