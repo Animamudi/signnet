@@ -2445,3 +2445,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                 }
                 else {
                     $mnbudgetvotesinfo = $mysqli->error;
+                }
+            }
