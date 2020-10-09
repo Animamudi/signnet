@@ -2447,3 +2447,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     $mnbudgetvotesinfo = $mysqli->error;
                 }
             }
+
+            // gobjects proposals 12.1+
+            $sqlgobjectproposals = array();
+            foreach($payload['gobjproposals'] as $proposal) {
