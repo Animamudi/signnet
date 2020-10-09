@@ -2454,3 +2454,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                 $sqlgobjectproposals[] = sprintf("(%d, '%s','%s','%s',%F,%d,%d,'%s','%s',%d,%d,%d,%d,%d,%d,%d,%d,%d,'%s',NOW(),NOW())",
                     $proposal["Testnet"],
                     $mysqli->real_escape_string($proposal["hash"]),
+                    $mysqli->real_escape_string($proposal["name"]),
+                    substr(trim($mysqli->real_escape_string($proposal["payment_address"])),0,34),
+                    floatval($proposal["payment_amount"]),
