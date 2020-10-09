@@ -2451,3 +2451,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             // gobjects proposals 12.1+
             $sqlgobjectproposals = array();
             foreach($payload['gobjproposals'] as $proposal) {
+                $sqlgobjectproposals[] = sprintf("(%d, '%s','%s','%s',%F,%d,%d,'%s','%s',%d,%d,%d,%d,%d,%d,%d,%d,%d,'%s',NOW(),NOW())",
+                    $proposal["Testnet"],
