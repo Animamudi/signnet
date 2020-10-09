@@ -2453,3 +2453,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             foreach($payload['gobjproposals'] as $proposal) {
                 $sqlgobjectproposals[] = sprintf("(%d, '%s','%s','%s',%F,%d,%d,'%s','%s',%d,%d,%d,%d,%d,%d,%d,%d,%d,'%s',NOW(),NOW())",
                     $proposal["Testnet"],
+                    $mysqli->real_escape_string($proposal["hash"]),
