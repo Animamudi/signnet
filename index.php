@@ -2460,3 +2460,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     intval($proposal["start_epoch"]),
                     intval($proposal["end_epoch"]),
                     $mysqli->real_escape_string($proposal["url"]),
+                    $mysqli->real_escape_string($proposal["gobject"]["CollateralHash"]),
+                    intval($proposal["gobject"]["AbsoluteYesCount"]),
+                    intval($proposal["gobject"]["YesCount"]),
