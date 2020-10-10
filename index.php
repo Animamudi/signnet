@@ -2457,3 +2457,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     $mysqli->real_escape_string($proposal["name"]),
                     substr(trim($mysqli->real_escape_string($proposal["payment_address"])),0,34),
                     floatval($proposal["payment_amount"]),
+                    intval($proposal["start_epoch"]),
+                    intval($proposal["end_epoch"]),
+                    $mysqli->real_escape_string($proposal["url"]),
