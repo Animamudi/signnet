@@ -2463,3 +2463,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     $mysqli->real_escape_string($proposal["gobject"]["CollateralHash"]),
                     intval($proposal["gobject"]["AbsoluteYesCount"]),
                     intval($proposal["gobject"]["YesCount"]),
+                    intval($proposal["gobject"]["NoCount"]),
