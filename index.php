@@ -2468,3 +2468,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     $proposal["gobject"]["fBlockchainValidity"] ? 1 : 0,
                     $proposal["gobject"]["fCachedValid"] ? 1 : 0,
                     $proposal["gobject"]["fCachedFunding"] ? 1 : 0,
+                    $proposal["gobject"]["fCachedDelete"] ? 1 : 0,
+                    $proposal["gobject"]["fCachedEndorsed"] ? 1 : 0,
