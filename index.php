@@ -2466,3 +2466,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     intval($proposal["gobject"]["NoCount"]),
                     intval($proposal["gobject"]["AbstainCount"]),
                     $proposal["gobject"]["fBlockchainValidity"] ? 1 : 0,
+                    $proposal["gobject"]["fCachedValid"] ? 1 : 0,
+                    $proposal["gobject"]["fCachedFunding"] ? 1 : 0,
