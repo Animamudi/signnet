@@ -2483,3 +2483,8 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     ." ON DUPLICATE KEY UPDATE GovernanceObjectName = VALUES(GovernanceObjectName), GovernanceObjectPaymentAddress = VALUES(GovernanceObjectPaymentAddress),"
                     ." GovernanceObjectPaymentAmount = VALUES(GovernanceObjectPaymentAmount), GovernanceObjectEpochStart = VALUES(GovernanceObjectEpochStart),"
                     ." GovernanceObjectEpochEnd = VALUES(GovernanceObjectEpochEnd), GovernanceObjectURL = VALUES(GovernanceObjectURL),"
+                    ." GovernanceObjectCollateral = VALUES(GovernanceObjectCollateral), GovernanceObjectVotesAbsoluteYes = VALUES(GovernanceObjectVotesAbsoluteYes),"
+                    ." GovernanceObjectVotesYes = VALUES(GovernanceObjectVotesYes), GovernanceObjectVotesNo = VALUES(GovernanceObjectVotesNo),"
+                    ." GovernanceObjectVotesAbstain = VALUES(GovernanceObjectVotesAbstain), GovernanceObjectBlockchainValidity = VALUES(GovernanceObjectBlockchainValidity),"
+                    ." GovernanceObjectCachedValid = VALUES(GovernanceObjectCachedValid), GovernanceObjectCachedFunding = VALUES(GovernanceObjectCachedFunding),"
+                    ." GovernanceObjectCachedDelete = VALUES(GovernanceObjectCachedDelete), GovernanceObjectCachedEndorsed = VALUES(GovernanceObjectCachedEndorsed),"
