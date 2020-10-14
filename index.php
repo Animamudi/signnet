@@ -2488,3 +2488,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     ." GovernanceObjectVotesAbstain = VALUES(GovernanceObjectVotesAbstain), GovernanceObjectBlockchainValidity = VALUES(GovernanceObjectBlockchainValidity),"
                     ." GovernanceObjectCachedValid = VALUES(GovernanceObjectCachedValid), GovernanceObjectCachedFunding = VALUES(GovernanceObjectCachedFunding),"
                     ." GovernanceObjectCachedDelete = VALUES(GovernanceObjectCachedDelete), GovernanceObjectCachedEndorsed = VALUES(GovernanceObjectCachedEndorsed),"
+                    ." GovernanceObjectIsValidReason = VALUES(GovernanceObjectIsValidReason), LastReported = VALUES(LastReported)";
+                if ($result70 = $mysqli->query($sql)) {
+                    $gobjectproposalsinfo = $mysqli->info;
+                    if (is_null($gobjectproposalsinfo)) {
