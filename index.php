@@ -2470,3 +2470,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     $proposal["gobject"]["fCachedFunding"] ? 1 : 0,
                     $proposal["gobject"]["fCachedDelete"] ? 1 : 0,
                     $proposal["gobject"]["fCachedEndorsed"] ? 1 : 0,
+                    $mysqli->real_escape_string($proposal["gobject"]["IsValidReason"])
+                );
+            }
