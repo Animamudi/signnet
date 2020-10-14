@@ -2478,3 +2478,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                 $sql = "INSERT INTO `cmd_gobject_proposals` (GovernanceObjectTestnet, GovernanceObjectId, GovernanceObjectName, GovernanceObjectPaymentAddress,"
                     ." GovernanceObjectPaymentAmount, GovernanceObjectEpochStart, GovernanceObjectEpochEnd, GovernanceObjectURL, GovernanceObjectCollateral,"
                     ." GovernanceObjectVotesAbsoluteYes, GovernanceObjectVotesYes, GovernanceObjectVotesNo, GovernanceObjectVotesAbstain, GovernanceObjectBlockchainValidity,"
+                    ." GovernanceObjectCachedValid, GovernanceObjectCachedFunding, GovernanceObjectCachedDelete, GovernanceObjectCachedEndorsed, GovernanceObjectIsValidReason, FirstReported, LastReported)"
+                    ." VALUES ".implode(',',$sqlgobjectproposals)
+                    ." ON DUPLICATE KEY UPDATE GovernanceObjectName = VALUES(GovernanceObjectName), GovernanceObjectPaymentAddress = VALUES(GovernanceObjectPaymentAddress),"
+                    ." GovernanceObjectPaymentAmount = VALUES(GovernanceObjectPaymentAmount), GovernanceObjectEpochStart = VALUES(GovernanceObjectEpochStart),"
