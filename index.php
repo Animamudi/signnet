@@ -2476,3 +2476,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             $gobjectproposalsinfo = false;
             if (count($sqlgobjectproposals) > 0) {
                 $sql = "INSERT INTO `cmd_gobject_proposals` (GovernanceObjectTestnet, GovernanceObjectId, GovernanceObjectName, GovernanceObjectPaymentAddress,"
+                    ." GovernanceObjectPaymentAmount, GovernanceObjectEpochStart, GovernanceObjectEpochEnd, GovernanceObjectURL, GovernanceObjectCollateral,"
+                    ." GovernanceObjectVotesAbsoluteYes, GovernanceObjectVotesYes, GovernanceObjectVotesNo, GovernanceObjectVotesAbstain, GovernanceObjectBlockchainValidity,"
