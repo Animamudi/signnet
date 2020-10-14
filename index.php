@@ -2482,3 +2482,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     ." VALUES ".implode(',',$sqlgobjectproposals)
                     ." ON DUPLICATE KEY UPDATE GovernanceObjectName = VALUES(GovernanceObjectName), GovernanceObjectPaymentAddress = VALUES(GovernanceObjectPaymentAddress),"
                     ." GovernanceObjectPaymentAmount = VALUES(GovernanceObjectPaymentAmount), GovernanceObjectEpochStart = VALUES(GovernanceObjectEpochStart),"
+                    ." GovernanceObjectEpochEnd = VALUES(GovernanceObjectEpochEnd), GovernanceObjectURL = VALUES(GovernanceObjectURL),"
