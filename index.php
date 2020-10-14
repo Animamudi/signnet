@@ -2473,3 +2473,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     $mysqli->real_escape_string($proposal["gobject"]["IsValidReason"])
                 );
             }
+            $gobjectproposalsinfo = false;
+            if (count($sqlgobjectproposals) > 0) {
+                $sql = "INSERT INTO `cmd_gobject_proposals` (GovernanceObjectTestnet, GovernanceObjectId, GovernanceObjectName, GovernanceObjectPaymentAddress,"
