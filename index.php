@@ -2499,3 +2499,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     $gobjectproposalsinfo = $mysqli->errno.": ".$mysqli->error;
                 }
             }
+
+            // gobjects triggers 12.1+
+            $sqlgobjecttriggers = array();
+            $sqlgobjecttriggerspayments = array();
