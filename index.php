@@ -2492,3 +2492,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                 if ($result70 = $mysqli->query($sql)) {
                     $gobjectproposalsinfo = $mysqli->info;
                     if (is_null($gobjectproposalsinfo)) {
+                        $gobjectproposalsinfo = true;
+                    }
+                }
+                else {
