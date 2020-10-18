@@ -2496,3 +2496,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     }
                 }
                 else {
+                    $gobjectproposalsinfo = $mysqli->errno.": ".$mysqli->error;
+                }
+            }
