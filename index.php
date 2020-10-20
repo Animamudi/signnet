@@ -2503,3 +2503,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             // gobjects triggers 12.1+
             $sqlgobjecttriggers = array();
             $sqlgobjecttriggerspayments = array();
+            $sqlgobjecttriggerspaymentstrim = array();
+            foreach($payload['gobjtriggers'] as $triggers) {
+                $objhash = $mysqli->real_escape_string($triggers["hash"]);
