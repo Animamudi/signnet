@@ -2506,3 +2506,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             $sqlgobjecttriggerspaymentstrim = array();
             foreach($payload['gobjtriggers'] as $triggers) {
                 $objhash = $mysqli->real_escape_string($triggers["hash"]);
+                $sqlgobjecttriggers[] = sprintf("(%d,'%s',%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,'%s',NOW(),NOW())",
+                    $triggers["Testnet"],
+                    $objhash,
+                    intval($triggers["event_block_height"]),
