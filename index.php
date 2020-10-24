@@ -2517,3 +2517,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     $triggers["gobject"]["fBlockchainValidity"] ? 1 : 0,
                     $triggers["gobject"]["fCachedValid"] ? 1 : 0,
                     $triggers["gobject"]["fCachedFunding"] ? 1 : 0,
+                    $triggers["gobject"]["fCachedDelete"] ? 1 : 0,
