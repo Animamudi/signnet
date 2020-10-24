@@ -2510,3 +2510,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     $triggers["Testnet"],
                     $objhash,
                     intval($triggers["event_block_height"]),
+                    intval($triggers["gobject"]["AbsoluteYesCount"]),
+                    intval($triggers["gobject"]["YesCount"]),
+                    intval($triggers["gobject"]["NoCount"]),
