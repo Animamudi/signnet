@@ -2520,3 +2520,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     $triggers["gobject"]["fCachedDelete"] ? 1 : 0,
                     $triggers["gobject"]["fCachedEndorsed"] ? 1 : 0,
                     $mysqli->real_escape_string($triggers["gobject"]["IsValidReason"])
+                );
