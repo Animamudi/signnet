@@ -2521,3 +2521,8 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     $triggers["gobject"]["fCachedEndorsed"] ? 1 : 0,
                     $mysqli->real_escape_string($triggers["gobject"]["IsValidReason"])
                 );
+                $addr = explode("|",$triggers["payment_addresses"]);
+                $amnt = explode("|",$triggers["payment_amounts"]);
+                if (array_key_exists("proposal_hashes",$triggers)) {
+                  $hash = explode("|",$triggers["proposal_hashes"]);
+                }
