@@ -2531,3 +2531,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                   $hash = array();
                   foreach($addr as $x) {
                     $hash[] = "";
+                  }
+                }
+                if ((count($addr) == count($amnt)) && (count($addr) == count($hash))) {
