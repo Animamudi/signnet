@@ -2539,3 +2539,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                           $triggers["Testnet"],
                           $objhash,
                           $x,
+                          $address,
+                          floatval($amnt[$x]),
+                          $mysqli->real_escape_string($hash[$x])
+                      );
