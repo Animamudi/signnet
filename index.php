@@ -2526,3 +2526,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                 if (array_key_exists("proposal_hashes",$triggers)) {
                   $hash = explode("|",$triggers["proposal_hashes"]);
                 }
+                // Temporary hack while sentinel is updated with proposals hashes
+                else {
+                  $hash = array();
