@@ -2534,3 +2534,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                   }
                 }
                 if ((count($addr) == count($amnt)) && (count($addr) == count($hash))) {
+                  foreach($addr as $x => $address) {
+                      $sqlgobjecttriggerspayments[] = sprintf("(%d,'%s',%d,'%s',%F,'%s')",
+                          $triggers["Testnet"],
