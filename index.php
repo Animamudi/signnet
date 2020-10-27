@@ -2537,3 +2537,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                   foreach($addr as $x => $address) {
                       $sqlgobjecttriggerspayments[] = sprintf("(%d,'%s',%d,'%s',%F,'%s')",
                           $triggers["Testnet"],
+                          $objhash,
