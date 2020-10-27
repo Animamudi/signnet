@@ -2529,3 +2529,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                 // Temporary hack while sentinel is updated with proposals hashes
                 else {
                   $hash = array();
+                  foreach($addr as $x) {
+                    $hash[] = "";
