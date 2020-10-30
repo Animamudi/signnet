@@ -2545,3 +2545,9 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                       );
                   }
                   $sqlgobjecttriggerspaymentstrim[] = sprintf("DELETE FROM cmd_gobject_triggers_payments WHERE GovernanceObjectTestnet = %d AND GovernanceObjectId = '%s' AND GovernanceObjectPaymentPosition >= %d",
+                     $triggers["Testnet"],
+                     $objhash,
+                     count($addr)
+                  );
+                }
+            }
