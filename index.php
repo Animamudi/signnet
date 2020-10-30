@@ -2551,3 +2551,8 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                   );
                 }
             }
+            $gobjecttriggersinfo = false;
+            $gobjecttriggersinfopayments = false;
+            $gobjecttriggersinfopaymentstrim = array(false);
+            if (count($sqlgobjecttriggers) > 0) {
+                $sql = "INSERT INTO `cmd_gobject_triggers` (GovernanceObjectTestnet, GovernanceObjectId, GovernanceObjectEventBlockHeight,"
