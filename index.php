@@ -2543,3 +2543,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                           floatval($amnt[$x]),
                           $mysqli->real_escape_string($hash[$x])
                       );
+                  }
+                  $sqlgobjecttriggerspaymentstrim[] = sprintf("DELETE FROM cmd_gobject_triggers_payments WHERE GovernanceObjectTestnet = %d AND GovernanceObjectId = '%s' AND GovernanceObjectPaymentPosition >= %d",
