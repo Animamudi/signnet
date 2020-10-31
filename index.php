@@ -2556,3 +2556,9 @@ $app->post('/ping', function() use ($app,&$mysqli) {
             $gobjecttriggersinfopaymentstrim = array(false);
             if (count($sqlgobjecttriggers) > 0) {
                 $sql = "INSERT INTO `cmd_gobject_triggers` (GovernanceObjectTestnet, GovernanceObjectId, GovernanceObjectEventBlockHeight,"
+                    ." GovernanceObjectVotesAbsoluteYes, GovernanceObjectVotesYes, GovernanceObjectVotesNo, GovernanceObjectVotesAbstain, GovernanceObjectBlockchainValidity,"
+                    ." GovernanceObjectCachedValid, GovernanceObjectCachedFunding, GovernanceObjectCachedDelete, GovernanceObjectCachedEndorsed, GovernanceObjectIsValidReason, FirstReported, LastReported)"
+                    ." VALUES ".implode(',',$sqlgobjecttriggers)
+                    ." ON DUPLICATE KEY UPDATE GovernanceObjectEventBlockHeight = VALUES(GovernanceObjectEventBlockHeight),"
+                    ." GovernanceObjectVotesAbsoluteYes = VALUES(GovernanceObjectVotesAbsoluteYes),"
+                    ." GovernanceObjectVotesYes = VALUES(GovernanceObjectVotesYes), GovernanceObjectVotesNo = VALUES(GovernanceObjectVotesNo),"
