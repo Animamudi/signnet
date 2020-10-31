@@ -2562,3 +2562,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     ." ON DUPLICATE KEY UPDATE GovernanceObjectEventBlockHeight = VALUES(GovernanceObjectEventBlockHeight),"
                     ." GovernanceObjectVotesAbsoluteYes = VALUES(GovernanceObjectVotesAbsoluteYes),"
                     ." GovernanceObjectVotesYes = VALUES(GovernanceObjectVotesYes), GovernanceObjectVotesNo = VALUES(GovernanceObjectVotesNo),"
+                    ." GovernanceObjectVotesAbstain = VALUES(GovernanceObjectVotesAbstain), GovernanceObjectBlockchainValidity = VALUES(GovernanceObjectBlockchainValidity),"
+                    ." GovernanceObjectCachedValid = VALUES(GovernanceObjectCachedValid), GovernanceObjectCachedFunding = VALUES(GovernanceObjectCachedFunding),"
+                    ." GovernanceObjectCachedDelete = VALUES(GovernanceObjectCachedDelete), GovernanceObjectCachedEndorsed = VALUES(GovernanceObjectCachedEndorsed),"
