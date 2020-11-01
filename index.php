@@ -2568,3 +2568,8 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     ." GovernanceObjectIsValidReason = VALUES(GovernanceObjectIsValidReason), LastReported = VALUES(LastReported)";
                 if ($result702 = $mysqli->query($sql)) {
                     $gobjecttriggersinfo = $mysqli->info;
+                    if (is_null($gobjecttriggersinfo)) {
+                        $gobjecttriggersinfo = true;
+                    }
+                }
+                else {
