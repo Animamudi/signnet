@@ -2575,3 +2575,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                 else {
                     $gobjecttriggersinfo = $mysqli->errno.": ".$mysqli->error;
                 }
+                if (count($sqlgobjecttriggerspayments) > 0) {
+                    $sql = "INSERT INTO `cmd_gobject_triggers_payments` (GovernanceObjectTestnet, GovernanceObjectId, GovernanceObjectPaymentPosition,"
