@@ -2573,3 +2573,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     }
                 }
                 else {
+                    $gobjecttriggersinfo = $mysqli->errno.": ".$mysqli->error;
+                }
