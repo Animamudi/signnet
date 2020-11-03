@@ -2579,3 +2579,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     $sql = "INSERT INTO `cmd_gobject_triggers_payments` (GovernanceObjectTestnet, GovernanceObjectId, GovernanceObjectPaymentPosition,"
                         ." GovernanceObjectPaymentAddress, GovernanceObjectPaymentAmount, GovernanceObjectPaymentProposalHash)"
                         ." VALUES ".implode(',',$sqlgobjecttriggerspayments)
+                        ." ON DUPLICATE KEY UPDATE GovernanceObjectPaymentAddress = VALUES(GovernanceObjectPaymentAddress),"
