@@ -2586,3 +2586,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                         $gobjecttriggersinfopayments = $mysqli->info;
                         if (is_null($gobjecttriggersinfopayments)) {
                             $gobjecttriggersinfopayments = true;
+                        }
