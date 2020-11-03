@@ -2577,3 +2577,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                 }
                 if (count($sqlgobjecttriggerspayments) > 0) {
                     $sql = "INSERT INTO `cmd_gobject_triggers_payments` (GovernanceObjectTestnet, GovernanceObjectId, GovernanceObjectPaymentPosition,"
+                        ." GovernanceObjectPaymentAddress, GovernanceObjectPaymentAmount, GovernanceObjectPaymentProposalHash)"
+                        ." VALUES ".implode(',',$sqlgobjecttriggerspayments)
