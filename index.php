@@ -2585,3 +2585,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     if ($result703 = $mysqli->query($sql)) {
                         $gobjecttriggersinfopayments = $mysqli->info;
                         if (is_null($gobjecttriggersinfopayments)) {
+                            $gobjecttriggersinfopayments = true;
