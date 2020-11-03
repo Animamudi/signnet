@@ -2580,3 +2580,8 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                         ." GovernanceObjectPaymentAddress, GovernanceObjectPaymentAmount, GovernanceObjectPaymentProposalHash)"
                         ." VALUES ".implode(',',$sqlgobjecttriggerspayments)
                         ." ON DUPLICATE KEY UPDATE GovernanceObjectPaymentAddress = VALUES(GovernanceObjectPaymentAddress),"
+                        ." GovernanceObjectPaymentAmount = VALUES(GovernanceObjectPaymentAmount),"
+                        ." GovernanceObjectPaymentProposalHash = VALUES(GovernanceObjectPaymentProposalHash)";
+                    if ($result703 = $mysqli->query($sql)) {
+                        $gobjecttriggersinfopayments = $mysqli->info;
+                        if (is_null($gobjecttriggersinfopayments)) {
