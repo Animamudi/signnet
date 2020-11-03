@@ -2590,3 +2590,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                         $gobjecttriggersinfopaymentstrim = array();
                         foreach($sqlgobjecttriggerspaymentstrim as $sql) {
                             if ($result703a = $mysqli->query($sql)) {
+                                $gobjecttriggersinfopaymentstrimtest = $mysqli->info;
+                                if (is_null($gobjecttriggersinfopaymentstrimtest)) {
