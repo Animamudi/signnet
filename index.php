@@ -2605,3 +2605,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     }
                 }
             }
+
+            // gobjects votes 12.1+
+            $sqlobjectvotes = array();
+            foreach($payload['gobjvotes'] as $objectvote) {
