@@ -2612,3 +2612,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                 $sqlobjectvotes[] = sprintf("(%d, '%s','%s',%d,'%s','%s',%d)",
                     $objectvote["GovernanceObjectTestnet"],
                     $mysqli->real_escape_string($objectvote["GovernanceObjectId"]),
+                    $mysqli->real_escape_string($objectvote["MasternodeOutputHash"]),
+                    $objectvote["MasternodeOutputIndex"],
+                    $mysqli->real_escape_string($objectvote["VoteHash"]),
+                    strtoupper($mysqli->real_escape_string($objectvote["VoteValue"])),
