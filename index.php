@@ -2595,3 +2595,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                     $gobjecttriggersinfopaymentstrimtest = true;
                                 }
                                 $gobjecttriggersinfopaymentstrim[] = $gobjecttriggersinfopaymentstrimtest;
+                            } else {
