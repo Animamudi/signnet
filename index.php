@@ -2604,3 +2604,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                         $gobjecttriggersinfopayments = $mysqli->errno.": ".$mysqli->error;
                     }
                 }
+            }
