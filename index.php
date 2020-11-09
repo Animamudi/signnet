@@ -2617,3 +2617,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     $mysqli->real_escape_string($objectvote["VoteHash"]),
                     strtoupper($mysqli->real_escape_string($objectvote["VoteValue"])),
                     $objectvote["VoteTime"]
+                );
+            }
