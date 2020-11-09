@@ -2619,3 +2619,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     $objectvote["VoteTime"]
                 );
             }
+            $objvotesinfo = false;
