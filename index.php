@@ -2620,3 +2620,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                 );
             }
             $objvotesinfo = false;
+            if (count($sqlobjectvotes) > 0) {
+                $sql = "INSERT INTO cmd_gobject_votes (GovernanceObjectTestnet, GovernanceObjectId, MasternodeOutputHash,"
+                    ." MasternodeOutputIndex, VoteHash, VoteValue, VoteTime)"
+                    ." VALUES ".implode(',',$sqlobjectvotes)
