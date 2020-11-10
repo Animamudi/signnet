@@ -2624,3 +2624,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                 $sql = "INSERT INTO cmd_gobject_votes (GovernanceObjectTestnet, GovernanceObjectId, MasternodeOutputHash,"
                     ." MasternodeOutputIndex, VoteHash, VoteValue, VoteTime)"
                     ." VALUES ".implode(',',$sqlobjectvotes)
+                    ." ON DUPLICATE KEY UPDATE VoteHash = VALUES(VoteHash), VoteValue = VALUES(VoteValue), "
+                    ." VoteTime = VALUES(VoteTime)";
+                if ($result705 = $mysqli->query($sql)) {
