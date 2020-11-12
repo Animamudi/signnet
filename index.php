@@ -2627,3 +2627,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     ." ON DUPLICATE KEY UPDATE VoteHash = VALUES(VoteHash), VoteValue = VALUES(VoteValue), "
                     ." VoteTime = VALUES(VoteTime)";
                 if ($result705 = $mysqli->query($sql)) {
+                    $objvotesinfo = $mysqli->info;
+                    if (is_null($objvotesinfo)) {
+                        $objvotesinfo = true;
+                    }
