@@ -2631,3 +2631,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     if (is_null($objvotesinfo)) {
                         $objvotesinfo = true;
                     }
+                }
+                else {
