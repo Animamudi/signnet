@@ -2633,3 +2633,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     }
                 }
                 else {
+                    $objvotesinfo = $mysqli->error;
+                }
+            }
