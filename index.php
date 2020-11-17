@@ -2636,3 +2636,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                     $objvotesinfo = $mysqli->error;
                 }
             }
+
+            //Change the HTTP status
+          $response->setStatusCode(202, "Accepted");
