@@ -2647,3 +2647,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                                                             'gobjproposals' => $gobjectproposalsinfo,
                                                                             'gobjvotes' => $objvotesinfo,
                                                                             'gobjtriggers' => $gobjecttriggersinfo,
+                                                                            'gobjtriggerspayments' => $gobjecttriggersinfopayments,
+                                                                            'gobjtriggerspaymentstrim' => implode("|",$gobjecttriggersinfopaymentstrim),
+                                                                            'mnlist' => $mnlistinfo,
