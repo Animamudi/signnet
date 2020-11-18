@@ -2645,3 +2645,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                                                             'mnbudgetprojection' => $mnbudgetprojectioninfo,
                                                                             'mnbudgetvotes' => $mnbudgetvotesinfo,
                                                                             'gobjproposals' => $gobjectproposalsinfo,
+                                                                            'gobjvotes' => $objvotesinfo,
+                                                                            'gobjtriggers' => $gobjecttriggersinfo,
