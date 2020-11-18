@@ -2642,3 +2642,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           $response->setJsonContent(array('status' => 'OK', 'data' => array(
                                                                             'mnbudgetshow' => $mnbudgetshowinfo,
                                                                             'mnbudgetfinal' => $mnbudgetfinalinfo,
+                                                                            'mnbudgetprojection' => $mnbudgetprojectioninfo,
+                                                                            'mnbudgetvotes' => $mnbudgetvotesinfo,
+                                                                            'gobjproposals' => $gobjectproposalsinfo,
