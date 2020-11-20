@@ -2653,3 +2653,7 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                                                             'mnlist2' => $mnlist2info,
                                                                             'mninfo' => $mninfoinfo,
                                                                             'mninfo2' => $mninfo2info,
+                                                                            'mnpubkeys' => $mnpubkeysinfo,
+                                                                            'mndonation' => $mndonationinfo,
+                                                                            'mnvotes' => $mnvotesinfo,
+                                                                            'nodes' => $nodesinfo,
