@@ -2663,3 +2663,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                                                             'spork' => $sporkinfo,
                                                                             'stats' => $statsinfo,
                                                                             'stats2' => $stats2info
+                                                                           )));
