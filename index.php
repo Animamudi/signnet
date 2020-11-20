@@ -2664,3 +2664,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                                                             'stats' => $statsinfo,
                                                                             'stats2' => $stats2info
                                                                            )));
+
+        }
+        else {
