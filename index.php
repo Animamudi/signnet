@@ -2650,3 +2650,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                                                             'gobjtriggerspayments' => $gobjecttriggersinfopayments,
                                                                             'gobjtriggerspaymentstrim' => implode("|",$gobjecttriggersinfopaymentstrim),
                                                                             'mnlist' => $mnlistinfo,
+                                                                            'mnlist2' => $mnlist2info,
+                                                                            'mninfo' => $mninfoinfo,
+                                                                            'mninfo2' => $mninfo2info,
