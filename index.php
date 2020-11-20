@@ -2657,3 +2657,6 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                                                             'mndonation' => $mndonationinfo,
                                                                             'mnvotes' => $mnvotesinfo,
                                                                             'nodes' => $nodesinfo,
+                                                                            'portcheck' => $pcinfo,
+                                                                            'protx' => $protxinfo,
+                                                                            'protxstate' => $protxstateinfo,
