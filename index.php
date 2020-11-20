@@ -2660,3 +2660,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                                                             'portcheck' => $pcinfo,
                                                                             'protx' => $protxinfo,
                                                                             'protxstate' => $protxstateinfo,
+                                                                            'spork' => $sporkinfo,
+                                                                            'stats' => $statsinfo,
