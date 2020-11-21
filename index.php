@@ -2669,3 +2669,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
         else {
           $response->setStatusCode(503, "Service Unavailable");
           $response->setJsonContent(array('status' => 'ERROR',
+                                          'messages' => array("INSERT INTO cmd_nodes_status",$mysqli->errno.': '.$mysqli->error),
+                                          'debug' => $sql));
