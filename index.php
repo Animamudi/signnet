@@ -2671,3 +2671,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
           $response->setJsonContent(array('status' => 'ERROR',
                                           'messages' => array("INSERT INTO cmd_nodes_status",$mysqli->errno.': '.$mysqli->error),
                                           'debug' => $sql));
+        }
+      }
