@@ -2673,3 +2673,9 @@ $app->post('/ping', function() use ($app,&$mysqli) {
                                           'debug' => $sql));
         }
       }
+      else {
+        $response->setStatusCode(503, "Service Unavailable");
+        $response->setJsonContent(array('status' => 'ERROR', 'messages' => array("Hub should have $numnodes nodes (reports ".count($payload['nodes']).")")));
+      }
+    }
+    else {
