@@ -2693,3 +2693,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
 // End-point to retrieve all known pools pubkeys
 // HTTP method:
 //   GET
+// Parameters:
+//   None
