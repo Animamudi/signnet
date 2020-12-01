@@ -2697,3 +2697,5 @@ $app->post('/ping', function() use ($app,&$mysqli) {
 //   None
 // ============================================================================
 $app->get('/pools', function() use ($app,&$mysqli) {
+
+  global $authinfo;
