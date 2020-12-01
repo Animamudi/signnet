@@ -2696,3 +2696,4 @@ $app->post('/ping', function() use ($app,&$mysqli) {
 // Parameters:
 //   None
 // ============================================================================
+$app->get('/pools', function() use ($app,&$mysqli) {
