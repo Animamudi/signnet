@@ -2711,3 +2711,6 @@ $app->get('/pools', function() use ($app,&$mysqli) {
     //Send errors to the client
     $response->setJsonContent(array('status' => 'ERROR', 'messages' => array('Payload (or CONTENT_LENGTH) is missing')));
   }
+  else {
+    // Retrieve all known nodes for current hub
+    $sql = "SELECT PoolPubKey, PoolDescription FROM cmd_pools_pubkey";
