@@ -2719,3 +2719,8 @@ $app->get('/pools', function() use ($app,&$mysqli) {
       while($row = $result->fetch_array()){
         $pubkeys[$row[0]] = $row[1];
       }
+
+      //Change the HTTP status
+      $response->setStatusCode(200, "OK");
+      $response->setJsonContent(array('status' => 'OK', 'data' => array('poolpubkeys' => $pubkeys)));
+    }
