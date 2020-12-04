@@ -2730,3 +2730,8 @@ $app->get('/pools', function() use ($app,&$mysqli) {
     }
   }
   return $response;
+
+});
+
+// ============================================================================
+// PORTCHECK/CONFIG (for dmnportcheck)
