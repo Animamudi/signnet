@@ -2724,3 +2724,5 @@ $app->get('/pools', function() use ($app,&$mysqli) {
       $response->setStatusCode(200, "OK");
       $response->setJsonContent(array('status' => 'OK', 'data' => array('poolpubkeys' => $pubkeys)));
     }
+    else {
+      $response->setStatusCode(503, "Service Unavailable");
