@@ -2735,3 +2735,7 @@ $app->get('/pools', function() use ($app,&$mysqli) {
 
 // ============================================================================
 // PORTCHECK/CONFIG (for dmnportcheck)
+// ----------------------------------------------------------------------------
+// End-point to retrieve port check configuration
+// HTTP method:
+//   GET
