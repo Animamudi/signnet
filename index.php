@@ -2714,3 +2714,8 @@ $app->get('/pools', function() use ($app,&$mysqli) {
   else {
     // Retrieve all known nodes for current hub
     $sql = "SELECT PoolPubKey, PoolDescription FROM cmd_pools_pubkey";
+    $pubkeys = array();
+    if ($result = $mysqli->query($sql)) {
+      while($row = $result->fetch_array()){
+        $pubkeys[$row[0]] = $row[1];
+      }
