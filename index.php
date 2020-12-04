@@ -2726,3 +2726,5 @@ $app->get('/pools', function() use ($app,&$mysqli) {
     }
     else {
       $response->setStatusCode(503, "Service Unavailable");
+      $response->setJsonContent(array('status' => 'ERROR', 'messages' => array($mysqli->errno.': '.$mysqli->error)));
+    }
