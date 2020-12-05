@@ -2739,3 +2739,5 @@ $app->get('/pools', function() use ($app,&$mysqli) {
 // End-point to retrieve port check configuration
 // HTTP method:
 //   GET
+// Parameters:
+//   none
