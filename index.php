@@ -2741,3 +2741,5 @@ $app->get('/pools', function() use ($app,&$mysqli) {
 //   GET
 // Parameters:
 //   none
+// Result (JSON body):
+//   status=OK|ERROR
