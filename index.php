@@ -2743,3 +2743,4 @@ $app->get('/pools', function() use ($app,&$mysqli) {
 //   none
 // Result (JSON body):
 //   status=OK|ERROR
+//   messages=array of error messages (only if status is ERROR)
