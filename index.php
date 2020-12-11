@@ -2747,3 +2747,5 @@ $app->get('/pools', function() use ($app,&$mysqli) {
 //   data=array of portcheck (only if status is OK)
 // ============================================================================
 $app->get('/portcheck/config', function() use ($app,&$mysqli) {
+
+  global $authinfo;
