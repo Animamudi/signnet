@@ -2767,3 +2767,6 @@ $app->get('/portcheck/config', function() use ($app,&$mysqli) {
     $cachevalid = (is_readable($cachefnam) && ((filemtime($cachefnam)+7200)>=time()));
     if ($cachevalid) {
       $config = unserialize(file_get_contents($cachefnam));
+      $response->setStatusCode(200, "OK");
+      $response->setJsonContent(array('status' => 'OK', 'data' => $config));
+    }
