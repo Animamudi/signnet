@@ -2770,3 +2770,5 @@ $app->get('/portcheck/config', function() use ($app,&$mysqli) {
       $response->setStatusCode(200, "OK");
       $response->setJsonContent(array('status' => 'OK', 'data' => $config));
     }
+    else {
+      // Retrieve the configuration for the port checker
