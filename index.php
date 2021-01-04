@@ -2774,3 +2774,7 @@ $app->get('/portcheck/config', function() use ($app,&$mysqli) {
       // Retrieve the configuration for the port checker
       $sql = "SELECT TestNet, Version, SatoshiVersion, ProtocolVersion, HEX(ProtocolMagic) ProtocolMagic FROM cmd_portcheck_config ORDER BY TestNet";
       $config = array();
+      if ($result = $mysqli->query($sql)) {
+        while($row = $result->fetch_assoc()){
+          $config[intval($row['TestNet'])] = $row;
+        }
