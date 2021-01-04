@@ -2780,3 +2780,7 @@ $app->get('/portcheck/config', function() use ($app,&$mysqli) {
         }
 
         file_put_contents($cachefnam,serialize($config),LOCK_EX);
+        //Change the HTTP status
+        $response->setStatusCode(200, "OK");
+        $response->setJsonContent(array('status' => 'OK', 'data' => $config));
+      }
