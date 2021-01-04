@@ -2784,3 +2784,7 @@ $app->get('/portcheck/config', function() use ($app,&$mysqli) {
         $response->setStatusCode(200, "OK");
         $response->setJsonContent(array('status' => 'OK', 'data' => $config));
       }
+      else {
+        $response->setStatusCode(503, "Service Unavailable");
+        $response->setJsonContent(array('status' => 'ERROR', 'messages' => $mysqli->errno.': '.$mysqli->error));
+      }
