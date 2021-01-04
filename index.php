@@ -2778,3 +2778,5 @@ $app->get('/portcheck/config', function() use ($app,&$mysqli) {
         while($row = $result->fetch_assoc()){
           $config[intval($row['TestNet'])] = $row;
         }
+
+        file_put_contents($cachefnam,serialize($config),LOCK_EX);
