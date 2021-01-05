@@ -2789,3 +2789,5 @@ $app->get('/portcheck/config', function() use ($app,&$mysqli) {
         $response->setJsonContent(array('status' => 'ERROR', 'messages' => $mysqli->errno.': '.$mysqli->error));
       }
     }
+  }
+  return $response;
