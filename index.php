@@ -2796,3 +2796,5 @@ $app->get('/portcheck/config', function() use ($app,&$mysqli) {
 
 // ============================================================================
 // PORTCHECK/LIST (for dmnportcheck)
+// ----------------------------------------------------------------------------
+// End-point to retrieve port check list of nodes
