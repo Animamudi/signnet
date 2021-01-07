@@ -2791,3 +2791,8 @@ $app->get('/portcheck/config', function() use ($app,&$mysqli) {
     }
   }
   return $response;
+
+});
+
+// ============================================================================
+// PORTCHECK/LIST (for dmnportcheck)
