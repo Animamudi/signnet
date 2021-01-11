@@ -2803,3 +2803,4 @@ $app->get('/portcheck/config', function() use ($app,&$mysqli) {
 // Parameters:
 //   none
 // Result (JSON body):
+//   status=OK|ERROR
