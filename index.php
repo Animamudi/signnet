@@ -2824,3 +2824,5 @@ $app->get('/portcheck/list', function() use ($app,&$mysqli) {
     $response->setJsonContent(array('status' => 'ERROR', 'messages' => array('Payload (or CONTENT_LENGTH) is missing')));
   }
   else {
+
+    // Retrieve all masternodes informations for portchecker
