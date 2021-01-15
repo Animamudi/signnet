@@ -2826,3 +2826,7 @@ $app->get('/portcheck/list', function() use ($app,&$mysqli) {
   else {
 
     // Retrieve all masternodes informations for portchecker
+    $sql = "SELECT inet6_ntoa(NodeIP) NodeIP, NodePort, NodeTestNet, NodePortCheck, NextCheck, NodeSubVer, ErrorMessage FROM cmd_portcheck ORDER BY NextCheck";
+    $portcheck = array();
+    if ($result = $mysqli->query($sql)) {
+      while($row = $result->fetch_assoc()){
