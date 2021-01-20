@@ -2830,3 +2830,4 @@ $app->get('/portcheck/list', function() use ($app,&$mysqli) {
     $portcheck = array();
     if ($result = $mysqli->query($sql)) {
       while($row = $result->fetch_assoc()){
+        $portcheck[] = $row;
