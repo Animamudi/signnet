@@ -2832,3 +2832,6 @@ $app->get('/portcheck/list', function() use ($app,&$mysqli) {
       while($row = $result->fetch_assoc()){
         $portcheck[] = $row;
       }
+
+      //Change the HTTP status
+      $response->setStatusCode(200, "OK");
