@@ -2835,3 +2835,5 @@ $app->get('/portcheck/list', function() use ($app,&$mysqli) {
 
       //Change the HTTP status
       $response->setStatusCode(200, "OK");
+      $response->setJsonContent(array('status' => 'OK', 'data' => $portcheck));
+    }
