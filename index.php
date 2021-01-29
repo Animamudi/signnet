@@ -2851,3 +2851,5 @@ $app->get('/portcheck/list', function() use ($app,&$mysqli) {
 // ----------------------------------------------------------------------------
 // End-point for the port check report
 // HTTP method:
+//   POST
+// Parameters (JSON body):
