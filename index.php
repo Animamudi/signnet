@@ -2878,3 +2878,7 @@ $app->post('/portcheck', function() use ($app,&$mysqli) {
     $response->setJsonContent(array('status' => 'ERROR', 'messages' => array('Payload is wrong or CONTENT_LENGTH is missing')));
   }
   else {
+
+    $sqlpc = array();
+    foreach($payload as $node) {
+      $mngeoip = geoip_record_by_name($node['NodeIP']);
