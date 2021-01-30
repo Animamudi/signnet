@@ -2877,3 +2877,4 @@ $app->post('/portcheck', function() use ($app,&$mysqli) {
     //Send errors to the client
     $response->setJsonContent(array('status' => 'ERROR', 'messages' => array('Payload is wrong or CONTENT_LENGTH is missing')));
   }
+  else {
