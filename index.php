@@ -2868,3 +2868,5 @@ $app->post('/portcheck', function() use ($app,&$mysqli) {
 
   $payload = $app->request->getRawBody();
   $payload = json_decode($payload,true);
+
+  if (!array_key_exists('CONTENT_LENGTH',$_SERVER) || (intval($_SERVER['CONTENT_LENGTH']) == 0)
