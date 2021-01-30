@@ -2853,3 +2853,6 @@ $app->get('/portcheck/list', function() use ($app,&$mysqli) {
 // HTTP method:
 //   POST
 // Parameters (JSON body):
+//   array of portcheck information (mandatory)
+// Result (JSON body):
+//   status=OK|ERROR
