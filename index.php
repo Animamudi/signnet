@@ -2859,3 +2859,9 @@ $app->get('/portcheck/list', function() use ($app,&$mysqli) {
 //   messages=array of error messages (only if status is ERROR)
 //   data=array of insert/update information (only if status is OK)
 // ============================================================================
+$app->post('/portcheck', function() use ($app,&$mysqli) {
+
+  global $authinfo;
+
+  //Create a response
+  $response = new Phalcon\Http\Response();
