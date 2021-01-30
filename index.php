@@ -2873,3 +2873,7 @@ $app->post('/portcheck', function() use ($app,&$mysqli) {
    || !is_array($payload) || (count($payload) == 0)) {
     //Change the HTTP status
     $response->setStatusCode(400, "Bad Request");
+
+    //Send errors to the client
+    $response->setJsonContent(array('status' => 'ERROR', 'messages' => array('Payload is wrong or CONTENT_LENGTH is missing')));
+  }
