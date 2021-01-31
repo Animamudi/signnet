@@ -2882,3 +2882,4 @@ $app->post('/portcheck', function() use ($app,&$mysqli) {
     $sqlpc = array();
     foreach($payload as $node) {
       $mngeoip = geoip_record_by_name($node['NodeIP']);
+      if ($mngeoip !== FALSE) {
