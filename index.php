@@ -2883,3 +2883,6 @@ $app->post('/portcheck', function() use ($app,&$mysqli) {
     foreach($payload as $node) {
       $mngeoip = geoip_record_by_name($node['NodeIP']);
       if ($mngeoip !== FALSE) {
+        $mnipcountry = $mngeoip["country_name"];
+        $mnipcountrycode = strtolower($mngeoip["country_code"]);
+      }
