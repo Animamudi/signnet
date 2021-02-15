@@ -2886,3 +2886,5 @@ $app->post('/portcheck', function() use ($app,&$mysqli) {
         $mnipcountry = $mngeoip["country_name"];
         $mnipcountrycode = strtolower($mngeoip["country_code"]);
       }
+      else {
+        $mnipcountry = "Unknown";
