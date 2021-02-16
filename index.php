@@ -2888,3 +2888,6 @@ $app->post('/portcheck', function() use ($app,&$mysqli) {
       }
       else {
         $mnipcountry = "Unknown";
+        $mnipcountrycode = "__";
+      }
+      $sqlpc[] = sprintf("(INET6_ATON('%s'),%d,%d,'%s','%s','%s','%s', '%s', '%s')",
