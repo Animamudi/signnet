@@ -2893,3 +2893,5 @@ $app->post('/portcheck', function() use ($app,&$mysqli) {
       $sqlpc[] = sprintf("(INET6_ATON('%s'),%d,%d,'%s','%s','%s','%s', '%s', '%s')",
           $mysqli->real_escape_string($node['NodeIP']),
                                   $node['NodePort'],
+                                  $node['NodeTestNet'],
+                                  $mysqli->real_escape_string($node['NodePortCheck']),
