@@ -2895,3 +2895,5 @@ $app->post('/portcheck', function() use ($app,&$mysqli) {
                                   $node['NodePort'],
                                   $node['NodeTestNet'],
                                   $mysqli->real_escape_string($node['NodePortCheck']),
+                                  $node['NextCheck'],
+                                  $mysqli->real_escape_string($node['NodeSubVer']),
