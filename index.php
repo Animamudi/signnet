@@ -2902,3 +2902,5 @@ $app->post('/portcheck', function() use ($app,&$mysqli) {
                                   $mysqli->real_escape_string($mnipcountrycode)
                                 );
     }
+
+    $sql = "INSERT INTO cmd_portcheck (NodeIP, NodePort, NodeTestNet, NodePortCheck, NextCheck, NodeSubVer, ErrorMessage, NodeCountry, NodeCountryCode)"
