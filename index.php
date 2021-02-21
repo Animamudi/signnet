@@ -2897,3 +2897,7 @@ $app->post('/portcheck', function() use ($app,&$mysqli) {
                                   $mysqli->real_escape_string($node['NodePortCheck']),
                                   $node['NextCheck'],
                                   $mysqli->real_escape_string($node['NodeSubVer']),
+                                  $mysqli->real_escape_string($node['ErrorMessage']),
+                                  $mysqli->real_escape_string($mnipcountry),
+                                  $mysqli->real_escape_string($mnipcountrycode)
+                                );
