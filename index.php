@@ -2904,3 +2904,4 @@ $app->post('/portcheck', function() use ($app,&$mysqli) {
     }
 
     $sql = "INSERT INTO cmd_portcheck (NodeIP, NodePort, NodeTestNet, NodePortCheck, NextCheck, NodeSubVer, ErrorMessage, NodeCountry, NodeCountryCode)"
+                           ." VALUES ".implode(',',$sqlpc)
