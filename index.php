@@ -2909,3 +2909,5 @@ $app->post('/portcheck', function() use ($app,&$mysqli) {
             ." NodeSubVer = VALUES(NodeSubVer), ErrorMessage = VALUES(ErrorMessage), NodeCountry = VALUES(NodeCountry), NodeCountryCode = VALUES(NodeCountryCode)";
 
     if ($result = $mysqli->query($sql)) {
+      $info = $mysqli->info;
+      if (is_null($info)) {
