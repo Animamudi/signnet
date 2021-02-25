@@ -2905,3 +2905,7 @@ $app->post('/portcheck', function() use ($app,&$mysqli) {
 
     $sql = "INSERT INTO cmd_portcheck (NodeIP, NodePort, NodeTestNet, NodePortCheck, NextCheck, NodeSubVer, ErrorMessage, NodeCountry, NodeCountryCode)"
                            ." VALUES ".implode(',',$sqlpc)
+            ." ON DUPLICATE KEY UPDATE NodePortCheck = VALUES(NodePortCheck), NextCheck = VALUES(NextCheck),"
+            ." NodeSubVer = VALUES(NodeSubVer), ErrorMessage = VALUES(ErrorMessage), NodeCountry = VALUES(NodeCountry), NodeCountryCode = VALUES(NodeCountryCode)";
+
+    if ($result = $mysqli->query($sql)) {
