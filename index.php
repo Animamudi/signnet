@@ -2911,3 +2911,5 @@ $app->post('/portcheck', function() use ($app,&$mysqli) {
     if ($result = $mysqli->query($sql)) {
       $info = $mysqli->info;
       if (is_null($info)) {
+        $info = true;
+      }
