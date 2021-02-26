@@ -2913,3 +2913,6 @@ $app->post('/portcheck', function() use ($app,&$mysqli) {
       if (is_null($info)) {
         $info = true;
       }
+
+      //Change the HTTP status
+      $response->setStatusCode(202, "Accepted");
