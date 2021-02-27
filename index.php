@@ -2932,3 +2932,5 @@ $app->post('/portcheck', function() use ($app,&$mysqli) {
 // THIRDPARTIES (Reporting for drkircbot)
 // ----------------------------------------------------------------------------
 // End-point to update third parties values (USD/DRK for ex)
+// HTTP method:
+//   POST
