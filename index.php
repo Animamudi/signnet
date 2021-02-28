@@ -2934,3 +2934,6 @@ $app->post('/portcheck', function() use ($app,&$mysqli) {
 // End-point to update third parties values (USD/DRK for ex)
 // HTTP method:
 //   POST
+// Parameters (JSON body):
+//   thirdparties=array of keys/values (mandatory)
+//   dashwhale=array of keys/values (mandatory)
