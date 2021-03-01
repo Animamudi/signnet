@@ -2942,3 +2942,4 @@ $app->post('/portcheck', function() use ($app,&$mysqli) {
 //   messages=array of error messages (only if status is ERROR)
 //   data=array of insert/update information (only if status is OK)
 // ============================================================================
+$app->post('/thirdparties', function() use ($app,&$mysqli) {
