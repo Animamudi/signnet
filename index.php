@@ -2945,3 +2945,8 @@ $app->post('/portcheck', function() use ($app,&$mysqli) {
 $app->post('/thirdparties', function() use ($app,&$mysqli) {
 
   global $authinfo;
+
+  //Create a response
+  $response = new Phalcon\Http\Response();
+
+  $payload = $app->request->getRawBody();
