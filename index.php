@@ -2954,3 +2954,4 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
 
   if (!array_key_exists('CONTENT_LENGTH',$_SERVER) || (intval($_SERVER['CONTENT_LENGTH']) == 0)
       || !is_array($payload) || (count($payload) == 0)
+      || !array_key_exists("thirdparties",$payload) || !is_array($payload["thirdparties"])
