@@ -2963,3 +2963,7 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
     $response->setJsonContent(array('status' => 'ERROR', 'messages' => array('Payload is wrong or CONTENT_LENGTH is missing')));
   }
   else {
+
+    $errors = array();
+
+    // Third Parties values
