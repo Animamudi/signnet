@@ -2970,3 +2970,7 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
     $sqlstats = array();
     foreach($payload["thirdparties"] as $key => $value) {
       $sqlstats[] = sprintf("('%s','%s',%d,'%s')",
+                                  $mysqli->real_escape_string($key),
+                                  $mysqli->real_escape_string($value['StatValue']),
+                                  $value['LastUpdate'],
+                                  $mysqli->real_escape_string($value['Source'])
