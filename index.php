@@ -2976,3 +2976,6 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
                                   $mysqli->real_escape_string($value['Source'])
                                 );
     }
+
+    if (count($sqlstats) > 0) {
+            $sql = "INSERT INTO cmd_stats_values (StatKey, StatValue, LastUpdate, Source)"
