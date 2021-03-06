@@ -2974,3 +2974,5 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
                                   $mysqli->real_escape_string($value['StatValue']),
                                   $value['LastUpdate'],
                                   $mysqli->real_escape_string($value['Source'])
+                                );
+    }
