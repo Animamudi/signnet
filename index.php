@@ -2967,3 +2967,6 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
     $errors = array();
 
     // Third Parties values
+    $sqlstats = array();
+    foreach($payload["thirdparties"] as $key => $value) {
+      $sqlstats[] = sprintf("('%s','%s',%d,'%s')",
