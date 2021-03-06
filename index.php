@@ -2979,3 +2979,5 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
 
     if (count($sqlstats) > 0) {
             $sql = "INSERT INTO cmd_stats_values (StatKey, StatValue, LastUpdate, Source)"
+              ." VALUES ".implode(',',$sqlstats)
+              ." ON DUPLICATE KEY UPDATE StatValue = VALUES(StatValue), LastUpdate = VALUES(LastUpdate), Source = VALUES(Source)";
