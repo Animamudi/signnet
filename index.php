@@ -2990,3 +2990,7 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
       }
       else {
           $errors[] = "TP-".$mysqli->errno.': '.$mysqli->error;
+      }
+    }
+
+    // Dash Whale data
