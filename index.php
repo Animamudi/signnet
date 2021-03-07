@@ -2988,3 +2988,5 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
           $statsinfo = true;
         }
       }
+      else {
+          $errors[] = "TP-".$mysqli->errno.': '.$mysqli->error;
