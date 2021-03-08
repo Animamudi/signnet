@@ -3005,3 +3005,4 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
       ){
         foreach($proposal["comments"] as $comment) {
             if ($comment !== false && is_array($comment) && array_key_exists('id', $comment) && is_string($comment["id"])
+                && array_key_exists('username', $comment) && is_string($comment["username"])
