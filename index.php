@@ -2996,3 +2996,5 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
     // Dash Whale data
     $sqldwc = array();
     foreach($payload["dashwhale"] as $proposal) {
+      $dwinfo = var_export($proposal,true);
+      if (is_array($proposal) && (count($proposal) == 2)
