@@ -2999,3 +2999,7 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
       $dwinfo = var_export($proposal,true);
       if (is_array($proposal) && (count($proposal) == 2)
       && array_key_exists("proposal",$proposal) && is_array($proposal["proposal"])
+      && array_key_exists("comments",$proposal) && is_array($proposal["comments"])
+      && array_key_exists('hash',$proposal["proposal"]) && is_string($proposal["proposal"]["hash"])
+      && (preg_match("/^[0-9a-f]{64}$/s", $proposal["proposal"]["hash"]) === 1)
+      ){
