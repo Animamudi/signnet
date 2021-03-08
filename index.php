@@ -3003,3 +3003,4 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
       && array_key_exists('hash',$proposal["proposal"]) && is_string($proposal["proposal"]["hash"])
       && (preg_match("/^[0-9a-f]{64}$/s", $proposal["proposal"]["hash"]) === 1)
       ){
+        foreach($proposal["comments"] as $comment) {
