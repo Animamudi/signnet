@@ -3009,3 +3009,6 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
                 && array_key_exists('date', $comment) && is_string($comment["date"])
                 && array_key_exists('order', $comment) && is_int($comment["order"])
                 && array_key_exists('level', $comment)
+                && array_key_exists('recently_posted', $comment) && is_bool($comment["recently_posted"])
+                && array_key_exists('posted_by_owner', $comment) && is_bool($comment["posted_by_owner"])
+                && array_key_exists('reply_url', $comment) && is_string($comment["reply_url"])
