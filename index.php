@@ -3016,3 +3016,4 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
                 && (preg_match("/^[0-9a-f]{32}$/s", $comment["id"]) === 1)
                 && (!filter_var($comment["reply_url"], FILTER_VALIDATE_URL) === false)
             ) {
+                $sqldwc[] = sprintf("('%s','%s','%s','%s',%d,%d,%d,%d,'%s','%s')",
