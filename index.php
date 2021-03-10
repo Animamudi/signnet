@@ -3012,3 +3012,5 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
                 && array_key_exists('recently_posted', $comment) && is_bool($comment["recently_posted"])
                 && array_key_exists('posted_by_owner', $comment) && is_bool($comment["posted_by_owner"])
                 && array_key_exists('reply_url', $comment) && is_string($comment["reply_url"])
+                && array_key_exists('content', $comment) && is_string($comment["content"])
+                && (preg_match("/^[0-9a-f]{32}$/s", $comment["id"]) === 1)
