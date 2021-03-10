@@ -3014,3 +3014,5 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
                 && array_key_exists('reply_url', $comment) && is_string($comment["reply_url"])
                 && array_key_exists('content', $comment) && is_string($comment["content"])
                 && (preg_match("/^[0-9a-f]{32}$/s", $comment["id"]) === 1)
+                && (!filter_var($comment["reply_url"], FILTER_VALIDATE_URL) === false)
+            ) {
