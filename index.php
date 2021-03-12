@@ -3025,3 +3025,6 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
                     intval($comment["level"]),
                     $comment["recently_posted"] ? 1 : 0,
                     $comment["posted_by_owner"] ? 1 : 0,
+                    $mysqli->real_escape_string($comment["reply_url"]),
+                    $mysqli->real_escape_string($comment["content"])
+                );
