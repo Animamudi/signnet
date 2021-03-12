@@ -3017,3 +3017,7 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
                 && (!filter_var($comment["reply_url"], FILTER_VALIDATE_URL) === false)
             ) {
                 $sqldwc[] = sprintf("('%s','%s','%s','%s',%d,%d,%d,%d,'%s','%s')",
+                    $mysqli->real_escape_string($proposal["proposal"]["hash"]),
+                    $mysqli->real_escape_string($comment["id"]),
+                    $mysqli->real_escape_string($comment["username"]),
+                    $mysqli->real_escape_string($comment["date"]),
