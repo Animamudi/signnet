@@ -3021,3 +3021,6 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
                     $mysqli->real_escape_string($comment["id"]),
                     $mysqli->real_escape_string($comment["username"]),
                     $mysqli->real_escape_string($comment["date"]),
+                    $comment["order"],
+                    intval($comment["level"]),
+                    $comment["recently_posted"] ? 1 : 0,
