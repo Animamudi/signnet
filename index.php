@@ -3028,3 +3028,4 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
                     $mysqli->real_escape_string($comment["reply_url"]),
                     $mysqli->real_escape_string($comment["content"])
                 );
+            }
