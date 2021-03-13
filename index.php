@@ -3032,3 +3032,5 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
         }
       }
     }
+
+      if (count($sqldwc) > 0) {
