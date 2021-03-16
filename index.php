@@ -3045,3 +3045,4 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
               $dwinfo = $mysqli->info;
               if (is_null($dwinfo)) {
                   $dwinfo = true;
+              }
