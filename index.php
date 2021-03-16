@@ -3040,3 +3040,8 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
                 ." ON DUPLICATE KEY UPDATE CommentUsername = VALUES(CommentUsername), CommentDate = VALUES(CommentDate), "
                 ." CommentOrder = VALUES(CommentOrder), CommentLevel = VALUES(CommentLevel), CommentRecentPost = VALUES(CommentRecentPost),"
                 ." CommentByOwner = VALUES(CommentByOwner), CommentReplyURL = VALUES(CommentReplyURL), CommentContent = VALUES(CommentContent)";
+
+          if ($result = $mysqli->query($sql)) {
+              $dwinfo = $mysqli->info;
+              if (is_null($dwinfo)) {
+                  $dwinfo = true;
