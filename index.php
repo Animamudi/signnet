@@ -3034,3 +3034,4 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
     }
 
       if (count($sqldwc) > 0) {
+          $sql = "INSERT INTO cmd_budget_dashwhale_comments (BudgetHash, CommentHash, CommentUsername, CommentDate, "
