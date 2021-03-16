@@ -3038,3 +3038,5 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
                 ."CommentOrder, CommentLevel, CommentRecentPost, CommentByOwner, CommentReplyURL, CommentContent)"
                 ." VALUES ".implode(',',$sqldwc)
                 ." ON DUPLICATE KEY UPDATE CommentUsername = VALUES(CommentUsername), CommentDate = VALUES(CommentDate), "
+                ." CommentOrder = VALUES(CommentOrder), CommentLevel = VALUES(CommentLevel), CommentRecentPost = VALUES(CommentRecentPost),"
+                ." CommentByOwner = VALUES(CommentByOwner), CommentReplyURL = VALUES(CommentReplyURL), CommentContent = VALUES(CommentContent)";
