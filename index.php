@@ -3049,3 +3049,5 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
           }
           else {
               $errors[] = "DW-".$mysqli->errno.': '.$mysqli->error;
+          }
+      }
