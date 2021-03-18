@@ -3052,3 +3052,5 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
           }
       }
       else {
+          $dwinfo = "Nothing to do";
+      }
