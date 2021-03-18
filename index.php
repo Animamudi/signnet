@@ -3057,3 +3057,5 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
 
 
     if (count($errors) == 0) {
+        $response->setStatusCode(202, "Accepted");
+        $response->setJsonContent(array('status' => 'OK', 'data' => array('thirdparties' => $statsinfo,
