@@ -3079,3 +3079,4 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
 //   POST
 // Parameters (JSON body):
 //   array of version parameters (mandatory)
+// Result (JSON body):
