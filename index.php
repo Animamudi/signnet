@@ -3064,3 +3064,7 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
     else {
         $response->setStatusCode(503, "Service Unavailable");
         $response->setJsonContent(array('status' => 'ERROR', 'messages' => $errors));
+    }
+  }
+
+  return $response;
