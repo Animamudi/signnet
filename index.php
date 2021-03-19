@@ -3068,3 +3068,5 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
   }
 
   return $response;
+
+});
