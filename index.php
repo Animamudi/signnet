@@ -3087,3 +3087,5 @@ $app->post('/thirdparties', function() use ($app,&$mysqli) {
 $app->post('/versions', function() use ($app,&$mysqli) {
 
   global $authinfo;
+
+  //Create a response
