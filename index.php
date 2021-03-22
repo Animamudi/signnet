@@ -3090,3 +3090,5 @@ $app->post('/versions', function() use ($app,&$mysqli) {
 
   //Create a response
   $response = new Phalcon\Http\Response();
+
+  $payload = $app->request->getRawBody();
