@@ -3092,3 +3092,4 @@ $app->post('/versions', function() use ($app,&$mysqli) {
   $response = new Phalcon\Http\Response();
 
   $payload = $app->request->getRawBody();
+  $payload = json_decode($payload,true);
