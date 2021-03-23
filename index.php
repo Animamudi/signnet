@@ -3100,3 +3100,8 @@ $app->post('/versions', function() use ($app,&$mysqli) {
     $response->setStatusCode(400, "Bad Request");
 
     //Send errors to the client
+    $response->setJsonContent(array('status' => 'ERROR', 'messages' => array('Payload is wrong or CONTENT_LENGTH is missing')));
+  }
+  else {
+
+    $sql = "INSERT INTO cmd_versions (VersionPath, VersionRaw, VersionDisplay, VersionTestnet, VersionEnabled, VersionURL, VersionSHA1, VersionSize, VersionHandling)"
