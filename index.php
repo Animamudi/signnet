@@ -3105,3 +3105,6 @@ $app->post('/versions', function() use ($app,&$mysqli) {
   else {
 
     $sql = "INSERT INTO cmd_versions (VersionPath, VersionRaw, VersionDisplay, VersionTestnet, VersionEnabled, VersionURL, VersionSHA1, VersionSize, VersionHandling)"
+          ." VALUES (".sprintf("'%s','%s','%s',%d,%d,'%s','%s',%d,%d",$payload['VersionPath'],
+                                                                        $payload['VersionRaw'],
+                                                                        $payload['VersionDisplay'],
