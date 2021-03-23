@@ -3096,3 +3096,5 @@ $app->post('/versions', function() use ($app,&$mysqli) {
 
   if (!array_key_exists('CONTENT_LENGTH',$_SERVER) || (intval($_SERVER['CONTENT_LENGTH']) == 0)
    || !is_array($payload) || (count($payload) != 9)) {
+    //Change the HTTP status
+    $response->setStatusCode(400, "Bad Request");
