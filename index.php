@@ -3108,3 +3108,5 @@ $app->post('/versions', function() use ($app,&$mysqli) {
           ." VALUES (".sprintf("'%s','%s','%s',%d,%d,'%s','%s',%d,%d",$payload['VersionPath'],
                                                                         $payload['VersionRaw'],
                                                                         $payload['VersionDisplay'],
+                                                                        $payload['VersionTestnet'],
+                                                                        $payload['VersionEnabled'],
