@@ -3111,3 +3111,5 @@ $app->post('/versions', function() use ($app,&$mysqli) {
                                                                         $payload['VersionTestnet'],
                                                                         $payload['VersionEnabled'],
                                                                         $payload['VersionURL'],
+                                                                        $payload['VersionHash'],
+                                                                        $payload['VersionSize'],
