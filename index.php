@@ -3113,3 +3113,5 @@ $app->post('/versions', function() use ($app,&$mysqli) {
                                                                         $payload['VersionURL'],
                                                                         $payload['VersionHash'],
                                                                         $payload['VersionSize'],
+                                                                        $payload['VersionHandling'])
+                  .")";
