@@ -3115,3 +3115,6 @@ $app->post('/versions', function() use ($app,&$mysqli) {
                                                                         $payload['VersionSize'],
                                                                         $payload['VersionHandling'])
                   .")";
+
+    if ($result = $mysqli->query($sql)) {
+      $info = $mysqli->info;
