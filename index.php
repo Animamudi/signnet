@@ -3124,3 +3124,5 @@ $app->post('/versions', function() use ($app,&$mysqli) {
       $versionid = $mysqli->insert_id;
 
       if ($payload['VersionTestnet'] == 1) {
+        $onlytestnet = " AND NodeTestNet=1";
+      }
