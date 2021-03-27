@@ -3128,3 +3128,5 @@ $app->post('/versions', function() use ($app,&$mysqli) {
       }
       else {
         $onlytestnet = "";
+      }
+      $sql = sprintf("UPDATE cmd_nodes SET VersionID=%d WHERE KeepUpToDate=1$onlytestnet",$versionid);
