@@ -3122,3 +3122,5 @@ $app->post('/versions', function() use ($app,&$mysqli) {
         $info = true;
       }
       $versionid = $mysqli->insert_id;
+
+      if ($payload['VersionTestnet'] == 1) {
