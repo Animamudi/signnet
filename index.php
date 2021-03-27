@@ -3126,3 +3126,5 @@ $app->post('/versions', function() use ($app,&$mysqli) {
       if ($payload['VersionTestnet'] == 1) {
         $onlytestnet = " AND NodeTestNet=1";
       }
+      else {
+        $onlytestnet = "";
