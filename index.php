@@ -3139,3 +3139,4 @@ $app->post('/versions', function() use ($app,&$mysqli) {
       }
       else {
         $info2 = $mysqli->errno.': '.$mysqli->error;
+      }
