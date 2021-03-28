@@ -3134,3 +3134,7 @@ $app->post('/versions', function() use ($app,&$mysqli) {
       if ($result = $mysqli->query($sql)) {
         $info2 = $mysqli->info;
         if (is_null($info2)) {
+          $info2 = true;
+        }
+      }
+      else {
