@@ -3165,3 +3165,6 @@ $app->notFound(function () use ($app) {
     $response->setJsonContent(array('status' => 'ERROR', 'messages' => array('Unknown end-point')));
     $response->send();
 });
+
+$request = new Phalcon\Http\Request();
+$app->handle($request->getURI());
