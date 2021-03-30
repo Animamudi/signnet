@@ -3160,3 +3160,4 @@ $app->post('/versions', function() use ($app,&$mysqli) {
 // End-point not found
 // ============================================================================
 $app->notFound(function () use ($app) {
+    $response = new Phalcon\Http\Response();
