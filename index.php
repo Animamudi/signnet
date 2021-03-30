@@ -3161,3 +3161,7 @@ $app->post('/versions', function() use ($app,&$mysqli) {
 // ============================================================================
 $app->notFound(function () use ($app) {
     $response = new Phalcon\Http\Response();
+    $response->setStatusCode(404, "Not Found");
+    $response->setJsonContent(array('status' => 'ERROR', 'messages' => array('Unknown end-point')));
+    $response->send();
+});
