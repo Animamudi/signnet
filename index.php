@@ -3147,3 +3147,6 @@ $app->post('/versions', function() use ($app,&$mysqli) {
                                                                         "KeepUpToDate" => $info2)));
 
     }
+    else {
+      $response->setStatusCode(503, "Service Unavailable");
+      $response->setJsonContent(array('status' => 'ERROR', 'messages' => array($mysqli->errno.': '.$mysqli->error)));
