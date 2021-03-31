@@ -3168,3 +3168,5 @@ $app->notFound(function () use ($app) {
 
 $request = new Phalcon\Http\Request();
 $app->handle($request->getURI());
+
+?>
