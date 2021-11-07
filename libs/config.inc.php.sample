@@ -21,3 +21,5 @@
 
 // Path to the cache folder (files will be created in there, best if outside www access)
 DEFINE('CACHEFOLDER',"/home/dashninja-be/cache/");
+
+// 
