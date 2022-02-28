@@ -23,4 +23,4 @@
 DEFINE('CACHEFOLDER',"/home/dashninja-be/cache/");
 
 // MySQL dtabase/user to use (it needs read & write access to the database)
-DEFINE('MYSQLU
+DEFINE('MYSQLUSE
