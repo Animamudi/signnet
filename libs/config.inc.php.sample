@@ -28,3 +28,4 @@ DEFINE('MYSQLPASS',"something_random");
 DEFINE('MYSQLDATABASE',"dashninja");
 DEFINE('MYSQLHOST',"localhost");
 
+?
