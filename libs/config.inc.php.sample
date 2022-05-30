@@ -27,3 +27,4 @@ DEFINE('MYSQLUSER',"your_mysql_user");
 DEFINE('MYSQLPASS',"something_random");
 DEFINE('MYSQLDATABASE',"dashninja");
 DEFINE('MYSQLHOST',"localhost");
+
