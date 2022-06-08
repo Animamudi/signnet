@@ -2,4 +2,4 @@
 
 /*
     This file is part of Dash Ninja.
-    https://github.com/elbereth/dashninja-
+    https://github.com/elbereth/dashninja-b
