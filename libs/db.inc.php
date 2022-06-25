@@ -5,4 +5,4 @@
     https://github.com/elbereth/dashninja-be
 
     Dash Ninja is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public L
+    it under the terms of the GNU General Public Lic
