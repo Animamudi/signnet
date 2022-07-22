@@ -10,4 +10,4 @@
     (at your option) any later version.
 
     Dash Ninja is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; withou
+    but WITHOUT ANY WARRANTY; without ev
