@@ -19,4 +19,4 @@
 
  */
 
-// Read confi
+// Read configur
