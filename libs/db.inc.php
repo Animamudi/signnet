@@ -19,4 +19,5 @@
 
  */
 
-// Read configurati
+// Read configuration
+r
