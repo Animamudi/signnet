@@ -20,4 +20,4 @@
  */
 
 // Read configuration
-r
+req
