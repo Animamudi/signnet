@@ -20,4 +20,4 @@
  */
 
 // Read configuration
-require
+require_on
