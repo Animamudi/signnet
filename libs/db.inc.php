@@ -20,4 +20,4 @@
  */
 
 // Read configuration
-require_onc
+require_once('
