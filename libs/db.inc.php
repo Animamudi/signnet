@@ -20,4 +20,4 @@
  */
 
 // Read configuration
-require_once('con
+require_once('confi
