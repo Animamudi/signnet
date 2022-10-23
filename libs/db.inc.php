@@ -20,4 +20,4 @@
  */
 
 // Read configuration
-require_once('config.inc.
+require_once('config.inc.ph
