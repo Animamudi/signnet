@@ -22,4 +22,4 @@
 // Read configuration
 require_once('config.inc.php');
 
-$usemysql = tr
+$usemysql = true;
