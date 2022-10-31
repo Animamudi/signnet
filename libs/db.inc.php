@@ -22,3 +22,4 @@
 // Read configuration
 require_once('config.inc.php');
 
+$us
