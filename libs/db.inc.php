@@ -24,4 +24,4 @@ require_once('config.inc.php');
 
 $usemysql = true;
 
-// Connect to MySQ
+// Connect to MySQL
