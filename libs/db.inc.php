@@ -26,3 +26,4 @@ $usemysql = true;
 
 // Connect to MySQL using mysqli
 $mysqli = new mysqli(MYSQLHOST, MYSQLUSER, MYSQLPASS, MYSQLDATABASE);
+
